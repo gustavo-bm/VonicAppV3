@@ -1,105 +1,160 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
+import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 
 const Contact = () => {
+  const { t } = useTranslation();
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    try {
+      const response = await fetch('https://formspree.io/f/marcos.moraes@vonicsystems.com.br', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+      
+      if (response.ok) {
+        alert('Mensagem enviada com sucesso!');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        alert('Erro ao enviar mensagem. Por favor, tente novamente.');
+      }
+    } catch (error) {
+      alert('Erro ao enviar mensagem. Por favor, tente novamente.');
+    }
+  };
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
   return (
-    <section id="contato" className="py-20 bg-gradient-to-b from-black via-vonic-500/5 to-black text-white">
+    <div id="contato" className="bg-gradient-vonic-dark py-24">
       <div className="container mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold mb-4">Entre em Contato</h2>
-          <p className="text-gray-400">Estamos prontos para atender sua empresa</p>
+          <h2 className="text-4xl font-bold text-white mb-4">{t('contact_us')}</h2>
+          <p className="text-xl text-white/80">{t('ready_to_serve')}</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            className="bg-gradient-to-br from-black to-gray-900 p-8 rounded-xl border border-vonic-500/10 shadow-lg"
-          >
-            <form className="space-y-6">
-              <div>
-                <label className="block text-sm font-medium mb-2">Nome</label>
-                <input
-                  type="text"
-                  className="w-full px-4 py-2 rounded-lg bg-black border border-gray-800 focus:outline-none focus:border-vonic-500 transition-colors"
-                  placeholder="Seu nome"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium mb-2">Email</label>
-                <input
-                  type="email"
-                  className="w-full px-4 py-2 rounded-lg bg-black border border-gray-800 focus:outline-none focus:border-vonic-500 transition-colors"
-                  placeholder="seu@email.com"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium mb-2">Mensagem</label>
-                <textarea
-                  className="w-full px-4 py-2 rounded-lg bg-black border border-gray-800 focus:outline-none focus:border-vonic-500 transition-colors h-32"
-                  placeholder="Sua mensagem"
-                ></textarea>
-              </div>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-full bg-gradient-to-r from-vonic-500 via-vonic-600 to-vonic-700 text-white font-bold py-3 px-8 rounded-full hover:from-vonic-600 hover:via-vonic-700 hover:to-vonic-800 transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                Enviar Mensagem
-              </motion.button>
-            </form>
-          </motion.div>
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="lg:col-span-2 bg-white/5 backdrop-blur-sm p-8 rounded-2xl"
+            >
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-white mb-2" htmlFor="name">{t('name')}</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-white/40"
+                      placeholder={t('your_name')}
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-white mb-2" htmlFor="email">{t('email')}</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-white/40"
+                      placeholder={t('your_email')}
+                      required
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label className="block text-white mb-2" htmlFor="message">{t('message')}</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows="5"
+                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-white/40"
+                    placeholder={t('your_message')}
+                    required
+                  ></textarea>
+                </div>
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  type="submit"
+                  className="w-full bg-gradient-vonic hover:bg-gradient-vonic-hover text-white font-bold py-3 px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  {t('send_message')}
+                </motion.button>
+              </form>
+            </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            className="space-y-8"
-          >
-            <div className="flex items-start space-x-4">
-              <div className="bg-gradient-to-br from-vonic-500/10 to-transparent p-3 rounded-full">
-                <FaPhone className="text-2xl text-vonic-500" />
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="space-y-8 bg-white/5 backdrop-blur-sm p-8 rounded-2xl"
+            >
+              <div className="flex items-start space-x-4">
+                <div className="bg-white/10 p-3 rounded-full">
+                  <FaEnvelope className="text-2xl text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">{t('email')}</h3>
+                  <p className="text-white/80">marcos.moraes@vonicsystems.com.br</p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Telefone</h3>
-                <p className="text-gray-400">(11) 9999-9999</p>
+
+              <div className="flex items-start space-x-4">
+                <div className="bg-white/10 p-3 rounded-full">
+                  <FaMapMarkerAlt className="text-2xl text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">{t('address')}</h3>
+                  <p className="text-white/80">Salto de Pirapora - SP</p>
+                </div>
               </div>
-            </div>
-            
-            <div className="flex items-start space-x-4">
-              <div className="bg-gradient-to-br from-vonic-500/10 to-transparent p-3 rounded-full">
-                <FaEnvelope className="text-2xl text-vonic-500" />
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Email</h3>
-                <p className="text-gray-400">contato@vonic.com.br</p>
-              </div>
-            </div>
-            
-            <div className="flex items-start space-x-4">
-              <div className="bg-gradient-to-br from-vonic-500/10 to-transparent p-3 rounded-full">
-                <FaMapMarkerAlt className="text-2xl text-vonic-500" />
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Endereço</h3>
-                <p className="text-gray-400">
-                  Rua Exemplo, 123<br />
-                  São Paulo - SP<br />
-                  CEP: 00000-000
-                </p>
-              </div>
-            </div>
-          </motion.div>
+
+              <a
+                href="https://wa.me/5515998024314"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center space-x-2 bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-4 px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl w-full"
+              >
+                <FaWhatsapp className="text-2xl" />
+                <span>WhatsApp Business</span>
+              </a>
+            </motion.div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
