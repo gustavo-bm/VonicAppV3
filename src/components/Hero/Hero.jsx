@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import HeroImage from '../../assets/hero-system.png';
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -37,7 +36,7 @@ const Hero = () => {
             >
               {t('delivering')} <br />
               <span className="text-[#CE171F] drop-shadow-glow">{t('solutions')}</span><br />
-              {t('solutions_exclamation')}
+              <span className="text-[#CE171F]">{t('solutions_exclamation')}</span>
             </motion.h1>
 
             <motion.p
@@ -55,22 +54,26 @@ const Hero = () => {
               transition={{ delay: 0.8 }}
               className="flex flex-wrap gap-4 pt-4"
             >
-              <a
+              <motion.a
                 href="/produtos/vonic"
-                className="bg-gradient-vonic hover:bg-gradient-vonic-hover text-white px-8 py-3 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
+                whileHover={{ scale: 1.02 }}
+                className="relative bg-gradient-vonic text-white px-8 py-3 rounded-full font-medium shadow-lg overflow-hidden group"
               >
-                {t('know_products')}
-              </a>
-              <a
+                <span className="absolute inset-0 bg-gradient-vonic-hover opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <span className="relative">{t('know_products')}</span>
+              </motion.a>
+              <motion.a
                 href="#sobre"
                 onClick={(e) => {
                   e.preventDefault();
                   document.getElementById('sobre').scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-full font-medium backdrop-blur-sm transition-all duration-300"
+                whileHover={{ scale: 1.02 }}
+                className="relative bg-white/10 text-white px-8 py-3 rounded-full font-medium backdrop-blur-sm overflow-hidden group"
               >
-                {t('learn_more')}
-              </a>
+                <span className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <span className="relative">{t('learn_more')}</span>
+              </motion.a>
             </motion.div>
           </motion.div>
 
@@ -80,20 +83,22 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className="relative lg:h-[700px] flex items-center justify-center"
           >
+            <div className="absolute inset-0 bg-gradient-radial from-[#CE171F]/20 via-transparent to-transparent rounded-full filter blur-3xl" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-black/80" />
+            
+            {/* Abstract 3D Shape */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.4 }}
-              className="relative w-full h-full"
+              initial={{ rotateY: 0 }}
+              animate={{ rotateY: 360 }}
+              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+              className="relative w-full h-full max-w-2xl mx-auto"
             >
-              <div className="absolute inset-0 bg-gradient-radial from-[#CE171F]/20 via-transparent to-transparent rounded-full filter blur-3xl" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-black/80" />
-              <img
-                src={HeroImage}
-                alt="Vonic Hot Runner System"
-                className="relative z-10 w-full h-full object-contain rounded-lg mix-blend-luminosity hover:mix-blend-normal transition-all duration-500"
-              />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-64 h-64 bg-gradient-to-br from-[#CE171F] to-[#8B0000] rounded-3xl transform rotate-45 animate-float" />
+                <div className="absolute w-64 h-64 bg-gradient-to-br from-[#CE171F]/50 to-[#8B0000]/50 rounded-3xl transform rotate-[30deg] animate-float-delayed" />
+                <div className="absolute w-64 h-64 bg-gradient-to-br from-[#CE171F]/30 to-[#8B0000]/30 rounded-3xl transform -rotate-[15deg] animate-float-delayed-2" />
+              </div>
             </motion.div>
           </motion.div>
         </div>

@@ -3,5 +3,12 @@
   <rect width="300" height="210" fill="#009b3a"/>
   <path d="M150,20 L280,105 L150,190 L20,105 z" fill="#fedf00"/>
   <circle cx="150" cy="105" r="35" fill="#002776"/>
-  <path d="M150,75 A30,30 0 0,1 180,105 A30,30 0 0,1 150,135 A30,30 0 0,1 120,105 A30,30 0 0,1 150,75" fill="#fff"/>
+  <clipPath id="bandClip">
+    <circle cx="150" cy="105" r="31.5"/>
+  </clipPath>
+  <g clip-path="url(#bandClip)">
+    <circle cx="150" cy="105" r="31.5" fill="#fff"/>
+    <path d="M110,105 Q150,140 190,105 Q150,70 110,105" fill="#002776"/>
+    <circle cx="150" cy="100" r="3" fill="#002776"/>
+  </g>
 </svg> 

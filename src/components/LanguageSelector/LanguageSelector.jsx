@@ -23,7 +23,7 @@ const LanguageSelector = () => {
         className="w-6 h-6 rounded-full"
       />
       <span className="text-black font-medium">
-        {i18n.language === 'pt' ? 'EN' : 'PT'}
+        {i18n.language === 'en' ? 'EN' : 'PT'}
       </span>
     </motion.button>
   );

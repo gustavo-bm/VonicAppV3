@@ -1,8 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import HotRunner from '../3D/HotRunner';
+import MastipLogo from '../../assets/mastip/logo_mastip.png';
+import { useTranslation } from 'react-i18next';
 
 const MastipSection = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="py-20 bg-black">
       <div className="container mx-auto px-4">
@@ -13,48 +17,40 @@ const MastipSection = () => {
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
-            <span className="text-[#CE171F] font-medium">Somos Parceiros MASTIP</span>
+            <div className="flex items-center space-x-4">
+              <img src={MastipLogo} alt="Mastip" className="h-12" />
+              <span className="text-[#CE171F] font-medium">{t('mastip_partner')}</span>
+            </div>
             
-            <h2 className="text-4xl font-bold text-white">PARCERIA ESTRATÉGICA</h2>
+            <h2 className="text-4xl font-bold text-white">{t('strategic_partnership')}</h2>
             
             <p className="text-white/90 leading-relaxed">
-              A Vonic Systems tem o orgulho de anunciar sua parceria estratégica com a
-              Mastip, uma líder global em soluções de sistemas de câmara quente. Esta
-              colaboração nos permite oferecer aos nossos clientes produtos de alta
-              qualidade e tecnologia avançada, garantindo eficiência e precisão nos
-              processos de injeção de plásticos.
+              {t('partnership_description')}
             </p>
 
-            <div className="space-y-4">
-              <div className="border-b border-white/10 pb-4">
-                <button className="flex items-center justify-between w-full text-left">
-                  <h3 className="text-xl font-semibold text-white">QUEM É A MASTIP?</h3>
-                  <span className="text-[#CE171F] text-2xl">+</span>
-                </button>
-                <div className="mt-4">
-                  <p className="text-white/80 leading-relaxed">
-                    A Mastip é reconhecida globalmente por sua inovação e excelência em sistemas
-                    de câmara quente. Com décadas de experiência, a empresa se destaca pelo
-                    desenvolvimento de soluções tecnológicas avançadas que revolucionam a
-                    indústria de injeção de plásticos.
-                  </p>
-                </div>
+            <div className="space-y-8 pt-4">
+              <div className="border-b border-white/10 pb-6">
+                <h3 className="text-xl font-semibold text-white mb-4">{t('who_is_mastip')}</h3>
+                <p className="text-white/80 leading-relaxed">
+                  {t('mastip_description')}
+                </p>
               </div>
 
-              <div className="border-b border-white/10 pb-4">
-                <button className="flex items-center justify-between w-full text-left">
-                  <h3 className="text-xl font-semibold text-white">TIPOS DE PRODUTOS</h3>
-                  <span className="text-[#CE171F] text-2xl">+</span>
-                </button>
-                <div className="mt-4">
-                  <p className="text-white/80 leading-relaxed">
-                    Oferecemos uma linha completa de produtos Mastip, incluindo sistemas de
-                    câmara quente, bicos de injeção, controladores de temperatura e muito mais.
-                    Cada produto é projetado para maximizar a eficiência e qualidade da
-                    produção.
-                  </p>
-                </div>
+              <div className="border-b border-white/10 pb-6">
+                <h3 className="text-xl font-semibold text-white mb-4">{t('product_types')}</h3>
+                <p className="text-white/80 leading-relaxed">
+                  {t('products_description')}
+                </p>
               </div>
+
+              <motion.a
+                href="/produtos/mastip"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-block bg-gradient-vonic hover:bg-gradient-vonic-hover text-white px-8 py-3 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                {t('know_products')}
+              </motion.a>
             </div>
           </motion.div>
 

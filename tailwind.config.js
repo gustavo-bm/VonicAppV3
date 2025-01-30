@@ -40,20 +40,33 @@ export default {
       },
       backgroundImage: {
         'gradient-vonic': 'linear-gradient(135deg, #CE171F 0%, #8B0000 100%)',
-        'gradient-vonic-soft': 'linear-gradient(135deg, rgba(206,23,31,0.9) 0%, rgba(139,0,0,0.9) 100%)',
         'gradient-vonic-hover': 'linear-gradient(135deg, #8B0000 0%, #CE171F 100%)',
-        'gradient-vonic-dark': 'linear-gradient(135deg, #CE171F 0%, #000000 100%)',
-        'gradient-vonic-transparent': 'linear-gradient(135deg, rgba(206,23,31,0.1) 0%, transparent 100%)',
+        'gradient-vonic-soft': 'linear-gradient(135deg, rgba(206, 23, 31, 0.1) 0%, rgba(139, 0, 0, 0.1) 100%)',
+        'gradient-vonic-dark': 'linear-gradient(180deg, #0A0A0A 0%, #1A1A1A 100%)',
+        'gradient-vonic-light': 'linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%)',
+        'gradient-radial': 'radial-gradient(circle at center, var(--tw-gradient-stops))',
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',
+        'float-delayed': 'float 6s ease-in-out 2s infinite',
+        'float-delayed-2': 'float 6s ease-in-out 4s infinite',
+        'gradient': 'gradient 15s ease infinite',
+        'spin-slow': 'spin 20s linear infinite',
       },
       keyframes: {
         float: {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-20px)' },
-        }
-      }
+        },
+        gradient: {
+          '0%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+          '100%': { backgroundPosition: '0% 50%' },
+        },
+      },
+      dropShadow: {
+        'glow': '0 0 20px rgba(206, 23, 31, 0.5)',
+      },
     },
   },
   plugins: [],
