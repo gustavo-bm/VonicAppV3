@@ -7,17 +7,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        red: {
-          50: '#fff1f1',
-          100: '#ffe1e1',
-          200: '#ffc7c7',
-          300: '#ffa0a0',
-          400: '#ff6b6b',
-          500: '#f83b3b',
-          600: '#e51d1d',
-          700: '#c11414',
-          800: '#a01414',
-          900: '#841818',
+        vonic: {
+          50: '#fef2f2',
+          100: '#fee2e2',
+          200: '#fecaca',
+          300: '#fca5a5',
+          400: '#f87171',
+          500: '#CE171F',
+          600: '#b91c1c',
+          700: '#991b1b',
+          800: '#7f1d1d',
+          900: '#713f3f',
         },
         gray: {
           50: '#f8f9fa',
@@ -37,6 +37,12 @@ export default {
       },
       spacing: {
         '128': '32rem',
+      },
+      backgroundImage: {
+        'gradient-vonic': 'linear-gradient(135deg, #CE171F 0%, #991b1b 100%)',
+        'gradient-vonic-to-black': 'linear-gradient(135deg, #CE171F 0%, #000000 100%)',
+        'gradient-black-to-vonic': 'linear-gradient(135deg, #000000 0%, #CE171F 100%)',
+        'gradient-vonic-transparent': 'linear-gradient(135deg, rgba(206,23,31,0.1) 0%, transparent 100%)',
       },
     },
   },
