@@ -1,5 +1,8 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
+import BrFlag from '/br-flag.svg';
+import UsFlag from '/us-flag.svg';
 
 const LanguageSelector = () => {
   const { i18n } = useTranslation();
@@ -9,27 +12,32 @@ const LanguageSelector = () => {
   };
 
   return (
-    <div className="flex items-center space-x-2">
-      <button
+    <div className="flex items-center space-x-3">
+      <motion.button
         onClick={() => changeLanguage('pt')}
-        className={`px-2 py-1 rounded-md text-sm font-medium transition-colors ${
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        className={`w-8 h-8 rounded-full overflow-hidden border-2 transition-all ${
           i18n.language === 'pt'
-            ? 'bg-[#CE171F] text-white'
-            : 'text-gray-800 hover:text-[#CE171F]'
+            ? 'border-[#CE171F] shadow-lg'
+            : 'border-transparent opacity-70 hover:opacity-100'
         }`}
       >
-        PT
-      </button>
-      <button
+        <img src={BrFlag} alt="Português" className="w-full h-full object-cover" />
+      </motion.button>
+      
+      <motion.button
         onClick={() => changeLanguage('en')}
-        className={`px-2 py-1 rounded-md text-sm font-medium transition-colors ${
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        className={`w-8 h-8 rounded-full overflow-hidden border-2 transition-all ${
           i18n.language === 'en'
-            ? 'bg-[#CE171F] text-white'
-            : 'text-gray-800 hover:text-[#CE171F]'
+            ? 'border-[#CE171F] shadow-lg'
+            : 'border-transparent opacity-70 hover:opacity-100'
         }`}
       >
-        EN
-      </button>
+        <img src={UsFlag} alt="English" className="w-full h-full object-cover" />
+      </motion.button>
     </div>
   );
 };

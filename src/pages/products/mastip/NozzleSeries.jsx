@@ -5,7 +5,6 @@ import { FaArrowRight } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 
 const SeriesCard = ({ image, title, description, features, link }) => {
-  const { t } = useTranslation();
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -22,13 +21,13 @@ const SeriesCard = ({ image, title, description, features, link }) => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
       </div>
       <div className="p-6">
-        <h3 className="text-2xl font-bold mb-3 text-[#CE171F]">{t(title)}</h3>
-        <p className="text-gray-600 mb-4">{t(description)}</p>
+        <h3 className="text-2xl font-bold mb-3 text-[#CE171F]">{title}</h3>
+        <p className="text-gray-600 mb-4">{description}</p>
         <ul className="space-y-2 mb-6">
           {features.map((feature, index) => (
             <li key={index} className="flex items-center text-gray-600">
               <span className="w-2 h-2 bg-[#CE171F] rounded-full mr-2"></span>
-              {t(feature)}
+              {feature}
             </li>
           ))}
         </ul>
@@ -36,7 +35,7 @@ const SeriesCard = ({ image, title, description, features, link }) => {
           to={link}
           className="inline-flex items-center space-x-2 bg-gradient-vonic hover:bg-gradient-vonic-hover text-white font-bold py-3 px-6 rounded-full transition-all duration-300 group"
         >
-          <span>{t('view_specs')}</span>
+          <span>View Specifications</span>
           <FaArrowRight className="transform group-hover:translate-x-1 transition-transform" />
         </Link>
       </div>
@@ -44,42 +43,53 @@ const SeriesCard = ({ image, title, description, features, link }) => {
   );
 };
 
-const HotNozzles = () => {
+const NozzleSeries = () => {
   const { t } = useTranslation();
   
   const series = [
     {
-      title: "vh_series_title",
-      description: "vh_series_desc",
-      image: "/products/vh-series.jpg",
+      title: "MX Series",
+      description: "High performance nozzles for demanding applications",
+      image: "/products/mastip/mx-series.jpg",
       features: [
-        "vh_feature_1",
-        "vh_feature_2",
-        "vh_feature_3"
+        "Optimized thermal profile",
+        "High wear resistance",
+        "Suitable for engineering materials"
       ],
-      link: "/produtos/vonic/bicos/vh"
+      link: "/produtos/mastip/nozzles/mx"
     },
     {
-      title: "vt_series_title",
-      description: "vt_series_desc",
-      image: "/products/vt-series.jpg",
+      title: "BX Series",
+      description: "Balanced nozzles for precision molding",
+      image: "/products/mastip/bx-series.jpg",
       features: [
-        "vt_feature_1",
-        "vt_feature_2",
-        "vt_feature_3"
+        "Perfect balance control",
+        "Minimal pressure loss",
+        "Excellent thermal stability"
       ],
-      link: "/produtos/vonic/bicos/vt"
+      link: "/produtos/mastip/nozzles/bx"
     },
     {
-      title: "vp_series_title",
-      description: "vp_series_desc",
-      image: "/products/vp-series.jpg",
+      title: "SX Series",
+      description: "Standard nozzles for general applications",
+      image: "/products/mastip/sx-series.jpg",
       features: [
-        "vp_feature_1",
-        "vp_feature_2",
-        "vp_feature_3"
+        "Cost-effective solution",
+        "Reliable performance",
+        "Easy maintenance"
       ],
-      link: "/produtos/vonic/bicos/vp"
+      link: "/produtos/mastip/nozzles/sx"
+    },
+    {
+      title: "FlowLoc Series",
+      description: "Advanced flow control technology",
+      image: "/products/mastip/flowloc-series.jpg",
+      features: [
+        "Precise flow control",
+        "Reduced cycle times",
+        "Superior part quality"
+      ],
+      link: "/produtos/mastip/nozzles/flowloc"
     }
   ];
 
@@ -92,9 +102,9 @@ const HotNozzles = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl font-bold mb-6 text-white">{t('hot_nozzles_title')}</h1>
+          <h1 className="text-5xl font-bold mb-6 text-white">Mastip Nozzle Series</h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto">
-            {t('hot_nozzles_desc')}
+            Advanced hot runner nozzle solutions for every application
           </p>
         </motion.div>
 
@@ -108,4 +118,4 @@ const HotNozzles = () => {
   );
 };
 
-export default HotNozzles; 
+export default NozzleSeries; 

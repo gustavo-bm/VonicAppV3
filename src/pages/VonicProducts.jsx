@@ -12,7 +12,7 @@ const Controllers = 'https://via.placeholder.com/300x200?text=Controllers';
 const Filters = 'https://via.placeholder.com/300x200?text=Filters';
 const NewProducts = 'https://via.placeholder.com/300x200?text=New+Products';
 
-const ProductCard = ({ image, title, description, link, isNew }) => (
+const ProductCard = ({ title, description, image, link, isNew }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -53,44 +53,44 @@ const VonicProducts = () => {
 
   const products = [
     {
-      title: "Novidades Vonic",
-      description: "Conheça nossos mais recentes lançamentos e inovações em sistemas de câmara quente",
-      image: NewProducts,
+      title: t('new_releases'),
+      description: t('new_releases_desc'),
+      image: "/products/new-releases.jpeg",
       link: "/produtos/vonic/novidades",
       isNew: true
     },
     {
-      title: "Bicos de Injeção",
-      description: "Bicos com design exclusivo e controle preciso de temperatura",
-      image: HotNozzles,
+      title: t('hot_nozzles'),
+      description: t('hot_nozzles_desc'),
+      image: "/products/hot_nozzles.jpeg",
       link: "/produtos/vonic/bicos",
       isNew: false
     },
     {
-      title: "Manifolds",
-      description: "Sistemas de manifold balanceados para distribuição otimizada",
-      image: Manifolds,
+      title: t('manifolds'),
+      description: t('manifolds_desc'),
+      image: "/products/manifolds.jpeg",
       link: "/produtos/vonic/manifolds",
       isNew: false
     },
     {
-      title: "Hot Half",
-      description: "Conjuntos completos de câmara quente customizados",
-      image: HotHalf,
+      title: t('hot_half'),
+      description: t('hot_half_desc'),
+      image: "/products/hot_half.jpeg",
       link: "/produtos/vonic/hot-half",
       isNew: false
     },
     {
-      title: "Controladores",
-      description: "Controladores de temperatura de alta precisão",
-      image: Controllers,
+      title: t('controllers'),
+      description: t('controllers_desc'),
+      image: "/products/controllers.jpg",
       link: "/produtos/vonic/controladores",
       isNew: false
     },
     {
-      title: "Filtros e Equipamentos",
-      description: "Soluções especializadas para produção e manutenção",
-      image: Filters,
+      title: t('filters'),
+      description: t('filters_desc'),
+      image: "/products/filters.jpg",
       link: "/produtos/vonic/filtros",
       isNew: false
     }
