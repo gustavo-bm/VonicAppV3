@@ -20,16 +20,117 @@ body {
   margin: 0 auto;
 }
 
+/* Partners Section Styles */
+.partners-section {
+  padding: 8rem 0;
+  background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+}
+
+.section-title {
+  @apply text-4xl font-bold mb-4 text-center text-gray-900;
+}
+
+.section-subtitle {
+  @apply text-center text-gray-600 text-lg mb-16 max-w-2xl mx-auto;
+}
+
+.partners-swiper {
+  padding: 3rem 0;
+  width: 100%;
+}
+
+.swiper-slide {
+  width: 400px;
+  height: 400px;
+  background: transparent;
+}
+
+.testimonial-card {
+  @apply bg-white rounded-2xl p-8 h-full shadow-lg hover:shadow-xl transition-all duration-300;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  transform: translateY(0);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.partner-logo {
+  @apply text-center mb-6 pb-6 border-b border-gray-200;
+}
+
+.logo-emoji {
+  @apply text-5xl mb-4 block;
+}
+
+.partner-logo h3 {
+  @apply text-xl font-bold text-gray-900;
+}
+
+.testimonial-content blockquote {
+  @apply text-gray-700 text-lg leading-relaxed italic mb-6 relative px-4;
+}
+
+.testimonial-content blockquote::before,
+.testimonial-content blockquote::after {
+  @apply text-4xl text-gray-400 absolute;
+  content: '"';
+}
+
+.testimonial-content blockquote::before {
+  left: -0.5rem;
+  top: -0.5rem;
+}
+
+.testimonial-content blockquote::after {
+  right: -0.5rem;
+  bottom: -1rem;
+}
+
+.testimonial-author {
+  @apply text-right pt-4 border-t border-gray-200;
+}
+
+.author-name {
+  @apply text-gray-900 font-semibold text-lg mb-1;
+}
+
+.author-position {
+  @apply text-gray-600 text-sm;
+}
+
+/* Swiper Customization */
+.swiper-pagination-bullet {
+  @apply w-3 h-3 bg-gray-400 opacity-50;
+}
+
+.swiper-pagination-bullet-active {
+  @apply opacity-100 bg-[#CE171F];
+}
+
+@media (max-width: 768px) {
+  .partners-section {
+    padding: 4rem 0;
+  }
+
+  .swiper-slide {
+    width: 300px;
+    height: 350px;
+  }
+
+  .testimonial-card {
+    padding: 1.5rem;
+  }
+}
+
 @layer components {
   .btn-primary {
     @apply bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full transition-colors;
-  }
-  
-  .section-title {
-    @apply text-4xl font-bold mb-4 text-center;
-  }
-  
-  .section-subtitle {
-    @apply text-xl text-gray-600 mb-8 text-center;
   }
 }

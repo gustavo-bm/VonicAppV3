@@ -18,6 +18,150 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+/* Partners Section */
+.partners-section {
+  padding: 8rem 0;
+  background: #ffffff;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+  margin-bottom: 4rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.partners-section .section-title {
+  color: #333;
+}
+
+.partners-swiper {
+  padding: 3rem 0;
+  width: 100%;
+}
+
+.swiper-slide {
+  width: 400px;
+  height: 400px;
+  background: transparent;
+}
+
+.testimonial-card {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  height: 100%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.1s ease, background-color 0.1s ease;
+  will-change: transform;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.partner-logo {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.logo-emoji {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.partner-logo h3 {
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.testimonial-content blockquote {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.testimonial-content blockquote::before,
+.testimonial-content blockquote::after {
+  content: '"';
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+}
+
+.testimonial-content blockquote::before {
+  left: -0.5rem;
+  top: -0.5rem;
+}
+
+.testimonial-content blockquote::after {
+  right: -0.5rem;
+  bottom: -1rem;
+}
+
+.testimonial-author {
+  text-align: right;
+  padding-top: 1rem;
+  border-top: 2px solid #f0f0f0;
+}
+
+.author-name {
+  color: #333;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.author-position {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Swiper Customization */
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: white;
+}
+
+@media (max-width: 768px) {
+  .partners-section {
+    padding: 4rem 0;
+  }
+
+  .swiper-slide {
+    width: 300px;
+    height: 350px;
+  }
+
+  .testimonial-card {
+    padding: 1.5rem;
+  }
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);

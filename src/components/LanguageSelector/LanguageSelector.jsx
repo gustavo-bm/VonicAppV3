@@ -1,31 +1,36 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
 
 const LanguageSelector = () => {
   const { i18n } = useTranslation();
 
-  const toggleLanguage = () => {
-    const newLang = i18n.language === 'pt' ? 'en' : 'pt';
-    i18n.changeLanguage(newLang);
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
   };
 
   return (
-    <motion.button
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      onClick={toggleLanguage}
-      className="flex items-center space-x-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300"
-    >
-      <img
-        src={i18n.language === 'pt' ? '/br-flag.svg' : '/us-flag.svg'}
-        alt={i18n.language === 'pt' ? 'Português' : 'English'}
-        className="w-6 h-6 rounded-full"
-      />
-      <span className="text-black font-medium">
-        {i18n.language === 'en' ? 'EN' : 'PT'}
-      </span>
-    </motion.button>
+    <div className="flex items-center space-x-2">
+      <button
+        onClick={() => changeLanguage('pt')}
+        className={`px-2 py-1 rounded-md text-sm font-medium transition-colors ${
+          i18n.language === 'pt'
+            ? 'bg-[#CE171F] text-white'
+            : 'text-gray-800 hover:text-[#CE171F]'
+        }`}
+      >
+        PT
+      </button>
+      <button
+        onClick={() => changeLanguage('en')}
+        className={`px-2 py-1 rounded-md text-sm font-medium transition-colors ${
+          i18n.language === 'en'
+            ? 'bg-[#CE171F] text-white'
+            : 'text-gray-800 hover:text-[#CE171F]'
+        }`}
+      >
+        EN
+      </button>
+    </div>
   );
 };
 

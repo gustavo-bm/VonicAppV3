@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { FaLinkedin, FaInstagram, FaWhatsapp, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import VonicLogo from '../../assets/VONIC.png';
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -13,7 +14,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Coluna 1 - Informações de Contato */}
           <div className="space-y-6">
-            <img src="/logo.png" alt="Vonic Systems" className="h-12" />
+            <img src={VonicLogo} alt="Vonic Systems" className="h-12" />
             <p className="text-white/80 max-w-sm">
               {t('footer_description')}
             </p>
@@ -52,6 +53,7 @@ const Footer = () => {
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
+                title="Vonic Systems Location"
               ></iframe>
             </div>
           </div>

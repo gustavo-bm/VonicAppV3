@@ -2,204 +2,236 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
 const resources = {
-  en: {
-    translation: {
-      // Navigation
-      home: 'HOME',
-      about: 'ABOUT US',
-      products: 'PRODUCTS',
-      partners: 'PARTNERS',
-      contact: 'CONTACT',
-
-      // Hero
-      years_market: 'Over 30 years in the market',
-      delivering: 'DELIVERING',
-      solutions: 'ADVANCED',
-      solutions_exclamation: 'SOLUTIONS!',
-      hero_description: 'Technology and innovation in hot runner systems, developed to maximize your production efficiency.',
-      know_products: 'Know Our Products',
-      learn_more: 'Learn More',
-
-      // About
-      our_proposal: 'Our Proposal',
-      about_description: 'Offering differentiated products and services with Technology, Values and Reliability.',
-      about_tech: 'We use exclusive logical technology that improves plastic production efficiency. Our technology comes from years of experience, listening to typical molding problems and constantly coming up with SOLUTIONS.',
-      about_help: 'We can help your company with new or existing projects to become more efficient than you are today!',
-
-      // Features
-      headquarters: 'Headquarters in Salto de Pirapora - SP',
-      new_manufacturer: 'New Hot Runner Systems Manufacturer and Supplier',
-      certified_products: 'Certified Products',
-      materials_certified: 'Manufactured with certified materials for each application',
-      commitment: 'Commitment',
-      flexibility: 'Flexibility, trust and commitment with each project',
-      smart_projects: 'Smart Projects',
-      standardized_projects: 'Smart and Standardized Products and Projects',
-
-      // Mastip Section
-      mastip_partner: 'We are MASTIP Partners',
-      strategic_partnership: 'STRATEGIC PARTNERSHIP',
-      partnership_description: 'Vonic Systems is proud to announce its strategic partnership with Mastip, a global leader in hot runner system solutions. This collaboration allows us to offer our customers high quality products and advanced technology, ensuring efficiency and precision in plastic injection processes.',
-      who_is_mastip: 'WHO IS MASTIP?',
-      mastip_description: 'Mastip is globally recognized for its innovation and excellence in hot runner systems. With decades of experience, the company stands out for developing advanced technological solutions that revolutionize the plastic injection industry.',
-      product_types: 'PRODUCT TYPES',
-      products_description: 'We offer a complete line of Mastip products, including hot runner systems, injection nozzles, temperature controllers and more. Each product is designed to maximize production efficiency and quality.',
-
-      // Contact
-      contact_us: 'Contact Us',
-      ready_to_serve: 'We are ready to serve your company',
-      name: 'Name',
-      your_name: 'Your name',
-      email: 'Email',
-      your_email: 'your@email.com',
-      message: 'Message',
-      your_message: 'Your message',
-      send_message: 'Send Message',
-      phone: 'Phone',
-      address: 'Address',
-
-      // Footer
-      social_media: 'Social Media',
-      rights_reserved: 'All rights reserved',
-
-      // Vonic Products
-      vonic_products: 'Vonic Products',
-      vonic_products_desc: 'Advanced hot runner system solutions, combining technology, efficiency and reliability for your production.',
-      
-      // Hot Runner Systems
-      hot_runner_systems: 'Hot Runner Systems',
-      hot_runner_systems_desc: 'Complete hot runner systems for various applications',
-      hot_runner_16: '16-way VONIC Hot Runner System',
-      hot_runner_8: '8-way Hot Runner System with Cold Runner',
-      
-      // Technical Parts
-      technical_parts: 'Technical Parts',
-      technical_parts_desc: 'Specialized solutions for various engineering applications',
-      electrical_parts: 'Electrical parts: PC, PBT',
-      telecom_parts: 'Telecommunication parts: PC / ABS',
-      engineering_parts: 'Engineering parts: PA6, PA66 + GF30, PPO, PPS, PPE / PS',
-      fiber_materials: 'Use with high fiber content materials',
-      
-      // Hot Nozzles
-      hot_nozzles: 'Hot Nozzles',
-      hot_nozzles_desc: 'Advanced nozzle technology for precise temperature control',
-      efficient_nozzles: 'Efficient nozzles with exclusive design, precise temperature control and minimal heat loss to the mold',
-      
-      // Manifold Systems
-      manifold_systems: 'Balanced Manifold Systems',
-      manifold_systems_desc: 'High-performance manifold systems for optimal flow',
-      balanced_manifold: 'Manifold with excellent flow balancing, with direct injection into the part and over the channel',
-      
-      // Hot Half
-      hot_half: 'Hot Half Assembly',
-      hot_half_desc: 'Complete system assembly solutions',
-      complete_systems: 'Assembly of complete systems',
-      machined_plates: 'Supply of machined plates',
-      
-      // Filters and Equipment
-      filters_equipment: 'Filters and Equipment',
-      filters_equipment_desc: 'Specialized equipment for production and machining',
-      specific_equipment: 'Specific equipment for production and machining',
-    }
-  },
   pt: {
     translation: {
       // Navegação
-      home: 'HOME',
-      about: 'SOBRE NÓS',
-      products: 'PRODUTOS',
-      partners: 'PARCEIROS',
-      contact: 'CONTATO',
-
+      home: 'Início',
+      about: 'Sobre',
+      products: 'Produtos',
+      contact: 'Contato',
+      vonic_products: 'Produtos Vonic',
+      
       // Hero
-      years_market: 'Há mais de 30 anos no mercado',
-      delivering: 'ENTREGANDO',
-      solutions: 'SOLUÇÕES',
-      solutions_exclamation: 'AVANÇADAS!',
-      hero_description: 'Tecnologia e inovação em sistemas de câmara quente, desenvolvidos para maximizar sua eficiência produtiva.',
-      know_products: 'Conheça Nossos Produtos',
-      learn_more: 'Saiba Mais',
+      years_market: '10+ Anos no Mercado',
+      delivering: 'Desenvolvendo',
+      solutions: 'soluções',
+      solutions_exclamation: 'em sistemas de câmara quente!',
+      hero_description: 'Tecnologia e inovação em sistemas de câmara quente para a indústria de injeção de plásticos.',
+      know_products: 'Conheça nossos produtos',
+      learn_more: 'Saiba mais',
 
-      // Sobre
-      our_proposal: 'Nossa Proposta',
-      about_description: 'Oferecer produtos e serviços diferenciados com Tecnologia, Valores e Confiabilidade.',
-      about_tech: 'Utilizamos tecnologia lógica exclusiva que permite melhorar a eficiência da produção de plástico. Nossa tecnologia vem de anos de experiência, ouvindo problemas típicos de moldagem e constantemente surgindo com SOLUÇÕES.',
-      about_help: 'Podemos ajudar sua empresa com projetos novos ou existentes a se tornar mais eficiente do que você é hoje!',
+      // Produtos
+      vonic_products_desc: 'Descubra nossa linha completa de produtos para sistemas de câmara quente',
+      new_products: 'Novos Produtos',
+      hot_nozzles: 'Bicos de Injeção',
+      manifolds: 'Manifolds',
+      hot_half: 'Hot Half',
+      controllers: 'Controladores',
+      filters: 'Filtros',
+
+      // Filtros
+      filter_title: 'Filtros',
+      filter_description: 'Soluções especializadas para filtragem em sistemas de injeção',
+      mesh_filters: 'Filtros de Malha',
+      mesh_filters_desc: 'Filtros de malha para diferentes aplicações e materiais',
+      filter_features: {
+        multiple_sizes: 'Disponível em múltiplos tamanhos',
+        high_pressure: 'Resistente a altas pressões',
+        easy_maintenance: 'Fácil manutenção',
+        material_compatibility: 'Compatível com diversos materiais',
+        efficient_filtration: 'Filtragem eficiente',
+        temperature_resistant: 'Resistente a altas temperaturas'
+      },
+
+      // Mastip
+      mastip_partner: 'Parceiro Oficial',
+      strategic_partnership: 'Parceria Estratégica',
+      partnership_description: 'Uma aliança que une experiência global e tecnologia de ponta',
+      who_is_mastip: 'Quem é a Mastip',
+      mastip_description: 'Líder global em tecnologia de câmara quente',
+      product_types: 'Tipos de Produtos',
+      products_description: 'Linha completa de soluções para injeção',
+
+      // Footer
+      footer_description: 'Desenvolvendo soluções em sistemas de câmara quente',
+      all_rights_reserved: 'Todos os direitos reservados',
+
+      // Parceiros
+      our_partners: 'Nossos Parceiros',
+      partners_subtitle: 'Empresas que confiam em nossa tecnologia',
+      testimonials: {
+        techcorp: 'A Vonic tem sido fundamental em nosso processo de produção.',
+        innovate: 'Inovação e qualidade são marcas registradas da Vonic.',
+        globalplast: 'Parceria que agrega valor ao nosso negócio.',
+        futuretech: 'Excelência em soluções técnicas.',
+        ecomold: 'Comprometimento com resultados.'
+      },
+
+      // Séries
+      vh_series: 'Série VH',
+      vh_series_desc: 'Bicos de válvula de alta performance para aplicações exigentes',
+      vt_series: 'Série VT',
+      vt_series_desc: 'Bicos térmicos para aplicações gerais com excelente distribuição térmica',
+      vp_series: 'Série VP',
+      vp_series_desc: 'Bicos especializados para peças técnicas e materiais de engenharia',
 
       // Características
-      headquarters: 'Sede em Salto de Pirapora - SP',
-      new_manufacturer: 'Novo Fabricante e Fornecedor de Sistemas de Câmara-Quente',
-      certified_products: 'Produtos Certificados',
-      materials_certified: 'Fabricados com Materiais certificados para cada aplicação',
-      commitment: 'Comprometimento',
-      flexibility: 'Flexibilidade, confiança e comprometimento com cada projeto',
-      smart_projects: 'Projetos Inteligentes',
-      standardized_projects: 'Produtos e Projetos Inteligentes - Padronizados',
+      characteristics: 'Características',
+      specifications: 'Especificações',
+      documentation: 'Documentação',
+      
+      // Documentos
+      technical_manual: 'Manual Técnico',
+      technical_manual_desc: 'Manual completo de instalação e operação',
+      technical_specs: 'Especificações Técnicas',
+      technical_specs_desc: 'Documento detalhado com todas as especificações técnicas',
+      maintenance_guide: 'Guia de Manutenção',
+      maintenance_guide_desc: 'Vídeo tutorial de manutenção preventiva',
+      download: 'Download',
 
-      // Seção Mastip
-      mastip_partner: 'Somos Parceiros MASTIP',
-      strategic_partnership: 'PARCERIA ESTRATÉGICA',
-      partnership_description: 'A Vonic Systems tem o orgulho de anunciar sua parceria estratégica com a Mastip, uma líder global em soluções de sistemas de câmara quente. Esta colaboração nos permite oferecer aos nossos clientes produtos de alta qualidade e tecnologia avançada, garantindo eficiência e precisão nos processos de injeção de plásticos.',
-      who_is_mastip: 'QUEM É A MASTIP?',
-      mastip_description: 'A Mastip é reconhecida globalmente por sua inovação e excelência em sistemas de câmara quente. Com décadas de experiência, a empresa se destaca pelo desenvolvimento de soluções tecnológicas avançadas que revolucionam a indústria de injeção de plásticos.',
-      product_types: 'TIPOS DE PRODUTOS',
-      products_description: 'Oferecemos uma linha completa de produtos Mastip, incluindo sistemas de câmara quente, bicos de injeção, controladores de temperatura e muito mais. Cada produto é projetado para maximizar a eficiência e qualidade da produção.',
+      // Especificações
+      nozzle_diameter: 'Diâmetro do Bico',
+      length: 'Comprimento',
+      power: 'Potência',
+      max_temp: 'Temperatura Máxima',
+      body_material: 'Material do Corpo',
+      tip_material: 'Material da Ponta',
+      max_pressure: 'Pressão Máxima de Injeção',
+      temp_control: 'Controle de Temperatura',
 
-      // Contato
-      contact_us: 'Entre em Contato',
-      ready_to_serve: 'Estamos prontos para atender sua empresa',
-      name: 'Nome',
-      your_name: 'Seu nome',
-      email: 'Email',
-      your_email: 'seu@email.com',
-      message: 'Mensagem',
-      your_message: 'Sua mensagem',
-      send_message: 'Enviar Mensagem',
-      phone: 'Telefone',
-      address: 'Endereço',
+      // Características VH
+      vh_feature_1: 'Sistema de vedação avançado que previne vazamentos e garante máxima eficiência',
+      vh_feature_2: 'Perfil térmico otimizado para melhor distribuição de temperatura',
+      vh_feature_3: 'Design modular para fácil manutenção e troca de componentes',
+      vh_feature_4: 'Compatível com uma ampla gama de materiais e aplicações',
 
-      // Rodapé
-      social_media: 'Redes Sociais',
-      rights_reserved: 'Todos os direitos reservados',
+      // Características VT
+      vt_feature_1: 'Perfil térmico otimizado para melhor distribuição de temperatura',
+      vt_feature_2: 'Múltiplas opções de pontas para diferentes aplicações',
+      vt_feature_3: 'Design robusto para maior durabilidade',
+      vt_feature_4: 'Ideal para processamento de materiais comuns',
 
-      // Produtos Vonic
-      vonic_products: 'Produtos Vonic',
-      vonic_products_desc: 'Soluções avançadas em sistemas de câmara quente, combinando tecnologia, eficiência e confiabilidade para sua produção.',
+      // Características VP
+      vp_feature_1: 'Ideal para processamento de materiais técnicos e de engenharia',
+      vp_feature_2: 'Alta resistência ao desgaste e à corrosão',
+      vp_feature_3: 'Perfil térmico otimizado para materiais de alta temperatura',
+      vp_feature_4: 'Compatível com materiais reforçados com fibra de vidro'
+    }
+  },
+  en: {
+    translation: {
+      // Navigation
+      home: 'Home',
+      about: 'About',
+      products: 'Products',
+      contact: 'Contact',
+      vonic_products: 'Vonic Products',
       
-      // Sistemas de Câmara-Quente
-      hot_runner_systems: 'Sistemas de Câmara-Quente',
-      hot_runner_systems_desc: 'Sistemas completos de câmara quente para diversas aplicações',
-      hot_runner_16: 'Sistema Câmara Quente VONIC 16 vias',
-      hot_runner_8: 'Sistema Câmara Quente com 8 vias e Canal Frio',
+      // Hero
+      years_market: '10+ Years in the Market',
+      delivering: 'Delivering',
+      solutions: 'solutions',
+      solutions_exclamation: 'in hot runner systems!',
+      hero_description: 'Technology and innovation in hot runner systems for the plastic injection industry.',
+      know_products: 'Discover our products',
+      learn_more: 'Learn more',
+
+      // Products
+      vonic_products_desc: 'Discover our complete line of hot runner system products',
+      new_products: 'New Products',
+      hot_nozzles: 'Hot Nozzles',
+      manifolds: 'Manifolds',
+      hot_half: 'Hot Half',
+      controllers: 'Controllers',
+      filters: 'Filters',
+
+      // Filters
+      filter_title: 'Filters',
+      filter_description: 'Specialized solutions for injection system filtration',
+      mesh_filters: 'Mesh Filters',
+      mesh_filters_desc: 'Mesh filters for different applications and materials',
+      filter_features: {
+        multiple_sizes: 'Available in multiple sizes',
+        high_pressure: 'High pressure resistant',
+        easy_maintenance: 'Easy maintenance',
+        material_compatibility: 'Compatible with various materials',
+        efficient_filtration: 'Efficient filtration',
+        temperature_resistant: 'High temperature resistant'
+      },
+
+      // Mastip
+      mastip_partner: 'Official Partner',
+      strategic_partnership: 'Strategic Partnership',
+      partnership_description: 'An alliance that combines global experience and cutting-edge technology',
+      who_is_mastip: 'Who is Mastip',
+      mastip_description: 'Global leader in hot runner technology',
+      product_types: 'Product Types',
+      products_description: 'Complete line of injection solutions',
+
+      // Footer
+      footer_description: 'Developing solutions in hot runner systems',
+      all_rights_reserved: 'All rights reserved',
+
+      // Parceiros
+      our_partners: 'Our Partners',
+      partners_subtitle: 'Companies that trust our technology',
+      testimonials: {
+        techcorp: 'Vonic has been fundamental in our production process.',
+        innovate: 'Innovation and quality are Vonic\'s trademarks.',
+        globalplast: 'Partnership that adds value to our business.',
+        futuretech: 'Excellence in technical solutions.',
+        ecomold: 'Commitment to results.'
+      },
+
+      // Series
+      vh_series: 'VH Series',
+      vh_series_desc: 'High-performance valve gates for demanding applications',
+      vt_series: 'VT Series',
+      vt_series_desc: 'Thermal nozzles for general applications with excellent thermal distribution',
+      vp_series: 'VP Series',
+      vp_series_desc: 'Specialized nozzles for technical parts and engineering materials',
+
+      // Characteristics
+      characteristics: 'Characteristics',
+      specifications: 'Specifications',
+      documentation: 'Documentation',
       
-      // Peças Técnicas
-      technical_parts: 'Peças Técnicas',
-      technical_parts_desc: 'Soluções especializadas para diversas aplicações de engenharia',
-      electrical_parts: 'Peças elétricas: PC, PBT',
-      telecom_parts: 'Peças de telecomunicações: PC / ABS',
-      engineering_parts: 'Peças de engenharia: PA6, PA66 + GF30, PPO, PPS, PPE / PS',
-      fiber_materials: 'Uso em materiais com alto teor de fibra',
-      
-      // Bicos Quentes
-      hot_nozzles: 'Bicos Quentes',
-      hot_nozzles_desc: 'Tecnologia avançada de bicos para controle preciso de temperatura',
-      efficient_nozzles: 'Bicos eficientes com design exclusivo, controle preciso de temperatura e mínima perda de calor para o molde',
-      
-      // Sistemas de Manifold
-      manifold_systems: 'Sistemas de Manifold Balanceados',
-      manifold_systems_desc: 'Sistemas de manifold de alto desempenho para fluxo ideal',
-      balanced_manifold: 'Manifold com excelente balanceamento de fluxo, com injeção direta na peça e sobre o canal',
-      
-      // Hot Half
-      hot_half: 'Conjunto Hot Half',
-      hot_half_desc: 'Soluções completas de montagem de sistemas',
-      complete_systems: 'Montagem de sistemas completos',
-      machined_plates: 'Fornecimento de placas usinadas',
-      
-      // Filtros e Equipamentos
-      filters_equipment: 'Filtros e Equipamentos',
-      filters_equipment_desc: 'Equipamentos especializados para produção e usinagem',
-      specific_equipment: 'Equipamentos específicos para a produção e a usinagem',
+      // Documents
+      technical_manual: 'Technical Manual',
+      technical_manual_desc: 'Complete installation and operation manual',
+      technical_specs: 'Technical Specifications',
+      technical_specs_desc: 'Detailed document with all technical specifications',
+      maintenance_guide: 'Maintenance Guide',
+      maintenance_guide_desc: 'Preventive maintenance video tutorial',
+      download: 'Download',
+
+      // Specifications
+      nozzle_diameter: 'Nozzle Diameter',
+      length: 'Length',
+      power: 'Power',
+      max_temp: 'Maximum Temperature',
+      body_material: 'Body Material',
+      tip_material: 'Tip Material',
+      max_pressure: 'Maximum Injection Pressure',
+      temp_control: 'Temperature Control',
+
+      // VH Features
+      vh_feature_1: 'Advanced sealing system that prevents leaks and ensures maximum efficiency',
+      vh_feature_2: 'Optimized thermal profile for better temperature distribution',
+      vh_feature_3: 'Modular design for easy maintenance and component replacement',
+      vh_feature_4: 'Compatible with a wide range of materials and applications',
+
+      // VT Features
+      vt_feature_1: 'Optimized thermal profile for better temperature distribution',
+      vt_feature_2: 'Multiple tip options for different applications',
+      vt_feature_3: 'Robust design for greater durability',
+      vt_feature_4: 'Ideal for processing common materials',
+
+      // VP Features
+      vp_feature_1: 'Ideal for processing technical and engineering materials',
+      vp_feature_2: 'High wear and corrosion resistance',
+      vp_feature_3: 'Optimized thermal profile for high-temperature materials',
+      vp_feature_4: 'Compatible with glass fiber reinforced materials'
     }
   }
 };
