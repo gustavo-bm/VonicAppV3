@@ -1,0 +1,378 @@
+{
+  "navigation": {
+    "home": "Início",
+    "products": "Produtos",
+    "about": "Sobre",
+    "contact": "Contato",
+    "vonic_products": "Produtos Vonic",
+    "mastip_products": "Produtos Mastip"
+  },
+
+  "buttons": {
+    "view_more": "Ver mais",
+    "view_details": "Ver detalhes",
+    "view_specs": "Ver especificações",
+    "learn_more": "Saiba mais",
+    "contact_us": "Entre em contato"
+  },
+
+  "mastip": {
+    "products_page": {
+      "title": "Produtos Mastip",
+      "description": "Soluções avançadas de câmara quente de um líder global em tecnologia de injeção",
+      "categories": {
+        "new_releases": {
+          "title": "Novos Lançamentos na Mastip",
+          "description": "Fique por dentro das últimas soluções lançadas na Mastip"
+        },
+        "hot_halves": {
+          "title": "Hot Halves",
+          "description": "Sistemas completos de câmara quente"
+        },
+        "manifolds": {
+          "title": "Sistemas de Manifold",
+          "description": "Sistemas padrão e especiais, sistemas de manifold de alta cavidade e layouts personalizados"
+        },
+        "valve_gates": {
+          "title": "Tecnologia Valve Gate",
+          "description": "Tecnologia de válvula única e múltipla"
+        },
+        "nozzles": {
+          "title": "Bicos",
+          "description": "Linhas de bicos MX, BX, SX e FlowLoc"
+        },
+        "temperature_controllers": {
+          "title": "Controladores de Temperatura",
+          "description": "Série Meticom de controladores de temperatura de alta qualidade e confiabilidade"
+        },
+        "sequential_controllers": {
+          "title": "Controladores Sequenciais",
+          "description": "Controladores sequenciais para sistemas valve gate"
+        },
+        "cae": {
+          "title": "Serviços CAE",
+          "description": "Engenharia assistida por computador para resultados de desempenho ideais"
+        }
+      }
+    },
+
+    "new_releases": {
+      "title": "Novos Lançamentos Mastip",
+      "description": "Fique por dentro das últimas inovações em tecnologia de câmara quente",
+      "products": {
+        "aquilo": {
+          "title": "Aquilo™ Liquid Silicone Rubber",
+          "description": "Decks frios LSR (Liquid Silicone Rubber) customizados com tecnologia comprovada de válvula gate"
+        },
+        "gate_cooling": {
+          "title": "Gate Cooling Inserts",
+          "description": "Melhore o desempenho do gate da câmara quente através do resfriamento otimizado do gate"
+        },
+        "yv_tipless": {
+          "title": "YV Tipless Nut",
+          "description": "Simplifique seus requisitos de moldagem valve gate com as porcas YV Tipless"
+        }
+      }
+    },
+
+    "hot_halves": {
+      "title": "Sistemas Hot Half",
+      "description": "Sistemas completos de câmara quente para todas as aplicações",
+      "systems": {
+        "standard": {
+          "title": "Sistemas Hot Half Padrão",
+          "description": "Sistemas completos de câmara quente projetados para eficiência e confiabilidade",
+          "features": [
+            "Design robusto e confiável",
+            "Manutenção simplificada",
+            "Excelente custo-benefício",
+            "Configurações flexíveis",
+            "Controle preciso de temperatura",
+            "Suporte técnico especializado"
+          ]
+        },
+        "specialty": {
+          "title": "Sistemas Hot Half Especiais",
+          "description": "Soluções personalizadas para aplicações específicas e desafiadoras",
+          "features": [
+            "Projetos customizados",
+            "Alta performance",
+            "Soluções inovadoras",
+            "Suporte técnico especializado",
+            "Materiais de alta qualidade",
+            "Tecnologia avançada"
+          ]
+        }
+      }
+    },
+
+    "manifolds": {
+      "title": "Sistemas de Manifold",
+      "description": "Sistemas padrão e especiais, sistemas de manifold de alta cavidade e layouts personalizados",
+      "systems": {
+        "standard": {
+          "title": "Sistemas de Manifold Padrão",
+          "description": "Sistemas de manifold para atender todos os seus requisitos de moldagem",
+          "features": [
+            "Design robusto e confiável",
+            "Configurações flexíveis",
+            "Manutenção simplificada",
+            "Excelente custo-benefício",
+            "Balanceamento térmico otimizado",
+            "Ampla gama de aplicações"
+          ]
+        },
+        "high_cavity": {
+          "title": "Sistemas de Manifold de Alta Cavidade",
+          "description": "Sistemas de manifold single ou multi-nível para aplicações de alta produção",
+          "features": [
+            "Design otimizado para alta produção",
+            "Balanceamento térmico preciso",
+            "Controle avançado de temperatura",
+            "Ideal para moldes de alta cavidade",
+            "Alta eficiência produtiva",
+            "Monitoramento em tempo real"
+          ]
+        },
+        "multi_material": {
+          "title": "Sistemas Multi-material",
+          "description": "De sistemas simples a tecnicamente avançados para múltiplos materiais",
+          "features": [
+            "Compatível com diversos materiais",
+            "Controle independente de temperatura",
+            "Design personalizado",
+            "Soluções avançadas de injeção",
+            "Troca rápida de material",
+            "Flexibilidade de processo"
+          ]
+        }
+      }
+    },
+
+    "valve_gates": {
+      "title": "Tecnologia Valve Gate",
+      "description": "Tecnologia de válvula única e múltipla para controle preciso de injeção",
+      "systems": {
+        "verishot": {
+          "title": "VeriShot™",
+          "description": "Sistema de válvula gate pneumático compacto e confiável",
+          "features": [
+            "Design compacto e robusto",
+            "Fácil instalação e manutenção",
+            "Excelente custo-benefício",
+            "Ideal para aplicações standard",
+            "Controle preciso de fechamento",
+            "Alta durabilidade"
+          ]
+        },
+        "mvg25": {
+          "title": "MVG25",
+          "description": "Sistema de válvula gate pneumático para aplicações pequenas",
+          "features": [
+            "Ideal para peças pequenas",
+            "Alta precisão de controle",
+            "Design compacto",
+            "Excelente performance",
+            "Manutenção simplificada",
+            "Ótimo custo-benefício"
+          ]
+        },
+        "mvg40": {
+          "title": "MVG40",
+          "description": "Sistema de válvula gate pneumático para aplicações médias",
+          "features": [
+            "Ideal para peças médias",
+            "Controle preciso do gate",
+            "Alta durabilidade",
+            "Manutenção simplificada",
+            "Versatilidade de aplicação",
+            "Excelente vedação"
+          ]
+        },
+        "mvg55": {
+          "title": "MVG55",
+          "description": "Sistema de válvula gate pneumático para aplicações grandes",
+          "features": [
+            "Ideal para peças grandes",
+            "Alta capacidade de processamento",
+            "Robusto e confiável",
+            "Excelente vedação",
+            "Controle preciso",
+            "Longa vida útil"
+          ]
+        },
+        "nexus": {
+          "title": "Nexus™",
+          "description": "Sistema de válvula gate elétrico de alta performance",
+          "features": [
+            "Controle preciso do movimento da válvula",
+            "Monitoramento em tempo real",
+            "Alta velocidade de atuação",
+            "Ideal para aplicações críticas",
+            "Interface intuitiva",
+            "Tecnologia avançada"
+          ]
+        },
+        "cylix": {
+          "title": "Cylix™",
+          "description": "Sistema de válvula gate híbrido para máxima flexibilidade",
+          "features": [
+            "Combina tecnologias pneumática e elétrica",
+            "Alta flexibilidade de aplicação",
+            "Controle avançado",
+            "Excelente custo-benefício",
+            "Fácil manutenção",
+            "Performance superior"
+          ]
+        }
+      }
+    },
+
+    "nozzles": {
+      "title": "Bicos",
+      "description": "Soluções avançadas em bicos de injeção para todas as aplicações",
+      "series": {
+        "mx": {
+          "title": "Série MX",
+          "description": "Bicos de alta performance para aplicações exigentes",
+          "features": [
+            "Excelente consistência térmica",
+            "Baixa temperatura de moldagem",
+            "Ampla gama de materiais",
+            "Design robusto",
+            "Ideal para multi-cavidade",
+            "Alta produtividade"
+          ]
+        },
+        "bx": {
+          "title": "Série BX",
+          "description": "Bicos balanceados para moldagem de precisão",
+          "features": [
+            "Controle de balanceamento perfeito",
+            "Mínima perda de pressão",
+            "Excelente estabilidade térmica",
+            "Manutenção simplificada",
+            "Alta precisão",
+            "Qualidade superior"
+          ]
+        },
+        "sx": {
+          "title": "Série SX",
+          "description": "Bicos padrão para aplicações gerais",
+          "features": [
+            "Solução custo-benefício",
+            "Performance confiável",
+            "Fácil manutenção",
+            "Versatilidade",
+            "Durabilidade",
+            "Ampla aplicação"
+          ]
+        },
+        "flowloc": {
+          "title": "Tecnologia FlowLoc™",
+          "description": "Controle avançado de fluxo para resultados superiores",
+          "features": [
+            "Controle preciso de fluxo",
+            "Redução do tempo de ciclo",
+            "Qualidade superior das peças",
+            "Tecnologia inovadora",
+            "Alta eficiência",
+            "Processo otimizado"
+          ]
+        },
+        "multigate": {
+          "title": "Multi Gate",
+          "description": "Soluções para múltiplos pontos de injeção",
+          "features": [
+            "Design compacto",
+            "Alto volume de produção",
+            "Controle independente",
+            "Flexibilidade de aplicação",
+            "Balanceamento preciso",
+            "Eficiência energética"
+          ]
+        }
+      }
+    },
+
+    "temperature_controllers": {
+      "title": "Controladores de Temperatura Mastip",
+      "description": "Controladores de temperatura de alta precisão para sistemas de câmara quente",
+      "systems": {
+        "standard": {
+          "title": "Controlador de Temperatura Meticom",
+          "description": "Controlador de temperatura avançado para sistemas de câmara quente",
+          "features": [
+            "Interface intuitiva e fácil de usar",
+            "Controle preciso de temperatura",
+            "Monitoramento em tempo real",
+            "Diagnóstico avançado de falhas",
+            "Suporte para múltiplas zonas"
+          ],
+          "specs": {
+            "Alimentação": "AC220V (50/60 Hz)",
+            "Display": "LCD de alta resolução",
+            "Zonas": "6 a 48 zonas",
+            "Precisão": "±0.1°C",
+            "Comunicação": "RS485/USB"
+          }
+        }
+      }
+    },
+
+    "sequential_controllers": {
+      "title": "Controladores Sequenciais Mastip",
+      "description": "Controladores sequenciais para sistemas valve gate",
+      "systems": {
+        "sc2": {
+          "title": "MetiCom SC2",
+          "description": "Controlador sequencial compacto para até 2 válvulas",
+          "features": [
+            "Controle preciso de tempo",
+            "Fácil configuração e operação",
+            "Display LED intuitivo",
+            "Modo manual e automático",
+            "Design compacto"
+          ],
+          "specs": {
+            "Alimentação": "AC220V (50/60 Hz)",
+            "Canais": "2 canais",
+            "Precisão": "0.01s",
+            "Temperatura Operacional": "0-50°C"
+          }
+        },
+        "sc8": {
+          "title": "MetiCom SC8",
+          "description": "Controlador sequencial avançado para até 8 válvulas",
+          "features": [
+            "8 canais independentes",
+            "Interface touch screen",
+            "Programação avançada de sequências",
+            "Override manual disponível",
+            "Memória para múltiplos programas"
+          ],
+          "specs": {
+            "Alimentação": "Monofásico AC 220V (50/60 Hz)",
+            "Canais": "8 canais",
+            "Precisão": "0.01s",
+            "Display": "Touch screen colorido",
+            "Memória": "100 programas"
+          }
+        }
+      }
+    },
+
+    "cae": {
+      "title": "Serviços CAE",
+      "description": "Engenharia assistida por computador para resultados de desempenho ideais",
+      "features": [
+        "Análise de fluxo avançada",
+        "Otimização de processo",
+        "Simulação de resfriamento",
+        "Previsão de qualidade",
+        "Redução de custos",
+        "Suporte especializado"
+      ]
+    }
+  }
+} 

@@ -25,7 +25,7 @@ const Hero = () => {
               transition={{ delay: 0.2 }}
               className="text-xl font-light bg-white/5 backdrop-blur-sm inline-block px-6 py-2 rounded-full"
             >
-              {t('years_market')}
+              {t('hero.years_market')}
             </motion.p>
 
             <motion.h1
@@ -34,9 +34,9 @@ const Hero = () => {
               transition={{ delay: 0.4 }}
               className="text-5xl lg:text-7xl font-bold leading-tight"
             >
-              {t('delivering')} <br />
-              <span className="text-[#CE171F] drop-shadow-glow">{t('solutions')}</span><br />
-              <span className="text-[#CE171F]">{t('solutions_exclamation')}</span>
+              {t('hero.delivering')} <br />
+              <span className="text-[#CE171F] drop-shadow-glow">{t('hero.solutions')}</span><br />
+              <span className="text-[#CE171F]">{t('hero.solutions_exclamation')}</span>
             </motion.h1>
 
             <motion.p
@@ -45,7 +45,7 @@ const Hero = () => {
               transition={{ delay: 0.6 }}
               className="text-lg text-white/80 max-w-xl"
             >
-              {t('hero_description')}
+              {t('hero.hero_description')}
             </motion.p>
 
             <motion.div
@@ -60,7 +60,7 @@ const Hero = () => {
                 className="relative bg-gradient-vonic text-white px-8 py-3 rounded-full font-medium shadow-lg overflow-hidden group"
               >
                 <span className="absolute inset-0 bg-gradient-vonic-hover opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <span className="relative">{t('know_products')}</span>
+                <span className="relative">{t('buttons.know_products')}</span>
               </motion.a>
               <motion.a
                 href="#sobre"
@@ -72,7 +72,7 @@ const Hero = () => {
                 className="relative bg-white/10 text-white px-8 py-3 rounded-full font-medium backdrop-blur-sm overflow-hidden group"
               >
                 <span className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <span className="relative">{t('learn_more')}</span>
+                <span className="relative">{t('buttons.learn_more')}</span>
               </motion.a>
             </motion.div>
           </motion.div>

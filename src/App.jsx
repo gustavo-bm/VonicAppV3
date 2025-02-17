@@ -34,6 +34,14 @@ import VTSeries from './pages/products/series/VTSeries';
 // import SXSeries from './pages/products/series/mastip/SXSeries';
 // import FlowLocSeries from './pages/products/series/mastip/FlowLocSeries';
 
+// Produtos Mastip
+import MastipNewReleases from './pages/products/mastip/NewReleases';
+import HotHalfSystems from './pages/products/mastip/HotHalfSystems';
+import ManifoldSystems from './pages/products/mastip/ManifoldSystems';
+import NozzleSystems from './pages/products/mastip/NozzleSystems';
+import ValveGateSystems from './pages/products/mastip/ValveGateSystems';
+import SequentialControllers from './pages/products/mastip/SequentialControllers';
+
 function App() {
   return (
     <Router>
@@ -62,12 +70,13 @@ function App() {
             <Route path="/produtos/vonic/bicos/vt" element={<VTSeries />} />
 
             {/* Mastip Products Routes */}
-            <Route path="/produtos/mastip/hot-halves" element={<MastipProducts category="hot-halves" />} />
-            <Route path="/produtos/mastip/manifolds" element={<MastipProducts category="manifolds" />} />
-            <Route path="/produtos/mastip/valve-gates" element={<MastipProducts category="valve-gates" />} />
-            <Route path="/produtos/mastip/nozzles" element={<MastipProducts category="nozzles" />} />
+            <Route path="/produtos/mastip/novidades" element={<MastipNewReleases />} />
+            <Route path="/produtos/mastip/hot-halves" element={<HotHalfSystems />} />
+            <Route path="/produtos/mastip/manifolds" element={<ManifoldSystems />} />
+            <Route path="/produtos/mastip/nozzles" element={<NozzleSystems />} />
+            <Route path="/produtos/mastip/valve-gates" element={<ValveGateSystems />} />
+            <Route path="/produtos/mastip/sequential" element={<SequentialControllers />} />
             <Route path="/produtos/mastip/controllers" element={<MastipProducts category="controllers" />} />
-            <Route path="/produtos/mastip/sequential" element={<MastipProducts category="sequential" />} />
             <Route path="/produtos/mastip/cae" element={<MastipProducts category="cae" />} />
 
             {/* Mastip Series Routes */}

@@ -4,6 +4,16 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
 
+// Importando as imagens
+import HotValves from '../assets/mastip/hot_halves/hot_half.png';
+import Manifold from '../assets/mastip/manifolds/standard.png';
+import ValveGate from '../assets/mastip/valve_gate/valve_gate.png';
+import Nozzles from '../assets/mastip/nozzles/mx.png';
+import Controllers from '../assets/mastip/controllers.png';
+import Sequential from '../assets/mastip/sequential_controllers.png';
+import CAE from '../assets/mastip/cae.png';
+import Aquilo from '../assets/mastip/new_releases/aquilo.png';
+
 const ProductCard = ({ title, description, image, link, isNew }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
@@ -14,7 +24,7 @@ const ProductCard = ({ title, description, image, link, isNew }) => (
     <div className="relative">
       {isNew && (
         <div className="absolute top-4 left-4 bg-pink-500 text-white px-4 py-1 rounded-full text-sm font-bold">
-          New
+          Novo
         </div>
       )}
       <div className="relative h-48 overflow-hidden">
@@ -45,51 +55,58 @@ const MastipProducts = () => {
   
   const products = [
     {
-      title: "Hot Halves",
-      description: "Complete Turnkey Hot Runner Systems",
-      image: "/products/mastip/hot-halves.jpg",
+      title: t("mastip.new_releases.title"),
+      description: t("mastip.new_releases.description"),
+      image: Aquilo,
+      link: "/produtos/mastip/novidades",
+      isNew: true
+    },
+    {
+      title: t("mastip.hot_halves.title"),
+      description: t("mastip.hot_halves.description"),
+      image: HotValves,
       link: "/produtos/mastip/hot-halves",
       isNew: false
     },
     {
-      title: "Manifold Systems",
-      description: "Standard & Special Systems, High Cavity & Custom Layout Solutions",
-      image: "/products/mastip/manifolds.jpg",
+      title: t("mastip.manifolds.title"),
+      description: t("mastip.manifolds.description"),
+      image: Manifold,
       link: "/produtos/mastip/manifolds",
       isNew: false
     },
     {
-      title: "Valve Gate Technology",
-      description: "Single & Multi Valve Gate Technology",
-      image: "/products/mastip/valve-gates.jpg",
+      title: t("mastip.valve_gate.title"),
+      description: t("mastip.valve_gate.description"),
+      image: ValveGate,
       link: "/produtos/mastip/valve-gates",
       isNew: false
     },
     {
-      title: "Nozzles",
-      description: "MX, BX, SX and FlowLoc Nozzle Ranges",
-      image: "/products/mastip/nozzles.jpg",
+      title: t("mastip.nozzles.title"),
+      description: t("mastip.nozzles.description"),
+      image: Nozzles,
       link: "/produtos/mastip/nozzles",
       isNew: false
     },
     {
-      title: "Temperature Controllers",
-      description: "Meticom series of high quality and reliable temperature controllers",
-      image: "/products/mastip/controllers.jpg",
+      title: t("mastip.controllers.title"),
+      description: t("mastip.controllers.description"),
+      image: Controllers,
       link: "/produtos/mastip/controllers",
       isNew: false
     },
     {
-      title: "Sequential Controllers",
-      description: "Valve Gate Timing Devices",
-      image: "/products/mastip/sequential.jpg",
+      title: t("mastip.sequential.title"),
+      description: t("mastip.sequential.description"),
+      image: Sequential,
       link: "/produtos/mastip/sequential",
       isNew: false
     },
     {
-      title: "CAE Services",
-      description: "Computer Aided Engineering for optimal performance outcomes",
-      image: "/products/mastip/cae.jpg",
+      title: t("mastip.cae.title"),
+      description: t("mastip.cae.description"),
+      image: CAE,
       link: "/produtos/mastip/cae",
       isNew: false
     }
@@ -104,9 +121,9 @@ const MastipProducts = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl font-bold mb-6 text-white">Mastip Products</h1>
+          <h1 className="text-5xl font-bold mb-6 text-white">{t("mastip.title")}</h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto">
-            Advanced hot runner solutions from a global leader in injection molding technology
+            {t("mastip.description")}
           </p>
         </motion.div>
 
@@ -120,4 +137,4 @@ const MastipProducts = () => {
   );
 };
 
-export default MastipProducts; 
+export default MastipProducts;
