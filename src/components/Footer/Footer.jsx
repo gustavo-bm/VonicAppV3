@@ -1,110 +1,87 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { FaFacebook, FaInstagram, FaLinkedin, FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import VonicLogoWhite from '../../assets/VONIC.png';
-
-const SocialButton = ({ icon: Icon, href }) => (
-  <a
-    href={href}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
-  >
-    <Icon className="text-white text-xl" />
-  </a>
-);
+import { FaLinkedin, FaInstagram, FaWhatsapp, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import VonicLogo from '../../assets/VONIC.png';
 
 const Footer = () => {
   const { t } = useTranslation();
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-black text-white">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
           <div>
-            <img src={VonicLogoWhite} alt="Vonic" className="h-12 mb-4" />
+            <img src={VonicLogo} alt="Vonic Systems" className="h-12 mb-4" />
             <div className="flex items-center space-x-2 text-white/80 mb-2">
-              <FaMapMarkerAlt />
+              <FaMapMarkerAlt className="text-[#CE171F]" />
               <span>{t('footer.address')}</span>
             </div>
             <div className="flex items-center space-x-2 text-white/80 mb-2">
-              <FaPhone />
-              <span>{t('footer.phone')}</span>
-            </div>
-            <div className="flex items-center space-x-2 text-white/80">
-              <FaEnvelope />
+              <FaEnvelope className="text-[#CE171F]" />
               <span>{t('footer.email')}</span>
             </div>
+            <div className="flex items-center space-x-2 text-white/80">
+              <FaWhatsapp className="text-[#25D366]" />
+              <span>{t('footer.phone')}</span>
+            </div>
           </div>
-
-          <div>
-            <h3 className="text-lg font-semibold mb-4">{t('footer.company')}</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/sobre" className="text-white/80 hover:text-white transition-colors">
-                  {t('navigation.about')}
-                </Link>
-              </li>
-              <li>
-                <Link to="/produtos" className="text-white/80 hover:text-white transition-colors">
-                  {t('navigation.products')}
-                </Link>
-              </li>
-              <li>
-                <Link to="/parceiros" className="text-white/80 hover:text-white transition-colors">
-                  {t('navigation.partners')}
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold mb-4">{t('footer.support')}</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/contato" className="text-white/80 hover:text-white transition-colors">
-                  {t('navigation.contact')}
-                </Link>
-              </li>
-              <li>
-                <a href="tel:+5515998024314" className="text-white/80 hover:text-white transition-colors">
-                  {t('footer.phone')}
-                </a>
-              </li>
-              <li>
-                <a href="mailto:marcos.moraes@vonicsystems.com.br" className="text-white/80 hover:text-white transition-colors">
-                  {t('footer.email')}
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold mb-4">{t('footer.contact')}</h3>
-            <div className="flex space-x-4 mb-6">
-              <SocialButton
-                icon={FaFacebook}
-                href="https://facebook.com/vonicsystems"
-              />
-              <SocialButton
-                icon={FaInstagram}
-                href="https://instagram.com/vonicsystems"
-              />
-              <SocialButton
-                icon={FaLinkedin}
-                href="https://linkedin.com/company/vonic-systems"
-              />
+          
+          <div className="lg:col-span-2">
+            <div className="rounded-2xl overflow-hidden h-[300px] shadow-lg">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.0167757024584!2d-47.5743493!3d-23.6472775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c58abf85b6ff59%3A0x7e47c35937b9844e!2sVonic%20Systems!5e0!3m2!1spt-BR!2sbr!4v1647887421784!5m2!1spt-BR!2sbr"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Vonic Systems Location"
+              ></iframe>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-8 text-center">
-          <p className="text-white/60">{t('footer.rights')}</p>
+        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-center">
+          <p className="text-white/60">© {currentYear} Vonic Systems. {t('footer.rights')}</p>
+          <div className="flex space-x-4 mt-4 md:mt-0">
+            <motion.a
+              href="https://www.linkedin.com/company/vonic-systems"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center text-white/80 hover:text-white hover:bg-white/10 transition-colors"
+            >
+              <FaLinkedin className="text-xl" />
+            </motion.a>
+            <motion.a
+              href="https://www.instagram.com/vonicsystems"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center text-white/80 hover:text-white hover:bg-white/10 transition-colors"
+            >
+              <FaInstagram className="text-xl" />
+            </motion.a>
+            <motion.a
+              href="https://wa.me/5515998024314"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center text-white/80 hover:text-white hover:bg-white/10 transition-colors"
+            >
+              <FaWhatsapp className="text-xl" />
+            </motion.a>
+          </div>
         </div>
       </div>
     </footer>
   );
 };
 
-export default Footer; 
+export default Footer;

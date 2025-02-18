@@ -229,23 +229,62 @@
     },
     "about": {
       "title": "Sobre Nós",
-      "description": "A Vonic Systems é uma empresa especializada em sistemas de câmara quente, oferecendo soluções completas para a indústria de injeção plástica."
+      "description": "A Vonic Systems é uma empresa especializada em sistemas de câmara quente, oferecendo soluções completas para a indústria de injeção plástica.",
+      "text": "Utilizamos tecnologia lógica exclusiva que permite melhorar a eficiência da produção de plástico. Nossa tecnologia vem de anos de experiência, ouvindo problemas típicos de moldagem e constantemente surgindo com SOLUÇÕES. Podemos ajudar sua empresa com projetos novos ou existentes a se tornar mais eficiente do que você é hoje!",
+      "features": {
+        "headquarters": {
+          "title": "Sede em Salto de Pirapora - SP",
+          "description": "Novo Fabricante e Fornecedor de Sistemas de Câmara-Quente"
+        },
+        "certified": {
+          "title": "Produtos Certificados",
+          "description": "Fabricados com Materiais certificados para cada aplicação"
+        },
+        "commitment": {
+          "title": "Comprometimento",
+          "description": "Flexibilidade, confiança e comprometimento com cada projeto"
+        },
+        "smart": {
+          "title": "Projetos Inteligentes",
+          "description": "Produtos e Projetos Inteligentes - Padronizados"
+        }
+      }
     },
     "contact": {
       "title": "Entre em Contato",
-      "ready_to_serve": "Estamos prontos para atender você",
+      "subtitle": "Estamos prontos para atender você",
       "info": {
-        "email": "E-mail",
-        "whatsapp": "WhatsApp",
-        "address": "Endereço"
+        "email": {
+          "title": "E-mail",
+          "content": "marcos.moraes@vonicsystems.com.br",
+          "action": "Enviar e-mail"
+        },
+        "whatsapp": {
+          "title": "WhatsApp",
+          "content": "+55 15 99802-4314",
+          "action": "Iniciar conversa"
+        },
+        "address": {
+          "title": "Endereço",
+          "content": "Rua Joaquim Machado, 999 - Salto de Pirapora, SP",
+          "action": "Ver no mapa"
+        }
       },
       "form": {
-        "name": "Nome",
-        "your_name": "Digite seu nome",
-        "email": "E-mail",
-        "your_email": "Digite seu e-mail",
-        "message": "Mensagem",
-        "your_message": "Digite sua mensagem"
+        "title": "Envie uma mensagem",
+        "name": {
+          "label": "Nome",
+          "placeholder": "Digite seu nome"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "Digite seu e-mail"
+        },
+        "message": {
+          "label": "Mensagem",
+          "placeholder": "Digite sua mensagem"
+        },
+        "submit": "Enviar mensagem"
       }
     },
     "mastip": {

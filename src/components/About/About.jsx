@@ -3,31 +3,31 @@ import { motion } from 'framer-motion';
 import { FaIndustry, FaCertificate, FaHandshake, FaBullseye } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 
-const features = [
-  {
-    icon: <FaIndustry className="text-4xl text-vonic-500" />,
-    title: "Sede em Salto de Pirapora - SP",
-    description: "Novo Fabricante e Fornecedor de Sistemas de Câmara-Quente"
-  },
-  {
-    icon: <FaCertificate className="text-4xl text-vonic-500" />,
-    title: "Produtos Certificados",
-    description: "Fabricados com Materiais certificados para cada aplicação"
-  },
-  {
-    icon: <FaHandshake className="text-4xl text-vonic-500" />,
-    title: "Comprometimento",
-    description: "Flexibilidade, confiança e comprometimento com cada projeto"
-  },
-  {
-    icon: <FaBullseye className="text-4xl text-vonic-500" />,
-    title: "Projetos Inteligentes",
-    description: "Produtos e Projetos Inteligentes - Padronizados"
-  }
-];
-
 const About = () => {
   const { t } = useTranslation();
+
+  const features = [
+    {
+      icon: <FaIndustry className="text-4xl text-vonic-500" />,
+      title: t('sections.about.features.headquarters.title'),
+      description: t('sections.about.features.headquarters.description')
+    },
+    {
+      icon: <FaCertificate className="text-4xl text-vonic-500" />,
+      title: t('sections.about.features.certified.title'),
+      description: t('sections.about.features.certified.description')
+    },
+    {
+      icon: <FaHandshake className="text-4xl text-vonic-500" />,
+      title: t('sections.about.features.commitment.title'),
+      description: t('sections.about.features.commitment.description')
+    },
+    {
+      icon: <FaBullseye className="text-4xl text-vonic-500" />,
+      title: t('sections.about.features.smart.title'),
+      description: t('sections.about.features.smart.description')
+    }
+  ];
 
   return (
     <section id="sobre" className="py-20 bg-white">
@@ -44,12 +44,7 @@ const About = () => {
             </p>
             <div className="space-y-6 text-black">
               <p className="leading-relaxed">
-                Utilizamos tecnologia lógica exclusiva que permite melhorar a eficiência da produção de plástico.
-                Nossa tecnologia vem de anos de experiência, ouvindo problemas típicos de moldagem e constantemente
-                surgindo com SOLUÇÕES.
-              </p>
-              <p className="leading-relaxed">
-                Podemos ajudar sua empresa com projetos novos ou existentes a se tornar mais eficiente do que você é hoje!
+                {t('sections.about.text')}
               </p>
             </div>
           </motion.div>

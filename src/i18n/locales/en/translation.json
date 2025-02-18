@@ -229,23 +229,62 @@
     },
     "about": {
       "title": "About Us",
-      "description": "Vonic Systems is a company specialized in hot runner systems, offering complete solutions for the plastic injection industry."
+      "description": "Vonic Systems is a company specialized in hot runner systems, offering complete solutions for the plastic injection industry.",
+      "text": "We use exclusive logical technology that allows us to improve the efficiency of plastic production. Our technology comes from years of experience, listening to typical molding problems and constantly coming up with SOLUTIONS. We can help your company with new or existing projects to become more efficient than you are today!",
+      "features": {
+        "headquarters": {
+          "title": "Headquarters in Salto de Pirapora - SP",
+          "description": "New Manufacturer and Supplier of Hot Runner Systems"
+        },
+        "certified": {
+          "title": "Certified Products",
+          "description": "Manufactured with certified materials for each application"
+        },
+        "commitment": {
+          "title": "Commitment",
+          "description": "Flexibility, trust and commitment to each project"
+        },
+        "smart": {
+          "title": "Smart Projects",
+          "description": "Smart and Standardized Products and Projects"
+        }
+      }
     },
     "contact": {
       "title": "Contact Us",
-      "ready_to_serve": "We are ready to serve you",
+      "subtitle": "We are ready to assist you",
       "info": {
-        "email": "Email",
-        "whatsapp": "WhatsApp",
-        "address": "Address"
+        "email": {
+          "title": "Email",
+          "content": "marcos.moraes@vonicsystems.com.br",
+          "action": "Send email"
+        },
+        "whatsapp": {
+          "title": "WhatsApp",
+          "content": "+55 15 99802-4314",
+          "action": "Start chat"
+        },
+        "address": {
+          "title": "Address",
+          "content": "Rua Joaquim Machado, 999 - Salto de Pirapora, SP",
+          "action": "View on map"
+        }
       },
       "form": {
-        "name": "Name",
-        "your_name": "Enter your name",
-        "email": "Email",
-        "your_email": "Enter your email",
-        "message": "Message",
-        "your_message": "Enter your message"
+        "title": "Send us a message",
+        "name": {
+          "label": "Name",
+          "placeholder": "Enter your name"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "Enter your email"
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "Enter your message"
+        },
+        "submit": "Send message"
       }
     },
     "mastip": {
