@@ -7,7 +7,16 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter var', 'system-ui', '-apple-system', 'sans-serif'],
+        sans: ['Outfit', 'system-ui', '-apple-system', 'sans-serif'],
+      },
+      fontSize: {
+        'base': '1.125rem',
+        'lg': '1.25rem',
+        'xl': '1.5rem',
+        '2xl': '1.875rem',
+        '3xl': '2.25rem',
+        '4xl': '3rem',
+        '5xl': '3.75rem',
       },
       colors: {
         vonic: {
@@ -37,6 +46,21 @@ export default {
       },
       spacing: {
         '128': '32rem',
+      },
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: '1rem',
+          sm: '2rem',
+          lg: '3rem',
+        },
+        screens: {
+          sm: '600px',
+          md: '728px',
+          lg: '984px',
+          xl: '1240px',
+          '2xl': '1496px',
+        },
       },
       backgroundImage: {
         'gradient-vonic': 'linear-gradient(135deg, #CE171F 0%, #8B0000 100%)',
