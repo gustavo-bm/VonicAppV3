@@ -55,8 +55,8 @@ function Partners() {
   return (
     <section className="partners-section" id="partners">
       <div className="container mx-auto px-4">
-        <h2 className="section-title text-4xl font-bold mb-4">{t('our_partners')}</h2>
-        <p className="section-subtitle">{t('partners_subtitle')}</p>
+        <h2 className="section-title text-4xl font-bold mb-4">{t('sections.partners.title')}</h2>
+        <p className="section-subtitle">{t('sections.partners.subtitle')}</p>
         
         <Swiper
           effect={'coverflow'}

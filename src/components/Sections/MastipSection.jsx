@@ -19,27 +19,27 @@ const MastipSection = () => {
           >
             <div className="flex items-center space-x-4">
               <img src={MastipLogo} alt="Mastip" className="h-12" />
-              <span className="text-[#CE171F] font-medium">{t('mastip_partner')}</span>
+              <span className="text-[#CE171F] font-medium">{t('sections.mastip.partner')}</span>
             </div>
             
-            <h2 className="text-4xl font-bold text-white">{t('strategic_partnership')}</h2>
+            <h2 className="text-4xl font-bold text-white">{t('sections.mastip.strategic_partnership')}</h2>
             
             <p className="text-white/90 leading-relaxed">
-              {t('partnership_description')}
+              {t('sections.mastip.partnership_description')}
             </p>
 
             <div className="space-y-8 pt-4">
               <div className="border-b border-white/10 pb-6">
-                <h3 className="text-xl font-semibold text-white mb-4">{t('who_is_mastip')}</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">{t('sections.mastip.who_is_mastip')}</h3>
                 <p className="text-white/80 leading-relaxed">
-                  {t('mastip_description')}
+                  {t('sections.mastip.mastip_description')}
                 </p>
               </div>
 
               <div className="border-b border-white/10 pb-6">
-                <h3 className="text-xl font-semibold text-white mb-4">{t('product_types')}</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">{t('sections.mastip.product_types')}</h3>
                 <p className="text-white/80 leading-relaxed">
-                  {t('products_description')}
+                  {t('sections.mastip.products_description')}
                 </p>
               </div>
 
@@ -49,7 +49,7 @@ const MastipSection = () => {
                 whileTap={{ scale: 0.95 }}
                 className="inline-block bg-gradient-vonic hover:bg-gradient-vonic-hover text-white px-8 py-3 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
               >
-                {t('know_products')}
+                {t('buttons.know_products')}
               </motion.a>
             </div>
           </motion.div>

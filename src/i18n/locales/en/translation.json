@@ -1,0 +1,304 @@
+{
+  "navigation": {
+    "home": "HOME",
+    "products": "PRODUCTS",
+    "about": "ABOUT US",
+    "partners": "PARTNERS",
+    "contact": "CONTACT"
+  },
+
+  "buttons": {
+    "view_more": "View more",
+    "view_details": "View details",
+    "view_specs": "View specifications",
+    "learn_more": "Learn more",
+    "contact_us": "Contact us",
+    "know_products": "Discover our products",
+    "submit": "Send message",
+    "send_email": "Send email",
+    "start_chat": "Start chat",
+    "view_map": "View on map",
+    "send_message": "Send message"
+  },
+
+  "hero": {
+    "title": "Hot Runner Solutions",
+    "description": "We are specialists in hot runner systems and plastic injection solutions, offering high-quality products and specialized technical support.",
+    "years_market": "Over 20 years in the market",
+    "delivering": "Delivering",
+    "solutions": "Solutions",
+    "solutions_exclamation": "!",
+    "hero_description": "We are specialists in hot runner systems and plastic injection solutions, offering high-quality products and specialized technical support."
+  },
+
+  "features": "Features",
+  "specifications": "Specifications",
+
+  "mastip": {
+    "title": "Mastip Products",
+    "hot_halves": "Complete hot runner systems",
+    "manifolds": "Manifold systems",
+    "valve_gates": "Valve Gate Technology",
+    "nozzles": "Injection nozzles",
+    "controllers": "Temperature controllers",
+    "sequential": "Sequential controllers",
+    "cae": "CAE Services",
+    "products_page": {
+      "title": "Mastip Products",
+      "description": "Complete solutions in hot runner systems",
+      "categories": {
+        "new_releases": {
+          "title": "New Releases",
+          "description": "Latest releases and innovations"
+        },
+        "hot_halves": {
+          "title": "Hot Half Systems",
+          "description": "Complete hot runner systems"
+        },
+        "manifolds": {
+          "title": "Manifold Systems",
+          "description": "Balanced and special manifolds"
+        },
+        "valve_gates": {
+          "title": "Valve Gate Technology",
+          "description": "Advanced valve systems"
+        },
+        "nozzles": {
+          "title": "Nozzles",
+          "description": "High performance injection nozzles"
+        },
+        "temperature_controllers": {
+          "title": "Temperature Controllers",
+          "description": "Precise temperature control"
+        },
+        "sequential_controllers": {
+          "title": "Sequential Controllers",
+          "description": "Sequential control for valve gate"
+        },
+        "cae": {
+          "title": "CAE Services",
+          "description": "Project analysis and optimization"
+        }
+      }
+    },
+
+    "hot_halves": {
+      "title": "Mastip Hot Half Systems",
+      "description": "Complete hot runner systems for all applications",
+      "systems": {
+        "standard": {
+          "title": "Standard Hot Half Systems",
+          "description": "Complete hot runner systems designed for efficiency and reliability",
+          "features": [
+            "Robust and reliable design",
+            "Simplified maintenance",
+            "Excellent cost-benefit",
+            "Flexible configurations",
+            "Precise temperature control",
+            "Specialized technical support"
+          ]
+        },
+        "specialty": {
+          "title": "Specialty Hot Half Systems",
+          "description": "Customized solutions for specific and challenging applications",
+          "features": [
+            "Custom projects",
+            "High performance",
+            "Innovative solutions",
+            "Specialized technical support",
+            "High quality materials",
+            "Advanced technology"
+          ]
+        }
+      }
+    },
+
+    "temperature_controllers": {
+      "title": "Mastip Temperature Controllers",
+      "description": "High precision temperature controllers for hot runner systems",
+      "systems": {
+        "standard": {
+          "title": "Meticom Temperature Controller",
+          "description": "Advanced temperature controller for hot runner systems",
+          "features": [
+            "Intuitive and easy to use interface",
+            "Precise temperature control",
+            "Real-time monitoring",
+            "Advanced fault diagnosis",
+            "Support for multiple zones"
+          ],
+          "specs": {
+            "Power": "AC220V (50/60 Hz)",
+            "Display": "High resolution LCD",
+            "Zones": "6 to 48 zones",
+            "Precision": "±0.1°C",
+            "Communication": "RS485/USB"
+          }
+        }
+      }
+    },
+
+    "sequential_controllers": {
+      "title": "Mastip Sequential Controllers",
+      "description": "Sequential controllers for valve gate systems",
+      "systems": {
+        "sc2": {
+          "title": "MetiCom SC2",
+          "description": "Compact sequential controller for up to 2 valves",
+          "features": [
+            "Precise time control",
+            "Easy setup and operation",
+            "Intuitive LED display",
+            "Manual and automatic mode",
+            "Overload protection"
+          ],
+          "specs": {
+            "Power": "AC220V (50/60 Hz)",
+            "Channels": "2 channels",
+            "Precision": "0.01s",
+            "Display": "LCD",
+            "Dimensions": "200x150x80mm"
+          }
+        },
+        "sc8": {
+          "title": "MetiCom SC8",
+          "description": "Advanced sequential controller for up to 8 valves",
+          "features": [
+            "Manual override available",
+            "Multiple operation modes",
+            "Memory for 100 molds",
+            "Touch screen interface",
+            "Advanced diagnostics"
+          ],
+          "specs": {
+            "Power": "Single phase AC 220V (50/60 Hz)",
+            "Channels": "8 channels",
+            "Precision": "0.01s",
+            "Display": "Color touch screen",
+            "Dimensions": "300x250x150mm"
+          }
+        }
+      }
+    }
+  },
+
+  "vonic": {
+    "title": "Vonic Products",
+    "new_releases": "Latest releases and innovations",
+    "nozzles": "High performance injection nozzles",
+    "manifolds": "Hot runner systems",
+    "hot_half": "Complete hot runner systems",
+    "controllers": "Temperature controllers",
+    "filters": "Filters and components",
+    "products_page": {
+      "title": "Vonic Products",
+      "description": "Innovative solutions in hot runner systems",
+      "categories": {
+        "new_releases": {
+          "title": "New Releases",
+          "description": "Latest releases and innovations"
+        },
+        "hot_nozzles": {
+          "title": "Injection Nozzles",
+          "description": "High performance nozzles"
+        },
+        "manifolds": {
+          "title": "Manifolds",
+          "description": "Balanced distribution systems"
+        },
+        "hot_half": {
+          "title": "Hot Half Systems",
+          "description": "Complete hot runner systems"
+        },
+        "controllers": {
+          "title": "Controllers",
+          "description": "Precise temperature control"
+        },
+        "filters": {
+          "title": "Filters",
+          "description": "Special filters for hot runner"
+        }
+      }
+    }
+  },
+
+  "sections": {
+    "products": {
+      "title": "Our Products",
+      "description": "Discover our complete line of plastic injection products"
+    },
+    "about": {
+      "title": "About Us",
+      "description": "Vonic Systems is a company specialized in hot runner systems, offering complete solutions for the plastic injection industry."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "ready_to_serve": "We are ready to serve you",
+      "info": {
+        "email": "Email",
+        "whatsapp": "WhatsApp",
+        "address": "Address"
+      },
+      "form": {
+        "name": "Name",
+        "your_name": "Enter your name",
+        "email": "Email",
+        "your_email": "Enter your email",
+        "message": "Message",
+        "your_message": "Enter your message"
+      }
+    },
+    "mastip": {
+      "partner": "Strategic Partner",
+      "strategic_partnership": "Strategic Partnership with Mastip",
+      "partnership_description": "Our partnership with Mastip allows us to offer high-tech solutions in hot runner systems.",
+      "who_is_mastip": "Who is Mastip?",
+      "mastip_description": "Mastip is a global leader in hot runner technology, recognized for its innovation and quality.",
+      "product_types": "Product Types",
+      "products_description": "Mastip's product line includes complete hot runner systems, nozzles, manifolds, and controllers."
+    },
+    "services": {
+      "title": "Our Services",
+      "subtitle": "Complete solutions for your industry",
+      "maintenance": {
+        "title": "Specialized Maintenance",
+        "description": "Preventive and corrective maintenance services for hot runner systems"
+      },
+      "manufacturing": {
+        "title": "Custom Manufacturing",
+        "description": "Development and manufacturing of customized systems for your needs"
+      },
+      "optimization": {
+        "title": "Process Optimization",
+        "description": "Analysis and efficiency improvement in existing systems"
+      },
+      "consulting": {
+        "title": "Technical Consulting",
+        "description": "Specialized support for system implementation and operation"
+      }
+    },
+    "partners": {
+      "title": "Our Partners",
+      "subtitle": "Companies that trust our solutions"
+    }
+  },
+
+  "testimonials": {
+    "techcorp": "Vonic has been an exceptional partner, providing high-quality solutions and unparalleled technical support.",
+    "innovate": "Vonic's products have revolutionized our production process, significantly increasing our efficiency.",
+    "globalplast": "Vonic's technical expertise and commitment to quality make them an indispensable partner.",
+    "futuretech": "We are impressed with Vonic's ability to deliver customized solutions that perfectly meet our needs.",
+    "ecomold": "The partnership with Vonic has allowed us to reach new levels of quality and productivity."
+  },
+
+  "footer": {
+    "company": "Company",
+    "products": "Products",
+    "support": "Support",
+    "contact": "Contact",
+    "rights": "© 2024 Vonic Systems. All rights reserved.",
+    "address": "Salto de Pirapora - SP",
+    "phone": "+55 15 99802-4314",
+    "email": "marcos.moraes@vonicsystems.com.br"
+  }
+}

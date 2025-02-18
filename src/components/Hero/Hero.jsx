@@ -35,7 +35,7 @@ const Hero = () => {
               className="text-5xl lg:text-7xl font-bold leading-tight"
             >
               {t('hero.delivering')} <br />
-              <span className="text-[#CE171F] drop-shadow-glow">{t('hero.solutions')}</span><br />
+              <span className="text-[#CE171F] drop-shadow-glow">{t('hero.solutions')}</span>
               <span className="text-[#CE171F]">{t('hero.solutions_exclamation')}</span>
             </motion.h1>
 

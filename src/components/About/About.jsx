@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaIndustry, FaCertificate, FaHandshake, FaBullseye } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
 const features = [
   {
@@ -26,6 +27,8 @@ const features = [
 ];
 
 const About = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="sobre" className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -35,9 +38,9 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl font-bold mb-6 text-[#CE171F]">Nossa Proposta</h2>
+            <h2 className="text-4xl font-bold mb-6 text-[#CE171F]">{t('sections.about.title')}</h2>
             <p className="text-xl text-black mb-8 leading-relaxed">
-              Oferecer produtos e serviços diferenciados com Tecnologia, Valores e Confiabilidade.
+              {t('sections.about.description')}
             </p>
             <div className="space-y-6 text-black">
               <p className="leading-relaxed">

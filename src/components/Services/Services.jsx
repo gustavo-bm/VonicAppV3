@@ -1,57 +1,34 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaTools, FaCog, FaIndustry, FaCheckCircle, FaBox, FaWrench } from 'react-icons/fa';
-
-const services = [
-  {
-    icon: <FaIndustry className="text-4xl mb-4 text-vonic-500" />,
-    title: 'Peças Técnicas',
-    description: 'Especialização em peças elétricas (PC, PBT), telecomunicações (PC/ABS) e materiais de engenharia (PA6, PA66 + GF30, PPO, PPS, PPE/PS)',
-    features: [
-      'Uso em materiais com alto teor de fibra',
-      'Bicos eficientes e precisos',
-      'Controle avançado de temperatura'
-    ]
-  },
-  {
-    icon: <FaBox className="text-4xl mb-4 text-vonic-500" />,
-    title: 'Soluções para Embalagem',
-    description: 'Sistemas avançados para produção de embalagens',
-    features: [
-      'Sistema para tampas de múltiplas cavidades',
-      'Peças de paredes finas',
-      'Vestígios imperceptíveis',
-      'Excelente processo de troca de cor',
-      'Manifold balanceados'
-    ]
-  },
-  {
-    icon: <FaCog className="text-4xl mb-4 text-vonic-500" />,
-    title: 'Bicos Quentes',
-    description: 'Design exclusivo com controle preciso de temperatura',
-    features: [
-      'Mínima perda de calor para o molde',
-      'Perfil de calor uniforme',
-      'Controle preciso para qualquer material plástico',
-      'Temperaturas mais baixas do material',
-      'Partidas mais rápidas e menos rejeições'
-    ]
-  },
-  {
-    icon: <FaWrench className="text-4xl mb-4 text-vonic-500" />,
-    title: 'Serviços Especializados',
-    description: 'Manutenção completa e serviços técnicos',
-    features: [
-      'Retrofit Completo',
-      'Retifica de Placas e Manifold',
-      'Troca de Bicos',
-      'Montagem',
-      'Acompanhamento e try-out'
-    ]
-  }
-];
+import { useTranslation } from 'react-i18next';
 
 const Services = () => {
+  const { t } = useTranslation();
+
+  const services = [
+    {
+      icon: <FaWrench className="text-4xl mb-4 text-vonic-500" />,
+      title: t('sections.services.maintenance.title'),
+      description: t('sections.services.maintenance.description')
+    },
+    {
+      icon: <FaIndustry className="text-4xl mb-4 text-vonic-500" />,
+      title: t('sections.services.manufacturing.title'),
+      description: t('sections.services.manufacturing.description')
+    },
+    {
+      icon: <FaCog className="text-4xl mb-4 text-vonic-500" />,
+      title: t('sections.services.optimization.title'),
+      description: t('sections.services.optimization.description')
+    },
+    {
+      icon: <FaCheckCircle className="text-4xl mb-4 text-vonic-500" />,
+      title: t('sections.services.consulting.title'),
+      description: t('sections.services.consulting.description')
+    }
+  ];
+
   return (
     <section className="py-20 bg-gradient-to-br from-[#CE171F] via-[#8B0000] to-black">
       <div className="container mx-auto px-4">
@@ -61,8 +38,8 @@ const Services = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold mb-4 text-white">Nosso Expertise</h2>
-          <p className="text-white/90">Soluções completas para produção eficiente</p>
+          <h2 className="text-4xl font-bold mb-4 text-white">{t('sections.services.title')}</h2>
+          <p className="text-white/90">{t('sections.services.subtitle')}</p>
         </motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -77,16 +54,12 @@ const Services = () => {
               <div className="bg-gradient-to-br from-[#CE171F]/10 to-transparent p-3 rounded-full w-16 h-16 flex items-center justify-center mb-4">
                 {service.icon}
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-[#CE171F] group-hover:text-[#8B0000] transition-colors">{service.title}</h3>
-              <p className="text-black/80 mb-4">{service.description}</p>
-              <ul className="space-y-2">
-                {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center text-black/70">
-                    <FaCheckCircle className="text-[#CE171F] mr-2 flex-shrink-0" />
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
+              <h3 className="text-xl font-semibold mb-4 text-[#CE171F] group-hover:text-[#8B0000] transition-colors">
+                {service.title}
+              </h3>
+              <p className="text-black/80">
+                {service.description}
+              </p>
             </motion.div>
           ))}
         </div>
