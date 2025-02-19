@@ -3,6 +3,7 @@
     "home": "HOME",
     "products": "PRODUTOS",
     "about": "SOBRE NÓS",
+    "services": "SERVIÇOS",
     "partners": "PARCEIROS",
     "contact": "CONTATO"
   },
@@ -318,7 +319,7 @@
     },
     "partners": {
       "title": "Nossos Parceiros",
-      "subtitle": "Empresas que confiam em nossas soluções"
+      "subtitle": "Conheça quem confia em nossas soluções"
     }
   },
 
