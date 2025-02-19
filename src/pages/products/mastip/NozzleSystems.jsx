@@ -66,39 +66,39 @@ const NozzleSystems = () => {
 
   const nozzles = [
     {
-      title: t('mastip_categories.nozzles.series.mx.title'),
-      description: t('mastip_categories.nozzles.series.mx.description'),
+      title: t('mastip.nozzles.series.mx.title'),
+      description: t('mastip.nozzles.series.mx.description'),
       image: MXNozzle,
       link: "https://mastip.com/products/nozzles/mx/",
-      features: getTranslatedFeatures('mastip_categories.nozzles.series.mx.features')
+      features: getTranslatedFeatures('mastip.nozzles.series.mx.features')
     },
     {
-      title: t('mastip_categories.nozzles.series.bx.title'),
-      description: t('mastip_categories.nozzles.series.bx.description'),
+      title: t('mastip.nozzles.series.bx.title'),
+      description: t('mastip.nozzles.series.bx.description'),
       image: BXNozzle,
       link: "https://mastip.com/products/nozzles/bx/",
-      features: getTranslatedFeatures('mastip_categories.nozzles.series.bx.features')
+      features: getTranslatedFeatures('mastip.nozzles.series.bx.features')
     },
     {
-      title: t('mastip_categories.nozzles.series.sx.title'),
-      description: t('mastip_categories.nozzles.series.sx.description'),
+      title: t('mastip.nozzles.series.sx.title'),
+      description: t('mastip.nozzles.series.sx.description'),
       image: SXNozzle,
       link: "https://mastip.com/products/nozzles/sx/",
-      features: getTranslatedFeatures('mastip_categories.nozzles.series.sx.features')
+      features: getTranslatedFeatures('mastip.nozzles.series.sx.features')
     },
     {
-      title: t('mastip_categories.nozzles.series.flowloc.title'),
-      description: t('mastip_categories.nozzles.series.flowloc.description'),
+      title: t('mastip.nozzles.series.flowloc.title'),
+      description: t('mastip.nozzles.series.flowloc.description'),
       image: FlowLocNozzle,
       link: "https://mastip.com/products/nozzles/flowloc-technology-range/",
-      features: getTranslatedFeatures('mastip_categories.nozzles.series.flowloc.features')
+      features: getTranslatedFeatures('mastip.nozzles.series.flowloc.features')
     },
     {
-      title: t('mastip_categories.nozzles.series.multigate.title'),
-      description: t('mastip_categories.nozzles.series.multigate.description'),
+      title: t('mastip.nozzles.series.multigate.title'),
+      description: t('mastip.nozzles.series.multigate.description'),
       image: MultiGateNozzle,
       link: "https://mastip.com/products/nozzles/new-multi-gate/",
-      features: getTranslatedFeatures('mastip_categories.nozzles.series.multigate.features')
+      features: getTranslatedFeatures('mastip.nozzles.series.multigate.features')
     }
   ];
 
@@ -111,9 +111,9 @@ const NozzleSystems = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl font-bold mb-6 text-white">{t('mastip_categories.nozzles.title')}</h1>
+          <h1 className="text-5xl font-bold mb-6 text-white">{t('mastip.nozzles.title')}</h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto">
-            {t('mastip_categories.nozzles.description')}
+            {t('mastip.nozzles.description')}
           </p>
         </motion.div>
 

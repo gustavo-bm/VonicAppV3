@@ -123,7 +123,7 @@ const MastipProducts = () => {
         >
           <h1 className="text-5xl font-bold mb-6 text-white">{t("mastip.title")}</h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto">
-            {t("mastip.description")}
+            {t("mastip.products_page.description")}
           </p>
         </motion.div>
 
