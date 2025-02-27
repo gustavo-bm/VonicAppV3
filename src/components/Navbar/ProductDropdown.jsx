@@ -30,20 +30,21 @@ const ProductDropdown = ({ isOpen, onClose }) => {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          initial={{ opacity: 0, y: -10 }}
+          initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -10 }}
-          className="absolute top-full left-0 w-64 bg-white shadow-lg rounded-lg py-4 z-50"
-          onMouseLeave={() => setActiveSubmenu(null)}
+          exit={{ opacity: 0, y: 10 }}
+          transition={{ duration: 0.2 }}
+          className="absolute top-[calc(100%+1px)] left-0 min-w-[240px] bg-white shadow-lg rounded-lg py-2 z-50"
+          onMouseEnter={() => setActiveSubmenu(null)}
         >
-          <div className="space-y-4">
+          <div className="space-y-1">
             {/* Vonic Products */}
             <div
               className="relative"
               onMouseEnter={() => setActiveSubmenu('vonic')}
             >
               <Link
-                to="/produtos/vonic/novidades"
+                to="/produtos/vonic"
                 onClick={onClose}
                 className="block px-6 py-2 text-gray-800 hover:text-[#CE171F] hover:bg-gray-50 transition-colors"
               >
@@ -55,7 +56,7 @@ const ProductDropdown = ({ isOpen, onClose }) => {
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -10 }}
-                    className="absolute left-full top-0 w-64 bg-white shadow-lg rounded-lg py-4"
+                    className="absolute left-full top-0 w-64 bg-white shadow-lg rounded-lg py-2"
                   >
                     {vonicProducts.map((product) => (
                       <Link
@@ -78,7 +79,7 @@ const ProductDropdown = ({ isOpen, onClose }) => {
               onMouseEnter={() => setActiveSubmenu('mastip')}
             >
               <Link
-                to="/produtos/mastip/hot-halves"
+                to="/produtos/mastip"
                 onClick={onClose}
                 className="block px-6 py-2 text-gray-800 hover:text-[#CE171F] hover:bg-gray-50 transition-colors"
               >
@@ -90,7 +91,7 @@ const ProductDropdown = ({ isOpen, onClose }) => {
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -10 }}
-                    className="absolute left-full top-0 w-64 bg-white shadow-lg rounded-lg py-4"
+                    className="absolute left-full top-0 w-64 bg-white shadow-lg rounded-lg py-2"
                   >
                     {mastipProducts.map((product) => (
                       <Link

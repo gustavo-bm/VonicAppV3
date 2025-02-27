@@ -10,17 +10,16 @@ const LanguageSelector = () => {
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng).then(() => {
       localStorage.setItem('i18nextLng', lng);
-      // Não precisamos mais forçar o reload da página
     });
   };
 
   return (
-    <div className="flex items-center space-x-3">
+    <div className="flex items-center h-full space-x-2">
       <motion.button
         onClick={() => changeLanguage('pt')}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className={`w-8 h-8 rounded-full overflow-hidden border-2 transition-all ${
+        className={`w-7 h-7 rounded-full overflow-hidden border-2 flex items-center justify-center transition-all ${
           i18n.language === 'pt' || i18n.language === 'pt-BR'
             ? 'border-[#CE171F] shadow-lg'
             : 'border-transparent opacity-70 hover:opacity-100'
@@ -33,7 +32,7 @@ const LanguageSelector = () => {
         onClick={() => changeLanguage('en')}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className={`w-8 h-8 rounded-full overflow-hidden border-2 transition-all ${
+        className={`w-7 h-7 rounded-full overflow-hidden border-2 flex items-center justify-center transition-all ${
           i18n.language === 'en' || i18n.language === 'en-US'
             ? 'border-[#CE171F] shadow-lg'
             : 'border-transparent opacity-70 hover:opacity-100'

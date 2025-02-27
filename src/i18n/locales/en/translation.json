@@ -3,6 +3,7 @@
     "home": "HOME",
     "products": "PRODUCTS",
     "about": "ABOUT US",
+    "services": "SERVICES",
     "partners": "PARTNERS",
     "contact": "CONTACT"
   },
@@ -80,11 +81,6 @@
           "description": "Project analysis and optimization"
         }
       }
-    },
-
-    "nozzles": {
-      "title": "Mastip Nozzles",
-      "description": "High performance injection nozzles"
     },
 
     "hot_halves_systems": {

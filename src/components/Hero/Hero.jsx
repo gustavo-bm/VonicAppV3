@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -54,14 +55,15 @@ const Hero = () => {
               transition={{ delay: 0.8 }}
               className="flex flex-wrap gap-4 pt-4"
             >
-              <motion.a
-                href="/produtos/vonic"
-                whileHover={{ scale: 1.02 }}
-                className="relative bg-gradient-vonic text-white px-8 py-3 rounded-full font-medium shadow-lg overflow-hidden group"
-              >
-                <span className="absolute inset-0 bg-gradient-vonic-hover opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <span className="relative">{t('buttons.know_products')}</span>
-              </motion.a>
+              <Link to="/produtos/vonic">
+                <motion.div
+                  whileHover={{ scale: 1.02 }}
+                  className="relative bg-gradient-vonic text-white px-8 py-3 rounded-full font-medium shadow-lg overflow-hidden group"
+                >
+                  <span className="absolute inset-0 bg-gradient-vonic-hover opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <span className="relative">{t('buttons.know_products')}</span>
+                </motion.div>
+              </Link>
               <motion.a
                 href="#sobre"
                 onClick={(e) => {

@@ -114,11 +114,6 @@
       }
     },
 
-    "nozzles": {
-      "title": "Bicos de Injeção Mastip",
-      "description": "Bicos de alta performance"
-    },
-
     "temperature_controllers": {
       "title": "Controladores de Temperatura Mastip",
       "description": "Controladores de temperatura de alta precisão para sistemas de câmara quente",

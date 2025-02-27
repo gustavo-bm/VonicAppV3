@@ -27,7 +27,7 @@
 .section-subtitle {
   text-align: center;
   color: rgba(255, 255, 255, 0.8);
-  font-size: 1.1rem;
+  font-size: 0.825rem; /* 75% of 1.1rem */
   margin-bottom: 4rem;
   max-width: 600px;
   margin-left: auto;
@@ -77,20 +77,20 @@
 }
 
 .logo-emoji {
-  font-size: 3rem;
+  font-size: 2.25rem; /* 75% of 3rem */
   margin-bottom: 1rem;
   display: block;
 }
 
 .partner-logo h3 {
   color: #333;
-  font-size: 1.5rem;
+  font-size: 1.125rem; /* 75% of 1.5rem */
   font-weight: 600;
 }
 
 .testimonial-content blockquote {
   color: #333;
-  font-size: 1rem;
+  font-size: 0.75rem; /* 75% of 1rem */
   line-height: 1.6;
   font-style: italic;
   margin-bottom: 1.5rem;
@@ -101,7 +101,7 @@
 .testimonial-content blockquote::before,
 .testimonial-content blockquote::after {
   content: '"';
-  font-size: 2rem;
+  font-size: 1.5rem; /* 75% of 2rem */
   color: rgba(255, 255, 255, 0.5);
   position: absolute;
 }
@@ -125,13 +125,13 @@
 .author-name {
   color: #333;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 0.825rem; /* 75% of 1.1rem */
   margin-bottom: 0.25rem;
 }
 
 .author-position {
   color: #666;
-  font-size: 0.9rem;
+  font-size: 0.675rem; /* 75% of 0.9rem */
 }
 
 /* Swiper Customization */

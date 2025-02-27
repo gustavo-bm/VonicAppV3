@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import HotRunner from '../3D/HotRunner';
 import MastipLogo from '../../assets/mastip/logo_mastip.png';
 import { useTranslation } from 'react-i18next';
@@ -43,14 +44,15 @@ const MastipSection = () => {
                 </p>
               </div>
 
-              <motion.a
-                href="/produtos/mastip"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-block bg-gradient-vonic hover:bg-gradient-vonic-hover text-white px-8 py-3 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                {t('buttons.know_products')}
-              </motion.a>
+              <Link to="/produtos/mastip">
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="inline-block bg-gradient-vonic hover:bg-gradient-vonic-hover text-white px-8 py-3 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  {t('buttons.know_products')}
+                </motion.div>
+              </Link>
             </div>
           </motion.div>
 

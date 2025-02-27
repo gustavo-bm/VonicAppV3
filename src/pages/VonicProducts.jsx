@@ -53,43 +53,43 @@ const VonicProducts = () => {
 
   const products = [
     {
-      title: t('new_releases'),
-      description: t('new_releases_desc'),
+      title: t('vonic.new_releases'),
+      description: t('vonic.products_page.categories.new_releases.description'),
       image: "/products/new-releases.jpeg",
       link: "/produtos/vonic/novidades",
       isNew: true
     },
     {
-      title: t('hot_nozzles'),
-      description: t('hot_nozzles_desc'),
+      title: t('vonic.nozzles'),
+      description: t('vonic.products_page.categories.hot_nozzles.description'),
       image: "/products/hot_nozzles.jpeg",
       link: "/produtos/vonic/bicos",
       isNew: false
     },
     {
-      title: t('manifolds'),
-      description: t('manifolds_desc'),
+      title: t('vonic.manifolds'),
+      description: t('vonic.products_page.categories.manifolds.description'),
       image: "/products/manifolds.jpeg",
       link: "/produtos/vonic/manifolds",
       isNew: false
     },
     {
-      title: t('hot_half'),
-      description: t('hot_half_desc'),
+      title: t('vonic.hot_half'),
+      description: t('vonic.products_page.categories.hot_half.description'),
       image: "/products/hot_half.jpeg",
       link: "/produtos/vonic/hot-half",
       isNew: false
     },
     {
-      title: t('controllers'),
-      description: t('controllers_desc'),
+      title: t('vonic.controllers'),
+      description: t('vonic.products_page.categories.controllers.description'),
       image: "/products/controllers.jpg",
       link: "/produtos/vonic/controladores",
       isNew: false
     },
     {
-      title: t('filters'),
-      description: t('filters_desc'),
+      title: t('vonic.filters'),
+      description: t('vonic.products_page.categories.filters.description'),
       image: "/products/filters.jpg",
       link: "/produtos/vonic/filtros",
       isNew: false
@@ -105,9 +105,9 @@ const VonicProducts = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl font-bold mb-6 text-white">{t('vonic_products')}</h1>
+          <h1 className="text-5xl font-bold mb-6 text-white">{t('vonic.products_page.title')}</h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto">
-            {t('vonic_products_desc')}
+            {t('vonic.products_page.description')}
           </p>
         </motion.div>
 
