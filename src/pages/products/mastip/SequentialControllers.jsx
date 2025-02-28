@@ -5,6 +5,8 @@ import { FaArrowRight, FaCheck, FaCog } from 'react-icons/fa';
 
 // Importando a imagem do controlador
 import SequentialController from '../../../assets/mastip/sequential_controllers.png';
+import sc2 from '../../../assets/mastip//sequential/sc2.png';
+import sc8 from '../../../assets/mastip/sequential/sc8.png';
 
 const ControllerCard = ({ title, description, image, link, features = [], specs = {} }) => {
   const { t } = useTranslation();
@@ -14,7 +16,7 @@ const ControllerCard = ({ title, description, image, link, features = [], specs 
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300"
+      className="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col"
     >
       <div className="relative">
         <div className="relative h-64 overflow-hidden">
@@ -26,7 +28,7 @@ const ControllerCard = ({ title, description, image, link, features = [], specs 
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
         </div>
       </div>
-      <div className="p-6">
+      <div className="p-6 flex-grow">
         <h3 className="text-2xl font-bold mb-3 text-[#CE171F]">{title}</h3>
         <p className="text-black/80 mb-4">{description}</p>
         
@@ -53,7 +55,8 @@ const ControllerCard = ({ title, description, image, link, features = [], specs 
             ))}
           </ul>
         </div>
-
+      </div>
+      <div className="p-6 mt-auto">
         <a
           href={link}
           target="_blank"
@@ -85,7 +88,7 @@ const SequentialControllers = () => {
     {
       title: t('mastip.sequential_controllers.systems.sc2.title'),
       description: t('mastip.sequential_controllers.systems.sc2.description'),
-      image: SequentialController,
+      image: sc2,
       link: "https://mastip.com/products/sequential-controllers/meticom-sc2/",
       features: getTranslatedFeatures('mastip.sequential_controllers.systems.sc2.features'),
       specs: getTranslatedSpecs('mastip.sequential_controllers.systems.sc2.specs')
@@ -93,7 +96,7 @@ const SequentialControllers = () => {
     {
       title: t('mastip.sequential_controllers.systems.sc8.title'),
       description: t('mastip.sequential_controllers.systems.sc8.description'),
-      image: SequentialController,
+      image: sc8,
       link: "https://mastip.com/products/sequential-controllers/meticom-sc8/",
       features: getTranslatedFeatures('mastip.sequential_controllers.systems.sc8.features'),
       specs: getTranslatedSpecs('mastip.sequential_controllers.systems.sc8.specs')

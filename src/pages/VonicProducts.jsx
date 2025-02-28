@@ -37,13 +37,13 @@ const ProductCard = ({ title, description, image, link, isNew }) => (
     <div className="p-6">
       <h3 className="text-2xl font-bold mb-3 text-[#CE171F]">{title}</h3>
       <p className="text-gray-600 mb-6">{description}</p>
-      <Link
+      {/* <Link
         to={link}
         className="inline-flex items-center space-x-2 bg-gradient-vonic hover:bg-gradient-vonic-hover text-white font-bold py-3 px-6 rounded-full transition-all duration-300 group"
       >
         <span>Ver mais</span>
         <FaArrowRight className="transform group-hover:translate-x-1 transition-transform" />
-      </Link>
+      </Link> */}
     </div>
   </motion.div>
 );
@@ -55,42 +55,42 @@ const VonicProducts = () => {
     {
       title: t('vonic.new_releases'),
       description: t('vonic.products_page.categories.new_releases.description'),
-      image: "/products/new-releases.jpeg",
+      image: "/src/assets/vonic/products/recent_project.jpeg",
       link: "/produtos/vonic/novidades",
       isNew: true
     },
     {
       title: t('vonic.nozzles'),
       description: t('vonic.products_page.categories.hot_nozzles.description'),
-      image: "/products/hot_nozzles.jpeg",
+      image: "/src/assets/vonic/products/hot_nozzles.jpeg",
       link: "/produtos/vonic/bicos",
       isNew: false
     },
     {
       title: t('vonic.manifolds'),
       description: t('vonic.products_page.categories.manifolds.description'),
-      image: "/products/manifolds.jpeg",
+      image: "/src/assets/vonic/products/manifolds.jpeg",
       link: "/produtos/vonic/manifolds",
       isNew: false
     },
     {
       title: t('vonic.hot_half'),
       description: t('vonic.products_page.categories.hot_half.description'),
-      image: "/products/hot_half.jpeg",
+      image: "/src/assets/vonic/products/hot_half.jpeg",
       link: "/produtos/vonic/hot-half",
       isNew: false
     },
     {
       title: t('vonic.controllers'),
       description: t('vonic.products_page.categories.controllers.description'),
-      image: "/products/controllers.jpg",
+      image: "/src/assets/mastip/controllers.png",
       link: "/produtos/vonic/controladores",
       isNew: false
     },
     {
       title: t('vonic.filters'),
       description: t('vonic.products_page.categories.filters.description'),
-      image: "/products/filters.jpg",
+      image: "/src/assets/vonic/products/filter.jpg",
       link: "/produtos/vonic/filtros",
       isNew: false
     }

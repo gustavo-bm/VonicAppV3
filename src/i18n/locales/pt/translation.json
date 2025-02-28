@@ -7,7 +7,6 @@
     "partners": "PARCEIROS",
     "contact": "CONTATO"
   },
-
   "buttons": {
     "view_more": "Ver mais",
     "view_details": "Ver detalhes",
@@ -15,13 +14,13 @@
     "learn_more": "Saiba mais",
     "contact_us": "Entre em contato",
     "know_products": "Conheça nossos produtos",
+    "know_products_mastip": "Conheça os produtos Mastip",
     "submit": "Enviar mensagem",
     "send_email": "Enviar e-mail",
     "start_chat": "Iniciar conversa",
     "view_map": "Ver no mapa",
     "send_message": "Enviar mensagem"
   },
-
   "hero": {
     "title": "Soluções em Câmara Quente",
     "description": "Somos especialistas em sistemas de câmara quente e soluções para injeção plástica, oferecendo produtos de alta qualidade e suporte técnico especializado.",
@@ -31,10 +30,8 @@
     "solutions_exclamation": "!",
     "hero_description": "Somos especialistas em sistemas de câmara quente e soluções para injeção plástica, oferecendo produtos de alta qualidade e suporte técnico especializado."
   },
-
   "features": "Características",
   "specifications": "Especificações",
-
   "mastip": {
     "title": "Produtos Mastip",
     "hot_halves": "Sistemas completos de câmara quente",
@@ -50,7 +47,7 @@
       "categories": {
         "new_releases": {
           "title": "Novidades",
-          "description": "Últimos lançamentos e inovações"
+          "description": "Projetos recentes de sucesso"
         },
         "hot_halves": {
           "title": "Sistemas Hot Half",
@@ -82,7 +79,6 @@
         }
       }
     },
-
     "hot_halves_systems": {
       "title": "Sistemas Hot Half Mastip",
       "description": "Sistemas completos de câmara quente para todas as aplicações",
@@ -113,7 +109,6 @@
         }
       }
     },
-
     "temperature_controllers": {
       "title": "Controladores de Temperatura Mastip",
       "description": "Controladores de temperatura de alta precisão para sistemas de câmara quente",
@@ -138,7 +133,6 @@
         }
       }
     },
-
     "sequential_controllers": {
       "title": "Controladores Sequenciais Mastip",
       "description": "Controladores sequenciais para sistemas valve gate",
@@ -151,14 +145,17 @@
             "Fácil configuração e operação",
             "Display LED intuitivo",
             "Modo manual e automático",
-            "Proteção contra sobrecarga"
+            "Proteção contra sobrecarga",
+            "Controle individual de abertura e fechamento de cada válvula"
           ],
           "specs": {
             "Alimentação": "AC220V (50/60 Hz)",
-            "Canais": "2 canais",
-            "Precisão": "0.01s",
-            "Display": "LCD",
-            "Dimensões": "200x150x80mm"
+            "Fonte de Alimentação de Entrada Única de Injeção": "DC24V, AC220V",
+            "Fonte de Alimentação de Saída do Solenoide": "Tensão única, 100mA / Zona",
+            "Faixa de Temperatura de Operação": "0ºC a 55ºC, (32℉~131℉)",
+            "Modos de Operação": "Modo A, Modo B, Modo C",
+            "Tensão de Entrada Automática": "Sim",
+            "HMI": "Tela Touch Colorida de 7.0\""
           }
         },
         "sc8": {
@@ -182,10 +179,9 @@
       }
     }
   },
-
   "vonic": {
     "title": "Produtos Vonic",
-    "new_releases": "Últimos lançamentos e inovações",
+    "new_releases": "Projetos recentes de sucesso",
     "nozzles": "Bicos de injeção de alta performance",
     "manifolds": "Sistemas de câmara quente",
     "hot_half": "Sistemas completos de câmara quente",
@@ -197,7 +193,7 @@
       "categories": {
         "new_releases": {
           "title": "Novidades",
-          "description": "Últimos lançamentos e inovações"
+          "description": "Projetos recentes de sucesso"
         },
         "hot_nozzles": {
           "title": "Bicos de Injeção",
@@ -222,7 +218,6 @@
       }
     }
   },
-
   "sections": {
     "products": {
       "title": "Nossos Produtos",
@@ -295,7 +290,12 @@
       "who_is_mastip": "Quem é a Mastip?",
       "mastip_description": "A Mastip é uma empresa líder global em tecnologia de câmara quente, reconhecida por sua inovação e qualidade.",
       "product_types": "Tipos de Produtos",
-      "products_description": "A linha de produtos Mastip inclui sistemas completos de câmara quente, bicos, manifolds e controladores."
+      "products_description": "A linha de produtos Mastip inclui sistemas completos de câmara quente, bicos, manifolds e controladores.",
+      "bullets": {
+        "point_1": "Tecnologia de ponta em câmara quente",
+        "point_2": "Ampla adesão no mercado internacional",
+        "point_3": "Engenharia de alta qualidade"
+      }
     },
     "services": {
       "title": "Nossos Serviços",
@@ -322,7 +322,6 @@
       "subtitle": "Conheça quem confia em nossas soluções"
     }
   },
-
   "testimonials": {
     "title": "O que nossos clientes dizem",
     "techcorp": {
@@ -343,7 +342,6 @@
     "globalplast": "A expertise técnica e o compromisso com a qualidade da Vonic fazem dela uma parceira indispensável.",
     "ecomold": "A parceria com a Vonic nos permitiu alcançar novos patamares de qualidade e produtividade."
   },
-
   "footer": {
     "company": "Empresa",
     "products": "Produtos",
@@ -356,4 +354,4 @@
     "phone": "+55 15 99802-4314",
     "email": "marcos.moraes@vonicsystems.com.br"
   }
-} 
+}

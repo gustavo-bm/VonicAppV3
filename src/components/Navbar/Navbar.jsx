@@ -49,14 +49,20 @@ const Navbar = () => {
   const determineActiveSection = useCallback((scrollPosition) => {
     let newSection = 'home';
     let minDistance = Infinity;
+    const viewportHeight = window.innerHeight;
+    const threshold = 100; // Ajuste de tolerância para melhor detecção
     
     for (const section of sections) {
       const element = document.getElementById(section);
       if (element) {
         const { offsetTop, offsetHeight } = element;
+        const elementCenter = offsetTop + (offsetHeight / 2);
         const distance = Math.abs(scrollPosition - (offsetTop - 60));
+        const isInView = offsetTop - threshold <= scrollPosition && 
+                        scrollPosition <= (offsetTop + offsetHeight - threshold);
         
-        if (distance < minDistance) {
+        // Prioriza elementos que estão atualmente visíveis na viewport
+        if (isInView && distance < minDistance) {
           minDistance = distance;
           newSection = section;
         }
@@ -82,7 +88,9 @@ const Navbar = () => {
         scrollTimeout = setTimeout(() => {
           setIsScrolling(false);
           const newSection = determineActiveSection(scrollPosition);
-          setActiveSection(newSection);
+          if (newSection !== activeSection) {
+            setActiveSection(newSection);
+          }
         }, 100);
       }
     };
@@ -92,7 +100,7 @@ const Navbar = () => {
       window.removeEventListener('scroll', handleScroll);
       clearTimeout(scrollTimeout);
     };
-  }, [location.pathname, determineActiveSection, isScrolling]);
+  }, [location.pathname, determineActiveSection, isScrolling, activeSection]);
 
   useEffect(() => {
     if (location.pathname !== '/') {

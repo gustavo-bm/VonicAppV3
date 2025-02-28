@@ -15,6 +15,7 @@
     "learn_more": "Learn more",
     "contact_us": "Contact us",
     "know_products": "Discover our products",
+    "know_products_mastip": "Discover mastip products",
     "submit": "Send message",
     "send_email": "Send email",
     "start_chat": "Start chat",
@@ -48,9 +49,9 @@
       "title": "Mastip Products",
       "description": "Complete solutions in hot runner systems",
       "categories": {
-        "new_releases": {
-          "title": "New Releases",
-          "description": "Latest releases and innovations"
+        "recent_projects": {
+          "title": "Recent Projects and innovations",
+          "description": "Successful recent projects and innovations"
         },
         "hot_halves": {
           "title": "Hot Half Systems",
@@ -151,14 +152,17 @@
             "Easy setup and operation",
             "Intuitive LED display",
             "Manual and automatic mode",
-            "Overload protection"
+            "Overload protection",
+            "Individual opening and closing control for each valve"
           ],
           "specs": {
             "Power": "AC220V (50/60 Hz)",
-            "Channels": "2 channels",
-            "Precision": "0.01s",
-            "Display": "LCD",
-            "Dimensions": "200x150x80mm"
+            "Injection Single Input Power Supply": "DC24V, AC220V",
+            "Solenoid Output Power Supply": "Single voltage, 100mA / Zone",
+            "Operating Temperature Range": "0ºC to 55ºC, (32℉~131℉)",
+            "Operation Modes": "Mode A, Mode B, Mode C",
+            "Automatic Input Voltage": "Yes",
+            "HMI": "7.0\" Color Touch Screen"
           }
         },
         "sc8": {
@@ -185,7 +189,7 @@
 
   "vonic": {
     "title": "Vonic Products",
-    "new_releases": "Latest releases and innovations",
+    "new_releases": "Recent Projects and innovations",
     "nozzles": "High performance injection nozzles",
     "manifolds": "Hot runner systems",
     "hot_half": "Complete hot runner systems",
@@ -197,7 +201,7 @@
       "categories": {
         "new_releases": {
           "title": "New Releases",
-          "description": "Latest releases and innovations"
+          "description": "Recent Projects and innovations"
         },
         "hot_nozzles": {
           "title": "Injection Nozzles",
@@ -295,7 +299,12 @@
       "who_is_mastip": "Who is Mastip?",
       "mastip_description": "Mastip is a global leader in hot runner technology, recognized for its innovation and quality.",
       "product_types": "Product Types",
-      "products_description": "Mastip's product line includes complete hot runner systems, nozzles, manifolds, and controllers."
+      "products_description": "Mastip's product line includes complete hot runner systems, nozzles, manifolds, and controllers.",
+      "bullets": {
+        "point_1": "Cutting-edge hot runner technology",
+        "point_2": "Wide adoption in the international market",
+        "point_3": "High-quality engineering"
+      }
     },
     "services": {
       "title": "Our Services",
