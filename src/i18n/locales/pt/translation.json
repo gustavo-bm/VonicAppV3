@@ -79,103 +79,145 @@
           "title": "Serviços CAE",
           "description": "Análise e otimização de projetos"
         }
-      }
-    },
-    "hot_halves_systems": {
-      "title": "Sistemas Hot Half Mastip",
-      "description": "Sistemas completos de câmara quente para todas as aplicações",
-      "systems": {
-        "standard": {
-          "title": "Sistemas Hot Half Padrão",
-          "description": "Sistemas completos de câmara quente projetados para eficiência e confiabilidade",
-          "features": [
-            "Design robusto e confiável",
-            "Manutenção simplificada",
-            "Excelente custo-benefício",
-            "Configurações flexíveis",
-            "Controle preciso de temperatura",
-            "Suporte técnico especializado"
-          ]
-        },
-        "specialty": {
-          "title": "Sistemas Hot Half Especiais",
-          "description": "Soluções personalizadas para aplicações específicas e desafiadoras",
-          "features": [
-            "Projetos customizados",
-            "Alta performance",
-            "Soluções inovadoras",
-            "Suporte técnico especializado",
-            "Materiais de alta qualidade",
-            "Tecnologia avançada"
-          ]
-        }
-      }
-    },
-    "temperature_controllers": {
-      "title": "Controladores de Temperatura Mastip",
-      "description": "Controladores de temperatura de alta precisão para sistemas de câmara quente",
-      "systems": {
-        "standard": {
-          "title": "Controlador de Temperatura Meticom",
-          "description": "Controlador de temperatura avançado para sistemas de câmara quente",
-          "features": [
-            "Interface intuitiva e fácil de usar",
-            "Controle preciso de temperatura",
-            "Monitoramento em tempo real",
-            "Diagnóstico avançado de falhas",
-            "Suporte para múltiplas zonas"
-          ],
-          "specs": {
-            "Alimentação": "AC220V (50/60 Hz)",
-            "Display": "LCD de alta resolução",
-            "Zonas": "6 a 48 zonas",
-            "Precisão": "±0.1°C",
-            "Comunicação": "RS485/USB"
+      },
+      "hot_halves_systems": {
+        "title": "Sistemas Hot Half Mastip",
+        "description": "Sistemas completos de câmara quente para todas as aplicações",
+        "systems": {
+          "standard": {
+            "title": "Sistemas Hot Half Padrão",
+            "description": "Sistemas completos de câmara quente projetados para eficiência e confiabilidade",
+            "features": [
+              "Design robusto e confiável",
+              "Manutenção simplificada",
+              "Excelente custo-benefício",
+              "Configurações flexíveis",
+              "Controle preciso de temperatura",
+              "Suporte técnico especializado"
+            ]
+          },
+          "specialty": {
+            "title": "Sistemas Hot Half Especiais",
+            "description": "Soluções personalizadas para aplicações específicas e desafiadoras",
+            "features": [
+              "Projetos customizados",
+              "Alta performance",
+              "Soluções inovadoras",
+              "Suporte técnico especializado",
+              "Materiais de alta qualidade",
+              "Tecnologia avançada"
+            ]
           }
         }
-      }
-    },
-    "sequential_controllers": {
-      "title": "Controladores Sequenciais Mastip",
-      "description": "Controladores sequenciais para sistemas valve gate",
-      "systems": {
-        "sc2": {
-          "title": "MetiCom SC2",
-          "description": "Controlador sequencial compacto para até 2 válvulas",
-          "features": [
-            "Controle preciso de tempo",
-            "Fácil configuração e operação",
-            "Display LED intuitivo",
-            "Modo manual e automático",
-            "Proteção contra sobrecarga",
-            "Controle individual de abertura e fechamento de cada válvula"
-          ],
-          "specs": {
-            "Alimentação": "AC220V (50/60 Hz)",
-            "Fonte de Alimentação de Entrada Única de Injeção": "DC24V, AC220V",
-            "Fonte de Alimentação de Saída do Solenoide": "Tensão única, 100mA / Zona",
-            "Faixa de Temperatura de Operação": "0ºC a 55ºC, (32℉~131℉)",
-            "Modos de Operação": "Modo A, Modo B, Modo C",
-            "Tensão de Entrada Automática": "Sim",
-            "HMI": "Tela Touch Colorida de 7.0\""
+      },
+      "temperature_controllers": {
+        "title": "Controladores de Temperatura Mastip",
+        "description": "Controladores de temperatura de alta precisão para sistemas de câmara quente",
+        "systems": {
+          "standard": {
+            "title": "Controlador de Temperatura Meticom",
+            "description": "Controlador de temperatura avançado para sistemas de câmara quente",
+            "features": [
+              "Interface intuitiva e fácil de usar",
+              "Controle preciso de temperatura",
+              "Monitoramento em tempo real",
+              "Diagnóstico avançado de falhas",
+              "Suporte para múltiplas zonas"
+            ],
+            "specs": {
+              "Alimentação": "AC220V (50/60 Hz)",
+              "Display": "LCD de alta resolução",
+              "Zonas": "6 a 48 zonas",
+              "Precisão": "±0.1°C",
+              "Comunicação": "RS485/USB"
+            }
           }
-        },
-        "sc8": {
-          "title": "MetiCom SC8",
-          "description": "Controlador sequencial avançado para até 8 válvulas",
-          "features": [
-            "Override manual disponível",
-            "Múltiplos modos de operação",
-            "Memória para 100 moldes",
-            "Interface touch screen",
-            "Diagnóstico avançado"
-          ],
-          "specs": {
-            "Alimentação": "Monofásico AC 220V (50/60 Hz)",
-            "Canais": "8 canais",
-            "Precisão": "0.01s",
-            "Display": "Touch screen colorido",
-            "Dimensões": "300x250x150mm"
+        }
+      },
+      "sequential_controllers": {
+        "title": "Controladores Sequenciais Mastip",
+        "description": "Controladores sequenciais para sistemas valve gate",
+        "systems": {
+          "sc2": {
+            "title": "MetiCom SC2",
+            "description": "Controlador sequencial compacto para até 2 válvulas",
+            "features": [
+              "Controle preciso de tempo",
+              "Fácil configuração e operação",
+              "Display LED intuitivo",
+              "Modo manual e automático",
+              "Proteção contra sobrecarga",
+              "Controle individual de abertura e fechamento de cada válvula"
+            ],
+            "specs": {
+              "Alimentação": "AC220V (50/60 Hz)",
+              "Fonte de Alimentação de Entrada Única de Injeção": "DC24V, AC220V",
+              "Fonte de Alimentação de Saída do Solenoide": "Tensão única, 100mA / Zona",
+              "Faixa de Temperatura de Operação": "0ºC a 55ºC, (32℉~131℉)",
+              "Modos de Operação": "Modo A, Modo B, Modo C",
+              "Tensão de Entrada Automática": "Sim",
+              "HMI": "Tela Touch Colorida de 7.0\""
+            }
+          },
+          "sc8": {
+            "title": "MetiCom SC8",
+            "description": "Controlador sequencial avançado para até 8 válvulas",
+            "features": [
+              "Override manual disponível",
+              "Múltiplos modos de operação",
+              "Memória para 100 moldes",
+              "Interface touch screen",
+              "Diagnóstico avançado"
+            ],
+            "specs": {
+              "Alimentação": "Monofásico AC 220V (50/60 Hz)",
+              "Canais": "8 canais",
+              "Precisão": "0.01s",
+              "Display": "Touch screen colorido",
+              "Dimensões": "300x250x150mm"
+            }
+          }
+        }
+      },
+      "manifolds_available": {
+        "title": "Sistemas de Manifold Mastip",
+        "description": "Manifolds balanceados e especiais para injeção plástica",
+        "systems": {
+          "standard": {
+            "title": "Manifolds Balanceados",
+            "description": "Manifolds de alta qualidade e precisão para distribuição de resina",
+            "features": [
+              "Design balanceado",
+              "Fluxo uniforme",
+              "Alta resistência",
+              "Fácil manutenção",
+              "Compatibilidade com resinas de engenharia",
+              "Suporte técnico especializado"
+            ]
+          },
+          "high_quality": {
+            "title": "Manifolds Especiais",
+            "description": "Manifolds customizados para aplicações específicas",
+            "features": [
+              "Projetos customizados",
+              "Alta performance",
+              "Soluções inovadoras",
+              "Suporte técnico especializado",
+              "Materiais de alta qualidade",
+              "Tecnologia avançada"
+            ]
+          },
+          "multi_material": {
+            "title": "Manifolds Multi-Material",
+            "description": "Manifolds para aplicações com múltiplos materiais",
+            "features": [
+              "Compatibilidade com múltiplos materiais",
+              "Design avançado",
+              "Fluxo balanceado",
+              "Alta resistência",
+              "Suporte técnico especializado",
+              "Fácil manutenção"
+            ]
           }
         }
       }

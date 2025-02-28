@@ -67,18 +67,18 @@ const HotHalfSystems = () => {
 
   const systems = [
     {
-      title: t('mastip.hot_halves_systems.systems.standard.title'),
-      description: t('mastip.hot_halves_systems.systems.standard.description'),
+      title: t('mastip.products_page.hot_halves_systems.systems.standard.title'),
+      description: t('mastip.products_page.hot_halves_systems.systems.standard.description'),
       image: StandardHotHalf,
       link: "https://mastip.com/products/hot-halves/hot-half-systems/",
-      features: getTranslatedFeatures('mastip.hot_halves_systems.systems.standard.features')
+      features: getTranslatedFeatures('mastip.products_page.hot_halves_systems.systems.standard.features')
     },
     {
-      title: t('mastip.hot_halves_systems.systems.specialty.title'),
-      description: t('mastip.hot_halves_systems.systems.specialty.description'),
+      title: t('mastip.products_page.hot_halves_systems.systems.specialty.title'),
+      description: t('mastip.products_page.hot_halves_systems.systems.specialty.description'),
       image: SpecialtyHotHalf,
       link: "https://mastip.com/products/hot-halves/speciality-hot-half-systems/",
-      features: getTranslatedFeatures('mastip.hot_halves_systems.systems.specialty.features')
+      features: getTranslatedFeatures('mastip.products_page.hot_halves_systems.systems.specialty.features')
     }
   ];
 
@@ -91,9 +91,9 @@ const HotHalfSystems = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl font-bold mb-6 text-white">{t('mastip.hot_halves_systems.title')}</h1>
+          <h1 className="text-5xl font-bold mb-6 text-white">{t('mastip.products_page.hot_halves_systems.title')}</h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto">
-            {t('mastip.hot_halves_systems.description')}
+            {t('mastip.products_page.hot_halves_systems.description')}
           </p>
         </motion.div>
 

@@ -8,123 +8,157 @@ import { HiOutlineLightBulb } from 'react-icons/hi';
 const Hero = () => {
   const { t } = useTranslation();
 
-  // Variantes para animações mais suaves
+  // Variantes para animações mais suaves e escalonadas
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        duration: 0.4,
-        when: "beforeChildren",
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 10 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { 
         duration: 0.6,
+        when: "beforeChildren",
+        staggerChildren: 0.12,
         ease: "easeOut"
       }
     }
   };
 
+  const itemVariants = {
+    hidden: { opacity: 0, y: 15 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { 
+        duration: 0.7,
+        ease: [0.21, 0.45, 0.12, 0.97] // Custom easing for better motion feel
+      }
+    }
+  };
+
   const imageVariants = {
-    hidden: { opacity: 0, scale: 0.9 },
+    hidden: { opacity: 0, scale: 0.92 },
     visible: {
       opacity: 1,
       scale: 1,
       transition: { 
-        duration: 0.8,
-        ease: "easeOut" 
+        duration: 1.2,
+        ease: "easeOut",
+        delay: 0.3
       }
     },
     floating: {
-      y: [0, -10, 0],
+      y: [0, -12, 0],
       transition: {
-        duration: 6,
+        duration: 8,
         repeat: Infinity,
         repeatType: "mirror",
         ease: "easeInOut",
-        delay: 1
+        delay: 0.8
+      }
+    }
+  };
+
+  const highlightVariants = {
+    hidden: { opacity: 0, x: 30 },
+    visible: {
+      opacity: 1, 
+      x: 0,
+      transition: { 
+        duration: 0.8,
+        delay: 1.1,
+        ease: "easeOut"
       }
     }
   };
 
   return (
-    <div className="relative min-h-screen bg-gradient-vonic-dark overflow-hidden flex items-center" id="home">
-      {/* Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/70 to-transparent z-10" />
-        <div className="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-t from-black to-transparent z-10" />
-        <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-black to-transparent z-10" />
+    <div className="relative min-h-screen bg-gradient-to-b from-black via-gray-900 to-black overflow-hidden flex items-center" id="home">
+      {/* Background Elements - Enhanced for better depth */}
+      <div className="absolute inset-0 z-0">
+        {/* Primary gradients */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black opacity-90" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-transparent to-black/80" />
         
-        {/* Decorative Elements */}
-        <div className="absolute top-[20%] left-[10%] w-64 h-64 bg-[#CE171F]/20 rounded-full filter blur-3xl opacity-30" />
-        <div className="absolute bottom-[20%] right-[10%] w-80 h-80 bg-[#CE171F]/10 rounded-full filter blur-3xl opacity-20" />
+        {/* Artistic gradient overlays */}
+        <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-black to-transparent z-10" />
+        <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-black to-transparent z-10" />
+        
+        {/* Decorative colored glows */}
+        <div className="absolute top-[30%] left-[5%] w-[500px] h-[500px] bg-[#CE171F]/10 rounded-full filter blur-[120px] opacity-40" />
+        <div className="absolute bottom-[20%] right-[5%] w-[600px] h-[600px] bg-[#CE171F]/5 rounded-full filter blur-[100px] opacity-30" />
+        
+        {/* Subtle pattern overlay for texture */}
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY3RhbE5vaXNlIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxwYXRoIGQ9Ik0wIDBoMzAwdjMwMEgweiIgZmlsdGVyPSJ1cmwoI2EpIiBvcGFjaXR5PSIuMDUiLz48L3N2Zz4=')]" />
       </div>
 
-      {/* Content Container */}
-      <div className="relative z-20 container mx-auto px-6">
+      {/* Content Container - Better grid layout */}
+      <div className="relative z-20 container mx-auto px-6 py-16 md:py-20">
         <motion.div
           initial="hidden"
           animate="visible"
           variants={containerVariants}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center"
+          className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center"
         >
-          {/* Left Side - Text */}
-          <div className="text-white space-y-10 pt-28 lg:pt-10">
-            {/* Badge */}
+          {/* Left Side - Text Content - Now takes 6/12 columns */}
+          <div className="text-white space-y-8 lg:col-span-6">
+            {/* Badge - Enhanced with better positioning */}
             <motion.div variants={itemVariants} className="inline-flex items-center">
-              <span className="bg-white/5 backdrop-blur-sm px-6 py-2 rounded-full border border-white/10 flex items-center space-x-3">
+              <span className="bg-black/60 backdrop-blur-md px-5 py-2 rounded-full border border-white/10 flex items-center space-x-3 shadow-lg">
                 <FaIndustry className="w-5 h-5 text-[#CE171F]" />
                 <span className="text-base font-medium text-white/90">{t('hero.years_market')}</span>
               </span>
             </motion.div>
 
-            {/* Main Heading - Enhanced Typography */}
-            <div className="space-y-5">
-              <motion.h1 variants={itemVariants} className="text-5xl lg:text-7xl font-bold leading-tight tracking-tight">
+            {/* Main Heading - More sophisticated typography and effects */}
+            <div className="space-y-6">
+              <motion.h1 
+                variants={itemVariants} 
+                className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight"
+              >
                 <span className="text-white">{t('hero.delivering')}</span> <br />
-                <div className="flex items-center">
+                <div className="relative inline-flex items-center mt-2">
                   <span className="text-[#CE171F] drop-shadow-glow relative">
                     {t('hero.solutions')}
-                    <span className="text-[#CE171F] absolute -right-8 top-0">{t('hero.solutions_exclamation')}</span>
+                    <span className="text-[#CE171F] absolute -right-9 top-0">{t('hero.solutions_exclamation')}</span>
                     <motion.div 
                       initial={{ width: 0 }}
                       animate={{ width: '100%' }}
-                      transition={{ delay: 0.8, duration: 0.8 }}
-                      className="absolute -bottom-2 left-0 h-1 bg-[#CE171F]/70 rounded-full"
+                      transition={{ delay: 1.2, duration: 1 }}
+                      className="absolute -bottom-2 left-0 h-1.5 bg-gradient-to-r from-[#CE171F] to-[#CE171F]/40 rounded-full"
                     />
                   </span>
                 </div>
               </motion.h1>
 
-              <motion.p variants={itemVariants} className="text-lg text-white/80 max-w-xl leading-relaxed">
+              {/* Description - Better styling and composition */}
+              <motion.p 
+                variants={itemVariants} 
+                className="text-base md:text-lg text-white/80 max-w-xl leading-relaxed border-l-4 border-[#CE171F]/30 pl-4"
+              >
                 {t('hero.hero_description')}
               </motion.p>
             </div>
 
-            {/* CTA Buttons - Enhanced */}
-            <motion.div variants={itemVariants} className="flex flex-wrap gap-5 pt-4">
-              <Link to="/produtos/vonic" onClick={() => window.scrollTo(0, 0)}>
+            {/* CTA Buttons - More polished with advanced hover effects */}
+            <motion.div variants={itemVariants} className="flex flex-wrap gap-4 pt-5">
+              <Link to="/produtos" onClick={() => window.scrollTo(0, 0)}>
                 <motion.div
-                  whileHover={{ scale: 1.02, boxShadow: "0 10px 25px -5px rgba(206, 23, 31, 0.3)" }}
-                  className="relative bg-gradient-to-r from-[#CE171F] to-[#A30F15] text-white px-8 py-3.5 rounded-lg font-semibold shadow-lg overflow-hidden group flex items-center"
+                  whileHover={{ scale: 1.03, y: -3 }}
+                  whileTap={{ scale: 0.98 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                  className="relative group"
                 >
-                  <span className="absolute inset-0 bg-gradient-to-r from-[#A30F15] to-[#CE171F] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <span className="relative mr-2">{t('buttons.know_products')}</span>
-                  <motion.span 
-                    initial={{ x: 0 }}
-                    whileHover={{ x: 5 }}
-                    className="relative"
-                  >
-                    →
-                  </motion.span>
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-[#CE171F] to-[#6c0000] rounded-lg blur-sm opacity-75 group-hover:opacity-100 transition duration-500"></div>
+                  <div className="relative bg-gradient-to-r from-[#CE171F] to-[#A30F15] text-white px-7 py-3 rounded-lg font-medium shadow-lg flex items-center space-x-2 overflow-hidden">
+                    <span className="z-10">{t('buttons.know_products')}</span>
+                    <motion.span 
+                      initial={{ x: 0 }}
+                      whileHover={{ x: 5 }}
+                      className="z-10"
+                    >
+                      →
+                    </motion.span>
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#A30F15] to-[#CE171F] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  </div>
                 </motion.div>
               </Link>
               
@@ -134,67 +168,85 @@ const Hero = () => {
                   e.preventDefault();
                   document.getElementById('sobre').scrollIntoView({ behavior: 'smooth' });
                 }}
-                whileHover={{ scale: 1.02 }}
-                className="relative border border-white/30 text-white px-8 py-3.5 rounded-lg font-semibold backdrop-blur-sm overflow-hidden group flex items-center"
+                whileHover={{ scale: 1.03, y: -3 }}
+                whileTap={{ scale: 0.98 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                className="relative bg-black/40 backdrop-blur-md border border-white/20 text-white px-7 py-3 rounded-lg font-medium shadow-md flex items-center space-x-2 hover:bg-black/60 hover:border-white/30 transition-all duration-300"
               >
-                <span className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <span className="relative mr-2">{t('buttons.learn_more')}</span>
+                <span>{t('buttons.learn_more')}</span>
                 <motion.span
-                  animate={{ y: [0, 5, 0] }}
-                  transition={{ duration: 1.5, repeat: Infinity, repeatType: "loop", delay: 1 }}
-                  className="relative"
+                  animate={{ y: [0, 6, 0] }}
+                  transition={{ duration: 2, repeat: Infinity, repeatType: "loop", delay: 1 }}
                 >
                   <FaChevronDown className="text-white/80" />
                 </motion.span>
               </motion.a>
             </motion.div>
             
-            {/* Innovation Indicator */}
-            <motion.div variants={itemVariants} className="inline-flex items-center mt-8 bg-white/5 backdrop-blur-sm p-3 rounded-xl border border-white/10">
-              <HiOutlineLightBulb className="text-[#CE171F] text-xl mr-3" />
-              <span className="text-sm text-white/80 font-medium">
-                Inovação e tecnologia em sistemas de câmara quente
+            {/* Innovation Indicator - Redesigned with better style */}
+            <motion.div 
+              variants={itemVariants} 
+              className="inline-flex items-center mt-8 px-4 py-3 bg-gradient-to-r from-black/80 to-black/60 backdrop-blur-md rounded-lg border-l-4 border-[#CE171F] shadow-lg"
+            >
+              <HiOutlineLightBulb className="text-[#CE171F] text-xl mr-3 flex-shrink-0" />
+              <span className="text-sm text-white/90 font-medium">
+                {t('hero.innovation_indicator')}
               </span>
             </motion.div>
           </div>
 
-          {/* Right Side - Hero Image */}
-          <div className="relative w-full h-[600px] flex items-center justify-center pt-24 lg:pt-10">
-            {/* Background and Effects */}
-            <div className="absolute inset-0 bg-gradient-radial from-[#CE171F]/10 via-transparent to-transparent rounded-full filter blur-3xl" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+          {/* Right Side - Hero Image - Now takes 6/12 columns with better presentation */}
+          <div className="relative w-full h-[480px] lg:h-[600px] lg:col-span-6 flex items-center justify-center overflow-visible">
+            {/* Enhanced background effects for the image */}
+            <div className="absolute inset-0 m-auto w-[90%] h-[90%] rounded-full bg-gradient-to-br from-[#CE171F]/5 via-[#CE171F]/2 to-transparent blur-2xl" />
             
-            {/* Circle Highlight Background */}
+            {/* Circle background with improved styling */}
             <motion.div
               variants={itemVariants}
-              className="absolute inset-0 m-auto w-[70%] h-[70%] rounded-full bg-gradient-to-br from-black/40 to-[#CE171F]/5 backdrop-blur-md z-0"
+              className="absolute inset-0 m-auto w-[75%] h-[75%] rounded-full bg-gray-900/80 border border-white/5 backdrop-blur-sm z-10"
             />
             
-            {/* Product Image with Advanced Styling */}
+            {/* Orbital ring effect */}
+            <motion.div 
+              initial={{ opacity: 0, rotate: 0 }}
+              animate={{ opacity: 1, rotate: 360 }}
+              transition={{ duration: 40, repeat: Infinity, ease: "linear", delay: 1 }}
+              className="absolute inset-0 m-auto w-[82%] h-[82%] rounded-full border border-white/10 z-0"
+              style={{ borderRadius: '50%' }}
+            />
+            
+            {/* Product Image with Advanced Styling and Hover Effect */}
             <motion.div
               variants={imageVariants}
               animate="floating"
-              className="relative z-10 w-full max-w-[80%] h-auto flex justify-center items-center"
+              className="relative z-20 w-[85%] h-auto flex justify-center items-center"
             >
-              <div className="relative w-full">
-                {/* Glow Effect */}
-                <div className="absolute -bottom-10 left-0 right-0 mx-auto w-2/3 h-20 bg-[#CE171F]/20 filter blur-3xl rounded-full" />
+              {/* Shadow beneath image */}
+              <div className="absolute -bottom-8 inset-x-0 mx-auto w-2/3 h-12 bg-[#CE171F]/30 filter blur-2xl rounded-full opacity-30" />
+              
+              {/* Image with enhanced shadow and glow effects */}
+              <div className="relative w-full mx-auto flex justify-center items-center">
+                <div className="absolute inset-0 bg-gradient-radial from-[#CE171F]/10 to-transparent rounded-full blur-2xl opacity-60 z-0" />
                 
                 <img
                   src={heroSystem}
                   alt="Vonic Systems - Hot Runner Solutions"
-                  className="w-full h-auto object-contain relative z-10 drop-shadow-2xl"
+                  className="w-[90%] h-auto object-contain relative z-10 drop-shadow-2xl"
                   style={{
-                    maskImage: "radial-gradient(circle, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%)",
-                    WebkitMaskImage: "radial-gradient(circle, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%)"
+                    filter: "drop-shadow(0 10px 15px rgba(0, 0, 0, 0.5))",
+                    maskImage: "radial-gradient(circle, rgba(0, 0, 0, 1) 65%, rgba(0, 0, 0, 0) 100%)",
+                    WebkitMaskImage: "radial-gradient(circle, rgba(0, 0, 0, 1) 65%, rgba(0, 0, 0, 0) 100%)"
                   }}
                 />
               </div>
             </motion.div>
             
-            {/* Technical Specs Label */}
-            <motion.div variants={itemVariants} className="absolute bottom-10 right-10 bg-black/50 backdrop-blur-md px-4 py-2 rounded-lg border border-white/10 z-20">
-              <span className="text-sm text-white/90 font-medium">Câmara Quente de Alta Performance</span>
+            {/* Technical Specs Label - Redesigned for better visibility */}
+            <motion.div 
+              variants={highlightVariants}
+              className="absolute bottom-8 right-0 bg-black/80 backdrop-blur-xl px-4 py-3 rounded-lg border-l-2 border-[#CE171F] shadow-xl z-30"
+            >
+              <span className="text-sm text-white font-medium">{t('hero.system_shown')}</span>
             </motion.div>
           </div>
         </motion.div>

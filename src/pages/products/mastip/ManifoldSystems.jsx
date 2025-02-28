@@ -64,25 +64,25 @@ const ManifoldSystems = () => {
 
   const systems = [
     {
-      title: t('mastip.manifolds.systems.standard.title'),
-      description: t('mastip.manifolds.systems.standard.description'),
+      title: t('mastip.manifolds_available.systems.standard.title'),
+      description: t('mastip.manifolds_available.systems.standard.description'),
       image: StandardManifold,
       link: "https://mastip.com/products/manifold-special-systems/standard-manifold-systems/",
-      features: getTranslatedFeatures('mastip.manifolds.systems.standard.features')
+      features: getTranslatedFeatures('mastip.manifolds_available.systems.standard.features')
     },
     {
-      title: t('mastip.manifolds.systems.high_cavity.title'),
-      description: t('mastip.manifolds.systems.high_cavity.description'),
+      title: t('mastip.manifolds_available.systems.high_cavity.title'),
+      description: t('mastip.manifolds_available.systems.high_cavity.description'),
       image: HighCavityManifold,
       link: "https://mastip.com/products/manifold-special-systems/high-cavity-manifold-systems/",
-      features: getTranslatedFeatures('mastip.manifolds.systems.high_cavity.features')
+      features: getTranslatedFeatures('mastip.manifolds_available.systems.high_cavity.features')
     },
     {
-      title: t('mastip.manifolds.systems.multi_material.title'),
-      description: t('mastip.manifolds.systems.multi_material.description'),
+      title: t('mastip.manifolds_available.systems.multi_material.title'),
+      description: t('mastip.manifolds_available.systems.multi_material.description'),
       image: MultiMaterialManifold,
       link: "https://mastip.com/products/manifold-special-systems/multi-material-system/",
-      features: getTranslatedFeatures('mastip.manifolds.systems.multi_material.features')
+      features: getTranslatedFeatures('mastip.manifolds_available.systems.multi_material.features')
     }
   ];
 
@@ -95,9 +95,9 @@ const ManifoldSystems = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl font-bold mb-6 text-white">{t('mastip.manifolds.title')}</h1>
+          <h1 className="text-5xl font-bold mb-6 text-white">{t('mastip.manifolds_available.title')}</h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto">
-            {t('mastip.manifolds.description')}
+            {t('mastip.manifolds_available.description')}
           </p>
         </motion.div>
 

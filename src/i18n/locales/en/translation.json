@@ -7,7 +7,6 @@
     "partners": "PARTNERS",
     "contact": "CONTACT"
   },
-
   "buttons": {
     "view_more": "View more",
     "view_details": "View details",
@@ -22,7 +21,6 @@
     "view_map": "View on map",
     "send_message": "Send message"
   },
-
   "hero": {
     "title": "Hot Runner Solutions",
     "description": "We are specialists in hot runner systems and plastic injection solutions, offering high-quality products and specialized technical support.",
@@ -34,10 +32,8 @@
     "innovation_indicator": "Innovation and technology on hot runner systems",
     "system_shown": "24 vias"
   },
-
   "features": "Features",
   "specifications": "Specifications",
-
   "mastip": {
     "title": "Mastip Products",
     "hot_halves": "Complete hot runner systems",
@@ -83,112 +79,150 @@
           "title": "CAE Services",
           "description": "Project analysis and optimization"
         }
-      }
-    },
-
-    "hot_halves_systems": {
-      "title": "Mastip Hot Half Systems",
-      "description": "Complete hot runner systems for all applications",
-      "systems": {
-        "standard": {
-          "title": "Standard Hot Half Systems",
-          "description": "Complete hot runner systems designed for efficiency and reliability",
-          "features": [
-            "Robust and reliable design",
-            "Simplified maintenance",
-            "Excellent cost-benefit",
-            "Flexible configurations",
-            "Precise temperature control",
-            "Specialized technical support"
-          ]
-        },
-        "specialty": {
-          "title": "Specialty Hot Half Systems",
-          "description": "Customized solutions for specific and challenging applications",
-          "features": [
-            "Custom projects",
-            "High performance",
-            "Innovative solutions",
-            "Specialized technical support",
-            "High quality materials",
-            "Advanced technology"
-          ]
-        }
-      }
-    },
-
-    "temperature_controllers": {
-      "title": "Mastip Temperature Controllers",
-      "description": "High precision temperature controllers for hot runner systems",
-      "systems": {
-        "standard": {
-          "title": "Meticom Temperature Controller",
-          "description": "Advanced temperature controller for hot runner systems",
-          "features": [
-            "Intuitive and easy to use interface",
-            "Precise temperature control",
-            "Real-time monitoring",
-            "Advanced fault diagnosis",
-            "Support for multiple zones"
-          ],
-          "specs": {
-            "Power": "AC220V (50/60 Hz)",
-            "Display": "High resolution LCD",
-            "Zones": "6 to 48 zones",
-            "Precision": "±0.1°C",
-            "Communication": "RS485/USB"
+      },
+      "hot_halves_systems": {
+        "title": "Mastip Hot Half Systems",
+        "description": "Complete hot runner systems for all applications",
+        "systems": {
+          "standard": {
+            "title": "Standard Hot Half Systems",
+            "description": "Complete hot runner systems designed for efficiency and reliability",
+            "features": [
+              "Robust and reliable design",
+              "Simplified maintenance",
+              "Excellent cost-benefit",
+              "Flexible configurations",
+              "Precise temperature control",
+              "Specialized technical support"
+            ]
+          },
+          "specialty": {
+            "title": "Specialty Hot Half Systems",
+            "description": "Customized solutions for specific and challenging applications",
+            "features": [
+              "Custom projects",
+              "High performance",
+              "Innovative solutions",
+              "Specialized technical support",
+              "High quality materials",
+              "Advanced technology"
+            ]
           }
         }
-      }
-    },
-
-    "sequential_controllers": {
-      "title": "Mastip Sequential Controllers",
-      "description": "Sequential controllers for valve gate systems",
-      "systems": {
-        "sc2": {
-          "title": "MetiCom SC2",
-          "description": "Compact sequential controller for up to 2 valves",
-          "features": [
-            "Precise time control",
-            "Easy setup and operation",
-            "Intuitive LED display",
-            "Manual and automatic mode",
-            "Overload protection",
-            "Individual opening and closing control for each valve"
-          ],
-          "specs": {
-            "Power": "AC220V (50/60 Hz)",
-            "Injection Single Input Power Supply": "DC24V, AC220V",
-            "Solenoid Output Power Supply": "Single voltage, 100mA / Zone",
-            "Operating Temperature Range": "0ºC to 55ºC, (32℉~131℉)",
-            "Operation Modes": "Mode A, Mode B, Mode C",
-            "Automatic Input Voltage": "Yes",
-            "HMI": "7.0\" Color Touch Screen"
+      },
+      "temperature_controllers": {
+        "title": "Mastip Temperature Controllers",
+        "description": "High precision temperature controllers for hot runner systems",
+        "systems": {
+          "standard": {
+            "title": "Meticom Temperature Controller",
+            "description": "Advanced temperature controller for hot runner systems",
+            "features": [
+              "Intuitive and easy to use interface",
+              "Precise temperature control",
+              "Real-time monitoring",
+              "Advanced fault diagnosis",
+              "Support for multiple zones"
+            ],
+            "specs": {
+              "Power": "AC220V (50/60 Hz)",
+              "Display": "High resolution LCD",
+              "Zones": "6 to 48 zones",
+              "Precision": "±0.1°C",
+              "Communication": "RS485/USB"
+            }
           }
-        },
-        "sc8": {
-          "title": "MetiCom SC8",
-          "description": "Advanced sequential controller for up to 8 valves",
-          "features": [
-            "Manual override available",
-            "Multiple operation modes",
-            "Memory for 100 molds",
-            "Touch screen interface",
-            "Advanced diagnostics"
-          ],
-          "specs": {
-            "Power": "Single phase AC 220V (50/60 Hz)",
-            "Channels": "8 channels",
-            "Precision": "0.01s",
-            "Display": "Color touch screen",
-            "Dimensions": "300x250x150mm"
+        }
+      },
+      "sequential_controllers": {
+        "title": "Mastip Sequential Controllers",
+        "description": "Sequential controllers for valve gate systems",
+        "systems": {
+          "sc2": {
+            "title": "MetiCom SC2",
+            "description": "Compact sequential controller for up to 2 valves",
+            "features": [
+              "Precise time control",
+              "Easy setup and operation",
+              "Intuitive LED display",
+              "Manual and automatic mode",
+              "Overload protection",
+              "Individual opening and closing control for each valve"
+            ],
+            "specs": {
+              "Power": "AC220V (50/60 Hz)",
+              "Injection Single Input Power Supply": "DC24V, AC220V",
+              "Solenoid Output Power Supply": "Single voltage, 100mA / Zone",
+              "Operating Temperature Range": "0ºC to 55ºC, (32℉~131℉)",
+              "Operation Modes": "Mode A, Mode B, Mode C",
+              "Automatic Input Voltage": "Yes",
+              "HMI": "7.0\" Color Touch Screen"
+            }
+          },
+          "sc8": {
+            "title": "MetiCom SC8",
+            "description": "Advanced sequential controller for up to 8 valves",
+            "features": [
+              "Manual override available",
+              "Multiple operation modes",
+              "Memory for 100 molds",
+              "Touch screen interface",
+              "Advanced diagnostics"
+            ],
+            "specs": {
+              "Power": "Single phase AC 220V (50/60 Hz)",
+              "Channels": "8 channels",
+              "Precision": "0.01s",
+              "Display": "Color touch screen",
+              "Dimensions": "300x250x150mm"
+            }
+          }
+        }
+      },
+      "manifolds_available": {
+        "title": "Mastip Manifold Systems",
+        "description": "Balanced and special manifolds for plastic injection",
+        "systems": {
+          "standard": {
+            "title": "Balanced Manifolds",
+            "description": "High-quality and precise manifolds for resin distribution",
+            "features": [
+              "Balanced design",
+              "Uniform flow",
+              "High durability",
+              "Easy maintenance",
+              "Compatibility with engineering resins",
+              "Specialized technical support"
+            ]
+          },
+          "high_quality": {
+            "title": "Specialty Manifolds",
+            "description": "Customized manifolds for specific applications",
+            "features": [
+              "Custom projects",
+              "High performance",
+              "Innovative solutions",
+              "Specialized technical support",
+              "High-quality materials",
+              "Advanced technology"
+            ]
+          },
+          "multi_material": {
+            "title": "Multi-Material Manifolds",
+            "description": "Manifolds for multi-material applications",
+            "features": [
+              "Compatibility with multiple materials",
+              "Advanced design",
+              "Balanced flow",
+              "High durability",
+              "Specialized technical support",
+              "Easy maintenance"
+            ]
           }
         }
       }
     }
   },
-
   "vonic": {
     "title": "Vonic Products",
     "new_releases": "Recent Projects and innovations",
@@ -228,7 +262,6 @@
       }
     }
   },
-
   "sections": {
     "products": {
       "title": "Our Products",
@@ -343,7 +376,6 @@
       "subtitle": "Companies that trust our solutions"
     }
   },
-
   "testimonials": {
     "title": "What our clients say",
     "3m": {
@@ -372,7 +404,6 @@
       "position": "Production Manager, EcoMold"
     }
   },
-
   "footer": {
     "company": "Company",
     "products": "Products",
