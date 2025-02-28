@@ -1,6 +1,7 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import './i18n/config';
+import { motion, AnimatePresence } from 'framer-motion';
 
 // Componentes de Layout
 import Navbar from './components/Navbar/Navbar';
@@ -42,12 +43,56 @@ import NozzleSystems from './pages/products/mastip/NozzleSystems';
 import ValveGateSystems from './pages/products/mastip/ValveGateSystems';
 import SequentialControllers from './pages/products/mastip/SequentialControllers';
 
+// Layout Wrapper com transição
+const PageTransition = ({ children }) => {
+  const variants = {
+    hidden: { opacity: 0 },
+    enter: { 
+      opacity: 1,
+      transition: { 
+        duration: 0.4,
+        when: "beforeChildren",
+        ease: "easeOut" 
+      }
+    },
+    exit: {
+      opacity: 0,
+      transition: { 
+        duration: 0.3,
+        ease: "easeIn" 
+      }
+    }
+  };
+
+  const location = useLocation();
+
+  // Scroll to top on page change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
+  return (
+    <AnimatePresence mode="wait">
+      <motion.div
+        key={location.pathname}
+        initial="hidden"
+        animate="enter"
+        exit="exit"
+        variants={variants}
+        className="flex-grow"
+      >
+        {children}
+      </motion.div>
+    </AnimatePresence>
+  );
+};
+
 function App() {
   return (
     <Router>
       <div className="flex flex-col min-h-screen">
         <Navbar />
-        <main className="flex-grow">
+        <PageTransition>
           <Routes>
             {/* Rotas Principais */}
             <Route path="/" element={<Home />} />
@@ -85,7 +130,7 @@ function App() {
             <Route path="/produtos/mastip/nozzles/sx" element={<SXSeries />} />
             <Route path="/produtos/mastip/nozzles/flowloc" element={<FlowLocSeries />} /> */}
           </Routes>
-        </main>
+        </PageTransition>
         <Footer />
       </div>
     </Router>

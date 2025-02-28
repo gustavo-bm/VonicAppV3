@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { FaLinkedin, FaInstagram, FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
+import { FaLinkedin, FaInstagram, FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaPhone, FaChevronUp } from 'react-icons/fa';
 import VonicLogo from '../../assets/VONIC.png';
 
 const SocialButton = ({ href, icon: Icon, label }) => (
@@ -9,9 +9,9 @@ const SocialButton = ({ href, icon: Icon, label }) => (
     href={href}
     target="_blank"
     rel="noopener noreferrer"
-    whileHover={{ scale: 1.1 }}
-    whileTap={{ scale: 0.9 }}
-    className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center text-white/80 hover:text-white hover:bg-white/10 transition-colors"
+    whileHover={{ scale: 1.05, y: -3 }}
+    whileTap={{ scale: 0.95 }}
+    className="w-11 h-11 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:text-white hover:shadow-glow-sm border border-white/10 transition-all duration-300"
     aria-label={label}
   >
     <Icon className="text-xl" />
@@ -19,11 +19,11 @@ const SocialButton = ({ href, icon: Icon, label }) => (
 );
 
 const InfoItem = ({ icon: Icon, text, className = "" }) => (
-  <div className={`flex items-center space-x-3 ${className}`}>
-    <div className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center">
-      <Icon className="text-[#CE171F] text-xl" />
+  <div className={`flex items-start space-x-4 ${className}`}>
+    <div className="w-10 h-10 bg-gradient-to-br from-vonics-500/30 to-vonics-600/20 backdrop-blur-sm rounded-full flex items-center justify-center shadow-inner border border-vonics-500/20">
+      <Icon className="text-vonics-500 text-lg" />
     </div>
-    <span className="text-white/80">{text}</span>
+    <span className="text-white/90 text-sm leading-tight mt-1">{text}</span>
   </div>
 );
 
@@ -31,50 +31,86 @@ const Footer = () => {
   const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
   return (
-    <footer className="bg-gray-900">
+    <footer className="relative bg-gradient-to-b from-gray-900 to-black overflow-hidden">
+      {/* Background Decorative Elements */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute top-0 right-0 w-80 h-80 bg-vonics-600/5 rounded-full filter blur-[100px] opacity-30"></div>
+        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-vonics-500/5 rounded-full filter blur-[120px] opacity-30"></div>
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.05 }}
+          transition={{ duration: 2 }}
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: 'radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 1px, transparent 1px)',
+            backgroundSize: '40px 40px'
+          }}
+        />
+      </div>
+
       {/* Gradient Bar */}
-      <div className="h-1 bg-gradient-vonic w-full" />
+      <div className="h-1.5 bg-gradient-vonic w-full relative z-10" />
+      
+      {/* Back to Top Button */}
+      <div className="absolute top-0 right-8 transform -translate-y-1/2 z-10">
+        <motion.button
+          onClick={scrollToTop}
+          whileHover={{ y: -3, boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.2)' }}
+          whileTap={{ scale: 0.95 }}
+          className="w-12 h-12 bg-gradient-to-br from-vonics-500 to-vonics-600 rounded-full flex items-center justify-center text-white shadow-lg border border-vonics-500/30"
+        >
+          <FaChevronUp className="text-lg" />
+        </motion.button>
+      </div>
 
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6 relative z-10">
         {/* Main Footer Content */}
-        <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
           {/* Company Info */}
-          <div className="space-y-6">
-            <img src={VonicLogo} alt="Vonic Systems" className="h-16 mb-6" />
-            <div className="space-y-4">
-              <InfoItem
-                icon={FaMapMarkerAlt}
-                text={t('footer.address')}
-              />
-              <InfoItem
-                icon={FaEnvelope}
-                text={t('footer.email')}
-              />
-              <InfoItem
-                icon={FaPhone}
-                text={t('footer.phone')}
-              />
-            </div>
+          <div className="space-y-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <img src={VonicLogo} alt="Vonic Systems" className="h-16 mb-8 drop-shadow-glow" />
+              <div className="space-y-6 max-w-xs">
+                <InfoItem
+                  icon={FaMapMarkerAlt}
+                  text={t('footer.address')}
+                />
+                <InfoItem
+                  icon={FaEnvelope}
+                  text={t('footer.email')}
+                />
+                <InfoItem
+                  icon={FaPhone}
+                  text={t('footer.phone')}
+                />
+              </div>
+            </motion.div>
           </div>
-
-          {/* Quick Links */}
-          {/* <div className="space-y-6">
-            <h3 className="text-white text-xl font-semibold">{t('footer.quick_links')}</h3>
-            <nav className="grid grid-cols-2 gap-4">
-              <a href="#home" className="text-white/60 hover:text-white transition-colors">{t('nav.home')}</a>
-              <a href="#sobre" className="text-white/60 hover:text-white transition-colors">{t('nav.about')}</a>
-              <a href="#servicos" className="text-white/60 hover:text-white transition-colors">{t('nav.services')}</a>
-              <a href="#parceiros" className="text-white/60 hover:text-white transition-colors">{t('nav.partners')}</a>
-              <a href="#produtos" className="text-white/60 hover:text-white transition-colors">{t('nav.products')}</a>
-              <a href="#contato" className="text-white/60 hover:text-white transition-colors">{t('nav.contact')}</a>
-            </nav>
-          </div> */}
 
           {/* Map */}
           <div className="lg:col-span-2">
-            <div className="rounded-xl overflow-hidden h-[250px] shadow-lg relative">
-              <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-vonic z-10" />
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="rounded-2xl overflow-hidden h-[300px] shadow-2xl relative"
+            >
+              <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent z-10 pointer-events-none"></div>
+              <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-vonics-500 to-vonics-600/50 z-20" />
               <iframe
                 src="https://www.google.com/maps?q=Vonic+Systems&hl=pt-BR&t=m&z=15&output=embed"
                 width="100%"
@@ -85,16 +121,28 @@ const Footer = () => {
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Vonic Systems Location"
               ></iframe>
-            </div>
+            </motion.div>
           </div>
         </div>
 
         {/* Footer Bottom */}
-        <div className="border-t border-white/10 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-white/60 text-center md:text-left">
+        <div className="border-t border-white/10 py-8 flex flex-col md:flex-row justify-between items-center gap-6">
+          <motion.p 
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="text-white/70 text-center md:text-left text-sm"
+          >
             © {currentYear} Vonic Systems. {t('footer.rights')}
-          </p>
-          <div className="flex space-x-4">
+          </motion.p>
+          <motion.div 
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="flex space-x-4"
+          >
             <SocialButton
               href="https://www.linkedin.com/company/vonic-systems"
               icon={FaLinkedin}
@@ -110,7 +158,7 @@ const Footer = () => {
               icon={FaWhatsapp}
               label="WhatsApp"
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </footer>

@@ -30,7 +30,9 @@
     "delivering": "Delivering",
     "solutions": "Solutions",
     "solutions_exclamation": "!",
-    "hero_description": "We are specialists in hot runner systems and plastic injection solutions, offering high-quality products and specialized technical support."
+    "hero_description": "We are specialists in hot runner systems and plastic injection solutions, offering high-quality products and specialized technical support.",
+    "innovation_indicator": "Innovation and technology on hot runner systems",
+    "system_shown": "24 vias"
   },
 
   "features": "Features",
@@ -343,11 +345,32 @@
   },
 
   "testimonials": {
-    "techcorp": "Vonic has been an exceptional partner, providing high-quality solutions and unparalleled technical support.",
-    "innovate": "Vonic's products have revolutionized our production process, significantly increasing our efficiency.",
-    "globalplast": "Vonic's technical expertise and commitment to quality make them an indispensable partner.",
-    "futuretech": "We are impressed with Vonic's ability to deliver customized solutions that perfectly meet our needs.",
-    "ecomold": "The partnership with Vonic has allowed us to reach new levels of quality and productivity."
+    "title": "What our clients say",
+    "3m": {
+      "text": "Vonic has been an exceptional partner, providing high-quality solutions and unmatched technical support.",
+      "author": "João Silva",
+      "position": "Production Director, TechCorp"
+    },
+    "injex": {
+      "text": "We are impressed with Vonic's ability to deliver customized solutions that perfectly meet our needs.",
+      "author": "Maria Santos",
+      "position": "Operations Manager, FutureTech"
+    },
+    "jeruel": {
+      "text": "The exceptional technical support and product quality make Vonic our preferred partner.",
+      "author": "Carlos Oliveira",
+      "position": "CEO, PlasticPro"
+    },
+    "globalplast": {
+      "text": "Vonic's technical expertise and commitment to quality make them an indispensable partner.",
+      "author": "Fernanda Costa",
+      "position": "Engineering Director, GlobalPlast"
+    },
+    "ecomold": {
+      "text": "The partnership with Vonic has allowed us to reach new levels of quality and productivity.",
+      "author": "Ricardo Almeida",
+      "position": "Production Manager, EcoMold"
+    }
   },
 
   "footer": {

@@ -8,6 +8,53 @@ import { HiOutlineLightBulb } from 'react-icons/hi';
 const Hero = () => {
   const { t } = useTranslation();
 
+  // Variantes para animações mais suaves
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.4,
+        when: "beforeChildren",
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 10 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { 
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const imageVariants = {
+    hidden: { opacity: 0, scale: 0.9 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { 
+        duration: 0.8,
+        ease: "easeOut" 
+      }
+    },
+    floating: {
+      y: [0, -10, 0],
+      transition: {
+        duration: 6,
+        repeat: Infinity,
+        repeatType: "mirror",
+        ease: "easeInOut",
+        delay: 1
+      }
+    }
+  };
+
   return (
     <div className="relative min-h-screen bg-gradient-vonic-dark overflow-hidden flex items-center" id="home">
       {/* Background Elements */}
@@ -23,21 +70,16 @@ const Hero = () => {
 
       {/* Content Container */}
       <div className="relative z-20 container mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={containerVariants}
+          className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center"
+        >
           {/* Left Side - Text */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-white space-y-10 pt-28 lg:pt-10"
-          >
+          <div className="text-white space-y-10 pt-28 lg:pt-10">
             {/* Badge */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2 }}
-              className="inline-flex items-center"
-            >
+            <motion.div variants={itemVariants} className="inline-flex items-center">
               <span className="bg-white/5 backdrop-blur-sm px-6 py-2 rounded-full border border-white/10 flex items-center space-x-3">
                 <FaIndustry className="w-5 h-5 text-[#CE171F]" />
                 <span className="text-base font-medium text-white/90">{t('hero.years_market')}</span>
@@ -46,12 +88,7 @@ const Hero = () => {
 
             {/* Main Heading - Enhanced Typography */}
             <div className="space-y-5">
-              <motion.h1
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.4 }}
-                className="text-5xl lg:text-7xl font-bold leading-tight tracking-tight"
-              >
+              <motion.h1 variants={itemVariants} className="text-5xl lg:text-7xl font-bold leading-tight tracking-tight">
                 <span className="text-white">{t('hero.delivering')}</span> <br />
                 <div className="flex items-center">
                   <span className="text-[#CE171F] drop-shadow-glow relative">
@@ -60,30 +97,20 @@ const Hero = () => {
                     <motion.div 
                       initial={{ width: 0 }}
                       animate={{ width: '100%' }}
-                      transition={{ delay: 1, duration: 0.8 }}
+                      transition={{ delay: 0.8, duration: 0.8 }}
                       className="absolute -bottom-2 left-0 h-1 bg-[#CE171F]/70 rounded-full"
                     />
                   </span>
                 </div>
               </motion.h1>
 
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.6 }}
-                className="text-lg text-white/80 max-w-xl leading-relaxed"
-              >
+              <motion.p variants={itemVariants} className="text-lg text-white/80 max-w-xl leading-relaxed">
                 {t('hero.hero_description')}
               </motion.p>
             </div>
 
             {/* CTA Buttons - Enhanced */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.8 }}
-              className="flex flex-wrap gap-5 pt-4"
-            >
+            <motion.div variants={itemVariants} className="flex flex-wrap gap-5 pt-4">
               <Link to="/produtos/vonic" onClick={() => window.scrollTo(0, 0)}>
                 <motion.div
                   whileHover={{ scale: 1.02, boxShadow: "0 10px 25px -5px rgba(206, 23, 31, 0.3)" }}
@@ -114,7 +141,7 @@ const Hero = () => {
                 <span className="relative mr-2">{t('buttons.learn_more')}</span>
                 <motion.span
                   animate={{ y: [0, 5, 0] }}
-                  transition={{ duration: 1.5, repeat: Infinity, repeatType: "loop" }}
+                  transition={{ duration: 1.5, repeat: Infinity, repeatType: "loop", delay: 1 }}
                   className="relative"
                 >
                   <FaChevronDown className="text-white/80" />
@@ -123,43 +150,30 @@ const Hero = () => {
             </motion.div>
             
             {/* Innovation Indicator */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.2 }}
-              className="inline-flex items-center mt-8 bg-white/5 backdrop-blur-sm p-3 rounded-xl border border-white/10"
-            >
+            <motion.div variants={itemVariants} className="inline-flex items-center mt-8 bg-white/5 backdrop-blur-sm p-3 rounded-xl border border-white/10">
               <HiOutlineLightBulb className="text-[#CE171F] text-xl mr-3" />
               <span className="text-sm text-white/80 font-medium">
                 Inovação e tecnologia em sistemas de câmara quente
               </span>
             </motion.div>
-          </motion.div>
+          </div>
 
           {/* Right Side - Hero Image */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            className="relative w-full h-[600px] flex items-center justify-center pt-24 lg:pt-10"
-          >
+          <div className="relative w-full h-[600px] flex items-center justify-center pt-24 lg:pt-10">
             {/* Background and Effects */}
             <div className="absolute inset-0 bg-gradient-radial from-[#CE171F]/10 via-transparent to-transparent rounded-full filter blur-3xl" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
             
             {/* Circle Highlight Background */}
             <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ delay: 0.3, duration: 1 }}
+              variants={itemVariants}
               className="absolute inset-0 m-auto w-[70%] h-[70%] rounded-full bg-gradient-to-br from-black/40 to-[#CE171F]/5 backdrop-blur-md z-0"
             />
             
             {/* Product Image with Advanced Styling */}
             <motion.div
-              initial={{ y: 20 }}
-              animate={{ y: [0, -15, 0] }}
-              transition={{ duration: 6, repeat: Infinity, repeatType: "mirror" }}
+              variants={imageVariants}
+              animate="floating"
               className="relative z-10 w-full max-w-[80%] h-auto flex justify-center items-center"
             >
               <div className="relative w-full">
@@ -179,16 +193,11 @@ const Hero = () => {
             </motion.div>
             
             {/* Technical Specs Label */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 1, duration: 0.8 }}
-              className="absolute bottom-10 right-10 bg-black/50 backdrop-blur-md px-4 py-2 rounded-lg border border-white/10 z-20"
-            >
+            <motion.div variants={itemVariants} className="absolute bottom-10 right-10 bg-black/50 backdrop-blur-md px-4 py-2 rounded-lg border border-white/10 z-20">
               <span className="text-sm text-white/90 font-medium">Câmara Quente de Alta Performance</span>
             </motion.div>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
       </div>
     </div>
   );

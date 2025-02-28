@@ -28,7 +28,9 @@
     "delivering": "Entregando",
     "solutions": "Soluções",
     "solutions_exclamation": "!",
-    "hero_description": "Somos especialistas em sistemas de câmara quente e soluções para injeção plástica, oferecendo produtos de alta qualidade e suporte técnico especializado."
+    "hero_description": "Somos especialistas em sistemas de câmara quente e soluções para injeção plástica, oferecendo produtos de alta qualidade e suporte técnico especializado.",
+    "innovation_indicator": "Inovação e tecnologia em sistemas de câmara quente",
+    "system_shown": "24 vias"
   },
   "features": "Características",
   "specifications": "Especificações",
@@ -334,23 +336,31 @@
   },
   "testimonials": {
     "title": "O que nossos clientes dizem",
-    "techcorp": {
+    "3m": {
       "text": "A Vonic tem sido uma parceira excepcional, fornecendo soluções de alta qualidade e suporte técnico incomparável.",
       "author": "João Silva",
       "position": "Diretor de Produção, TechCorp"
     },
-    "futuretech": {
+    "injex": {
       "text": "Estamos impressionados com a capacidade da Vonic de entregar soluções personalizadas que atendem perfeitamente às nossas necessidades.",
       "author": "Maria Santos",
       "position": "Gerente de Operações, FutureTech"
     },
-    "plasticpro": {
+    "jeruel": {
       "text": "O suporte técnico excepcional e a qualidade dos produtos fazem da Vonic nossa parceira preferencial",
       "author": "Carlos Oliveira",
       "position": "CEO, PlasticPro"
     },
-    "globalplast": "A expertise técnica e o compromisso com a qualidade da Vonic fazem dela uma parceira indispensável.",
-    "ecomold": "A parceria com a Vonic nos permitiu alcançar novos patamares de qualidade e produtividade."
+    "globalplast": {
+      "text": "A expertise técnica e o compromisso com a qualidade da Vonic fazem dela uma parceira indispensável.",
+      "author": "Fernanda Costa",
+      "position": "Diretora de Engenharia, GlobalPlast"
+    },
+    "ecomold": {
+      "text": "A parceria com a Vonic nos permitiu alcançar novos patamares de qualidade e produtividade.",
+      "author": "Ricardo Almeida",
+      "position": "Gerente de Produção, EcoMold"
+    }
   },
   "footer": {
     "company": "Empresa",
