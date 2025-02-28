@@ -300,10 +300,20 @@
       "mastip_description": "Mastip is a global leader in hot runner technology, recognized for its innovation and quality.",
       "product_types": "Product Types",
       "products_description": "Mastip's product line includes complete hot runner systems, nozzles, manifolds, and controllers.",
-      "bullets": {
-        "point_1": "Cutting-edge hot runner technology",
-        "point_2": "Wide adoption in the international market",
-        "point_3": "High-quality engineering"
+      "benefits": {
+        "title": "Main benefits",
+        "1": {
+          "title": "Cutting-edge hot runner technology",
+          "description": "Advanced systems for plastic injection"
+        },
+        "2": {
+          "title": "Wide adoption in the international market",
+          "description": "Present in more than 40 countries around the world"
+        },
+        "3": {
+          "title": "Innovation and quality",
+          "description": "Products developed with the highest quality standards"
+        }
       }
     },
     "services": {

@@ -291,10 +291,20 @@
       "mastip_description": "A Mastip é uma empresa líder global em tecnologia de câmara quente, reconhecida por sua inovação e qualidade.",
       "product_types": "Tipos de Produtos",
       "products_description": "A linha de produtos Mastip inclui sistemas completos de câmara quente, bicos, manifolds e controladores.",
-      "bullets": {
-        "point_1": "Tecnologia de ponta em câmara quente",
-        "point_2": "Ampla adesão no mercado internacional",
-        "point_3": "Engenharia de alta qualidade"
+      "benefits": {
+        "title": "Principais benefícios",
+        "1": {
+          "title": "Tecnologia de ponta em câmara quente",
+          "description": "Sistemas avançados para injeção plástica"
+        },
+        "2": {
+          "title": "Ampla adesão no mercado internacional",
+          "description": "Presente em mais de 40 países ao redor do mundo"
+        },
+        "3": {
+          "title": "Inovação e qualidade",
+          "description": "Produtos desenvolvidos com os mais altos padrões de qualidade"
+        }
       }
     },
     "services": {

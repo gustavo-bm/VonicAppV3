@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaBars, FaTimes, FaChevronDown } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
@@ -22,7 +22,7 @@ const NavLink = ({ to, onClick, children, isActive }) => (
           initial={{ opacity: 0, width: '0%' }}
           animate={{ opacity: 1, width: '100%' }}
           exit={{ opacity: 0, width: '0%' }}
-          className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#CE171F]"
+          className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#CE171F] to-[#CE171F]/60 rounded-full"
           transition={{ 
             type: "spring",
             stiffness: 500,
@@ -43,6 +43,7 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [isScrolling, setIsScrolling] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const sections = ['home', 'sobre', 'servicos', 'parceiros', 'contato'];
 
@@ -112,46 +113,59 @@ const Navbar = () => {
     }
   }, [location.pathname, determineActiveSection]);
 
-  const scrollToSection = useCallback((sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const navbarHeight = 60;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
-
+  const handleNavClick = (sectionId) => {
+    const currentPath = location.pathname;
+    
+    if (currentPath === '/') {
+      // Se já estiver na página inicial, apenas rola para a seção
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
       setActiveSection(sectionId);
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    }
-  }, []);
-
-  const handleNavigation = useCallback((sectionId) => {
-    if (location.pathname !== '/') {
-      window.location.href = `/#${sectionId}`;
     } else {
-      scrollToSection(sectionId);
-      setIsMobileOpen(false);
+      // Se estiver em outra página, primeiro navega para a home e configura para rolar para a seção depois
+      navigate('/');
+      // Aguarda o carregamento da página e depois rola para a seção
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        if (sectionId !== 'home') {
+          setTimeout(() => {
+            document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+          }, 100);
+        }
+        setActiveSection(sectionId);
+      }, 50);
     }
-  }, [location.pathname, scrollToSection]);
+  };
 
   return (
     <motion.header
       animate={{
-        height: isScrolled ? 60 : 70,
-        backgroundColor: isScrolled ? 'rgba(255, 255, 255, 0.98)' : 'rgba(255, 255, 255, 1)',
+        height: isScrolled ? 70 : 85,
+        backgroundColor: isScrolled ? 'rgba(255, 255, 255, 0.92)' : 'rgba(255, 255, 255, 0.98)',
+        backdropFilter: isScrolled ? 'blur(8px)' : 'blur(4px)',
       }}
       transition={{ duration: 0.3 }}
-      className="fixed top-0 left-0 right-0 z-50 shadow-lg backdrop-blur-sm"
+      className="fixed top-0 left-0 right-0 z-50 shadow-md"
     >
+      <div className="absolute inset-x-0 bottom-0 h-[1px] bg-gradient-to-r from-transparent via-gray-300 to-transparent opacity-70"></div>
+      
       <nav className="container mx-auto px-6 h-full">
         <div className="flex items-center justify-between h-full">
-          <Link to="/" className="flex items-center h-full py-2">
+          <Link 
+            to="/" 
+            className="inline-flex items-center h-full"
+            onClick={() => {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+              setActiveSection('home');
+            }}
+          >
             <motion.img
               src={VonicLogo}
               alt="Vonic Systems"
-              animate={{ height: isScrolled ? 35 : 40 }}
+              animate={{ 
+                height: isScrolled ? 35 : 40,
+                filter: isScrolled ? 'drop-shadow(0 2px 2px rgba(0,0,0,0.1))' : 'drop-shadow(0 4px 4px rgba(0,0,0,0.15))'
+              }}
+              whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
               className="object-contain"
             />
@@ -160,7 +174,7 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center h-full">
             <NavLink
               to="/"
-              onClick={() => handleNavigation('home')}
+              onClick={() => handleNavClick('home')}
               isActive={location.pathname === '/' && activeSection === 'home'}
             >
               {t('navigation.home')}
@@ -173,12 +187,15 @@ const Navbar = () => {
             >
               <NavLink
                 to="/produtos/vonic"
-                onClick={() => window.location.href = '/produtos/vonic'}
+                onClick={() => {
+                  window.location.href = '/produtos/vonic';
+                  window.scrollTo(0, 0);
+                }}
                 isActive={location.pathname.includes('/produtos')}
               >
                 <span className="flex items-center">
                   {t('navigation.products')}
-                  <FaChevronDown className="ml-1 text-sm" />
+                  <FaChevronDown className="ml-1 text-sm transition-transform duration-300 transform group-hover:rotate-180" />
                 </span>
               </NavLink>
               <ProductDropdown isOpen={isProductsOpen} onClose={() => setIsProductsOpen(false)} />
@@ -186,7 +203,7 @@ const Navbar = () => {
 
             <NavLink
               to="/"
-              onClick={() => handleNavigation('sobre')}
+              onClick={() => handleNavClick('sobre')}
               isActive={location.pathname === '/' && activeSection === 'sobre'}
             >
               {t('navigation.about')}
@@ -194,7 +211,7 @@ const Navbar = () => {
 
             <NavLink
               to="/"
-              onClick={() => handleNavigation('servicos')}
+              onClick={() => handleNavClick('servicos')}
               isActive={location.pathname === '/' && activeSection === 'servicos'}
             >
               {t('navigation.services')}
@@ -202,7 +219,7 @@ const Navbar = () => {
 
             <NavLink
               to="/"
-              onClick={() => handleNavigation('parceiros')}
+              onClick={() => handleNavClick('parceiros')}
               isActive={location.pathname === '/' && activeSection === 'parceiros'}
             >
               {t('navigation.partners')}
@@ -210,18 +227,46 @@ const Navbar = () => {
 
             <NavLink
               to="/"
-              onClick={() => handleNavigation('contato')}
+              onClick={() => handleNavClick('contato')}
               isActive={location.pathname === '/' && activeSection === 'contato'}
             >
               {t('navigation.contact')}
             </NavLink>
 
-            <div className="ml-4 h-full border-l border-gray-200 pl-4">
+            <div className="ml-4 h-full border-l border-gray-200 pl-4 flex items-center">
               <LanguageSelector />
             </div>
           </div>
+          
+          <motion.button
+            className="lg:hidden p-2 rounded-md focus:outline-none"
+            onClick={() => setIsMobileOpen(!isMobileOpen)}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            {isMobileOpen ? (
+              <FaTimes className="text-lg text-gray-700" />
+            ) : (
+              <FaBars className="text-lg text-gray-700" />
+            )}
+          </motion.button>
         </div>
       </nav>
+      
+      <AnimatePresence>
+        {isMobileOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="lg:hidden bg-white shadow-lg overflow-hidden"
+          >
+            <div className="container mx-auto py-4 px-6">
+              {/* Mobile menu items will go here */}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.header>
   );
 };

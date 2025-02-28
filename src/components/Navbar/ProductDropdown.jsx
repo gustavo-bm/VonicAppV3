@@ -2,10 +2,19 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
+import { FaArrowRight } from 'react-icons/fa';
 
 const ProductDropdown = ({ isOpen, onClose }) => {
   const { t } = useTranslation();
   const [activeSubmenu, setActiveSubmenu] = useState(null);
+
+  // Função para navegar e rolar para o topo
+  const handleNavigation = (closeMenu) => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (closeMenu) {
+      onClose();
+    }
+  };
 
   const vonicProducts = [
     { path: '/produtos/vonic/novidades', label: t('vonic.new_releases') },
@@ -34,10 +43,10 @@ const ProductDropdown = ({ isOpen, onClose }) => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 10 }}
           transition={{ duration: 0.2 }}
-          className="absolute top-[calc(100%+1px)] left-0 min-w-[240px] bg-white shadow-lg rounded-lg py-2 z-50"
+          className="absolute top-[calc(100%+1px)] left-0 min-w-[260px] bg-white/95 backdrop-blur-md shadow-lg rounded-lg p-3 z-50 border border-gray-100"
           onMouseEnter={() => setActiveSubmenu(null)}
         >
-          <div className="space-y-1">
+          <div className="space-y-2">
             {/* Vonic Products */}
             <div
               className="relative"
@@ -45,10 +54,17 @@ const ProductDropdown = ({ isOpen, onClose }) => {
             >
               <Link
                 to="/produtos/vonic"
-                onClick={onClose}
-                className="block px-6 py-2 text-gray-800 hover:text-[#CE171F] hover:bg-gray-50 transition-colors"
+                onClick={() => handleNavigation(true)}
+                className="block px-4 py-2.5 text-gray-800 hover:text-[#CE171F] rounded-md hover:bg-gray-50 transition-colors font-medium flex items-center justify-between group"
               >
-                {t('vonic.title')}
+                <span>{t('vonic.title')}</span>
+                <motion.span 
+                  initial={{ x: 0 }}
+                  whileHover={{ x: 5 }}
+                  className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >
+                  <FaArrowRight className="text-xs text-[#CE171F]" />
+                </motion.span>
               </Link>
               <AnimatePresence>
                 {activeSubmenu === 'vonic' && (
@@ -56,16 +72,26 @@ const ProductDropdown = ({ isOpen, onClose }) => {
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -10 }}
-                    className="absolute left-full top-0 w-64 bg-white shadow-lg rounded-lg py-2"
+                    className="absolute left-full top-0 w-72 bg-white/95 backdrop-blur-md shadow-lg rounded-lg p-3 border border-gray-100"
                   >
+                    <div className="border-b border-gray-100 pb-2 mb-2">
+                      <span className="text-sm font-semibold text-gray-500 px-4">Produtos Vonic</span>
+                    </div>
                     {vonicProducts.map((product) => (
                       <Link
                         key={product.path}
                         to={product.path}
-                        onClick={onClose}
-                        className="block px-6 py-2 text-gray-800 hover:text-[#CE171F] hover:bg-gray-50 transition-colors"
+                        onClick={() => handleNavigation(true)}
+                        className="block px-4 py-2 text-gray-700 hover:text-[#CE171F] rounded-md hover:bg-gray-50 transition-colors flex items-center justify-between group"
                       >
-                        {product.label}
+                        <span>{product.label}</span>
+                        <motion.span 
+                          initial={{ x: 0 }}
+                          whileHover={{ x: 5 }}
+                          className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        >
+                          <FaArrowRight className="text-xs text-[#CE171F]" />
+                        </motion.span>
                       </Link>
                     ))}
                   </motion.div>
@@ -80,10 +106,17 @@ const ProductDropdown = ({ isOpen, onClose }) => {
             >
               <Link
                 to="/produtos/mastip"
-                onClick={onClose}
-                className="block px-6 py-2 text-gray-800 hover:text-[#CE171F] hover:bg-gray-50 transition-colors"
+                onClick={() => handleNavigation(true)}
+                className="block px-4 py-2.5 text-gray-800 hover:text-[#CE171F] rounded-md hover:bg-gray-50 transition-colors font-medium flex items-center justify-between group"
               >
-                {t('mastip.title')}
+                <span>{t('mastip.title')}</span>
+                <motion.span 
+                  initial={{ x: 0 }}
+                  whileHover={{ x: 5 }}
+                  className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >
+                  <FaArrowRight className="text-xs text-[#CE171F]" />
+                </motion.span>
               </Link>
               <AnimatePresence>
                 {activeSubmenu === 'mastip' && (
@@ -91,16 +124,26 @@ const ProductDropdown = ({ isOpen, onClose }) => {
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -10 }}
-                    className="absolute left-full top-0 w-64 bg-white shadow-lg rounded-lg py-2"
+                    className="absolute left-full top-0 w-72 bg-white/95 backdrop-blur-md shadow-lg rounded-lg p-3 border border-gray-100"
                   >
+                    <div className="border-b border-gray-100 pb-2 mb-2">
+                      <span className="text-sm font-semibold text-gray-500 px-4">Produtos Mastip</span>
+                    </div>
                     {mastipProducts.map((product) => (
                       <Link
                         key={product.path}
                         to={product.path}
-                        onClick={onClose}
-                        className="block px-6 py-2 text-gray-800 hover:text-[#CE171F] hover:bg-gray-50 transition-colors"
+                        onClick={() => handleNavigation(true)}
+                        className="block px-4 py-2 text-gray-700 hover:text-[#CE171F] rounded-md hover:bg-gray-50 transition-colors flex items-center justify-between group"
                       >
-                        {product.label}
+                        <span>{product.label}</span>
+                        <motion.span 
+                          initial={{ x: 0 }}
+                          whileHover={{ x: 5 }}
+                          className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        >
+                          <FaArrowRight className="text-xs text-[#CE171F]" />
+                        </motion.span>
                       </Link>
                     ))}
                   </motion.div>
