@@ -24,7 +24,7 @@
   "hero": {
     "title": "Soluções em Câmara Quente",
     "description": "Somos especialistas em sistemas de câmara quente e soluções para injeção plástica, oferecendo produtos de alta qualidade e suporte técnico especializado.",
-    "years_market": "Há mais de 20 anos no mercado",
+    "years_market": "Há mais de 30 anos no mercado",
     "delivering": "Entregando",
     "solutions": "Soluções",
     "solutions_exclamation": "!",
@@ -527,7 +527,7 @@
       },
       "certified": "Empresa certificada",
       "mission": "Nossa missão é fornecer soluções que garantam a mais alta qualidade, eficiência e confiabilidade para todos os nossos clientes.",
-      "time": "+15 anos no mercado",
+      "time": "+30 anos no mercado",
       "cards": {
         "1": {
           "title": "",
@@ -643,7 +643,7 @@
     "partners": {
       "companies_trusted": "Empresas que confiam",
       "title": "Nossos Parceiros",
-      "subtitle": "Empresas que se orgulham dos resultados excepcionais alcançados por meio da expertise especializada e dedicação da Vonic."
+      "subtitle": "Empresas que se orgulham dos resultados excepcionais alcançados por meio da expertise e dedicação da Vonic."
     }
   },
   "testimonials": {

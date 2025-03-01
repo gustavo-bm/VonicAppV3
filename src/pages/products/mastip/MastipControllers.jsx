@@ -85,28 +85,28 @@ const MastipControllers = () => {
 
   const controllers = [
     {
-      title: t('mastip.temperature_controllers.systems.touchscreen.title'),
-      description: t('mastip.temperature_controllers.systems.touchscreen.description'),
+      title: t('mastip.products_page.temperature_controllers.systems.touchscreen.title'),
+      description: t('mastip.products_page.temperature_controllers.systems.touchscreen.description'),
       image: TouchscreenController,
       link: "https://mastip.com/products/temperature-controllers/meticom-touchscreen-temperature-controllers/",
-      features: getTranslatedFeatures('mastip.temperature_controllers.systems.touchscreen.features'),
-      specs: getTranslatedSpecs('mastip.temperature_controllers.systems.touchscreen.specs')
+      features: getTranslatedFeatures('mastip.products_page.temperature_controllers.systems.touchscreen.features'),
+      specs: getTranslatedSpecs('mastip.products_page.temperature_controllers.systems.touchscreen.specs')
     },
     {
-      title: t('mastip.temperature_controllers.systems.modular.title'),
-      description: t('mastip.temperature_controllers.systems.modular.description'),
+      title: t('mastip.products_page.temperature_controllers.systems.modular.title'),
+      description: t('mastip.products_page.temperature_controllers.systems.modular.description'),
       image: ModularController,
       link: "https://mastip.com/products/temperature-controllers/meticom-modular-temperature-controllers/",
-      features: getTranslatedFeatures('mastip.temperature_controllers.systems.modular.features'),
-      specs: getTranslatedSpecs('mastip.temperature_controllers.systems.modular.specs')
+      features: getTranslatedFeatures('mastip.products_page.temperature_controllers.systems.modular.features'),
+      specs: getTranslatedSpecs('mastip.products_page.temperature_controllers.systems.modular.specs')
     },
     {
-      title: t('mastip.temperature_controllers.systems.integrated.title'),
-      description: t('mastip.temperature_controllers.systems.integrated.description'),
+      title: t('mastip.products_page.temperature_controllers.systems.integrated.title'),
+      description: t('mastip.products_page.temperature_controllers.systems.integrated.description'),
       image: IntegratedController,
       link: "https://mastip.com/products/temperature-controllers/meticom-integrated-temperature-controllers/",
-      features: getTranslatedFeatures('mastip.temperature_controllers.systems.integrated.features'),
-      specs: getTranslatedSpecs('mastip.temperature_controllers.systems.integrated.specs')
+      features: getTranslatedFeatures('mastip.products_page.temperature_controllers.systems.integrated.features'),
+      specs: getTranslatedSpecs('mastip.products_page.temperature_controllers.systems.integrated.specs')
     }
   ];
 
@@ -119,9 +119,9 @@ const MastipControllers = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl font-bold mb-6 text-[#CE171F]">{t('mastip.temperature_controllers.title')}</h1>
+          <h1 className="text-5xl font-bold mb-6 text-[#CE171F]">{t('mastip.products_page.temperature_controllers.title')}</h1>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            {t('mastip.temperature_controllers.description')}
+            {t('mastip.products_page.temperature_controllers.description')}
           </p>
         </motion.div>
 

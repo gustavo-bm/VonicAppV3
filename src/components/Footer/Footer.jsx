@@ -11,7 +11,7 @@ const SocialButton = ({ href, icon: Icon, label }) => (
     rel="noopener noreferrer"
     whileHover={{ scale: 1.05, y: -3 }}
     whileTap={{ scale: 0.95 }}
-    className="w-11 h-11 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:text-white hover:shadow-glow-sm border border-white/10 transition-all duration-300"
+    className="w-11 h-11 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-full flex items-center justify-center text-[#CE171F] hover:text-white hover:shadow-glow-sm border border-white/10 transition-all duration-300"
     aria-label={label}
   >
     <Icon className="text-xl" />
@@ -21,7 +21,7 @@ const SocialButton = ({ href, icon: Icon, label }) => (
 const InfoItem = ({ icon: Icon, text, className = "" }) => (
   <div className={`flex items-start space-x-4 ${className}`}>
     <div className="w-10 h-10 bg-gradient-to-br from-vonics-500/30 to-vonics-600/20 backdrop-blur-sm rounded-full flex items-center justify-center shadow-inner border border-vonics-500/20">
-      <Icon className="text-vonics-500 text-lg" />
+      <Icon className="text-[#CE171F] text-lg" />
     </div>
     <span className="text-white/90 text-sm leading-tight mt-1">{text}</span>
   </div>
@@ -39,7 +39,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative bg-gradient-to-b from-gray-900 to-black overflow-hidden">
+    <footer className="relative bg-gradient-to-b from-black to-gray-900 overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 right-0 w-80 h-80 bg-vonics-600/5 rounded-full filter blur-[100px] opacity-30"></div>
@@ -59,13 +59,13 @@ const Footer = () => {
       {/* Gradient Bar */}
       <div className="h-1.5 bg-gradient-vonic w-full relative z-10" />
       
-      {/* Back to Top Button */}
-      <div className="absolute top-0 right-8 transform -translate-y-1/2 z-10">
+      {/* Back to Top Button - Ajustado para não sobrepor */}
+      <div className="absolute top-6 right-8 z-20">
         <motion.button
           onClick={scrollToTop}
           whileHover={{ y: -3, boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.2)' }}
           whileTap={{ scale: 0.95 }}
-          className="w-12 h-12 bg-gradient-to-br from-vonics-500 to-vonics-600 rounded-full flex items-center justify-center text-white shadow-lg border border-vonics-500/30"
+          className="w-12 h-12 bg-gradient-to-br from-[#CE171F] to-[#9E0B11] rounded-full flex items-center justify-center text-white shadow-lg border border-[#CE171F]/30"
         >
           <FaChevronUp className="text-lg" />
         </motion.button>

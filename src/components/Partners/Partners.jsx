@@ -42,24 +42,6 @@ function Partners() {
       testimonial: t('testimonials.jeruel.text'),
       author: 'Robert Chen',
       position: 'Production Manager'
-    },
-    {
-      id: 4,
-      name: 'Globalplast Solutions',
-      logo: <FaRocket className="text-[#CE171F]" />,
-      isImage: false,
-      testimonial: t('testimonials.globalplast.text'),
-      author: 'Sarah Johnson',
-      position: 'Technical Director'
-    },
-    {
-      id: 5,
-      name: 'EcoMold Systems',
-      logo: <FaLeaf className="text-[#CE171F]" />,
-      isImage: false,
-      testimonial: t('testimonials.ecomold.text'),
-      author: 'Michael Brown',
-      position: 'Innovation Manager'
     }
   ];
 
@@ -112,6 +94,7 @@ function Partners() {
           grabCursor={true}
           centeredSlides={true}
           slidesPerView={'auto'}
+          initialSlide={1} // Define o segundo item (id: 2) como foco inicial
           coverflowEffect={{
             rotate: 2,
             stretch: 0,
@@ -119,14 +102,10 @@ function Partners() {
             modifier: 1,
             slideShadows: false,
           }}
-          autoplay={{
-            delay: 5000,
-            disableOnInteraction: false,
-          }}
           pagination={{
             clickable: true,
           }}
-          modules={[EffectCoverflow, Autoplay, Pagination]}
+          modules={[EffectCoverflow, Pagination]} // Removido Autoplay
           className="testimonials-swiper mt-10"
         >
           {partners.map((partner) => (
@@ -165,10 +144,10 @@ function Partners() {
                   <div className="border-t border-gray-100 pt-6 flex items-center">
                     <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200/80 shadow-inner flex items-center justify-center mr-4">
                       {partner.isImage ? (
-                        <img 
-                          src={partner.logo} 
+                        <img
+                          src={partner.logo}
                           alt={partner.name}
-                          className="max-w-[70%] max-h-[70%] object-contain" 
+                          className="max-w-[70%] max-h-[70%] object-contain"
                         />
                       ) : (
                         partner.logo
@@ -211,14 +190,14 @@ function Partners() {
                   className="w-28 h-28 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg border border-gray-100/80 flex items-center justify-center transition-all duration-300"
                 >
                   {partner.isImage ? (
-                    <img 
-                      src={partner.logo} 
-                      alt={partner.name} 
+                    <img
+                      src={partner.logo}
+                      alt={partner.name}
                       className="max-w-[70%] max-h-[70%] object-contain"
                     />
                   ) : (
-                    React.cloneElement(partner.logo, { 
-                      className: "text-4xl text-gray-800" 
+                    React.cloneElement(partner.logo, {
+                      className: "text-4xl text-gray-800"
                     })
                   )}
                 </motion.div>

@@ -45,13 +45,25 @@ const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const sections = ['home', 'sobre', 'servicos', 'parceiros', 'contato'];
+  const sections = ['home', 'sobre', 'servicos', 'partners', 'contato'];
 
   const determineActiveSection = useCallback((scrollPosition) => {
     let newSection = 'home';
     let minDistance = Infinity;
     const viewportHeight = window.innerHeight;
     const threshold = 100; // Ajuste de tolerância para melhor detecção
+    
+    // Verificar se a seção mastip está visível - se estiver, considerá-la como parte da Home
+    const mastipElement = document.getElementById('mastip');
+    if (mastipElement) {
+      const { offsetTop, offsetHeight } = mastipElement;
+      const isInMastipView = offsetTop - threshold <= scrollPosition && 
+                    scrollPosition <= (offsetTop + offsetHeight - threshold);
+      
+      if (isInMastipView) {
+        return 'home';
+      }
+    }
     
     for (const section of sections) {
       const element = document.getElementById(section);
@@ -219,8 +231,8 @@ const Navbar = () => {
 
             <NavLink
               to="/"
-              onClick={() => handleNavClick('parceiros')}
-              isActive={location.pathname === '/' && activeSection === 'parceiros'}
+              onClick={() => handleNavClick('partners')}
+              isActive={location.pathname === '/' && activeSection === 'partners'}
             >
               {t('navigation.partners')}
             </NavLink>
