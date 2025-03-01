@@ -11,7 +11,7 @@ import MVG55 from '../../../assets/mastip/valve_gate/mvg55.png';
 import Nexus from '../../../assets/mastip/valve_gate/nexus.png';
 import Cylix from '../../../assets/mastip/valve_gate/cylix.png';
 
-const SystemCard = ({ title, description, image, link, features = [] }) => (
+const SystemCard = ({ t, title, description, image, link, features = [] }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -33,7 +33,7 @@ const SystemCard = ({ title, description, image, link, features = [] }) => (
       <p className="text-black/80 mb-4">{description}</p>
       
       <div className="mb-6">
-        <h4 className="text-lg font-semibold mb-2 text-gray-700">Características:</h4>
+        <h4 className="text-lg font-semibold mb-2 text-gray-700">{t('features')}:</h4>
         <ul className="space-y-2">
           {Array.isArray(features) && features.map((feature, index) => (
             <li key={index} className="flex items-start space-x-2">
@@ -67,46 +67,46 @@ const ValveGateSystems = () => {
 
   const systems = [
     {
-      title: t('mastip_categories.valve_gates.systems.verishot.title'),
-      description: t('mastip_categories.valve_gates.systems.verishot.description'),
+      title: t('mastip.products_page.valve_gates.series.verishot.title'),
+      description: t('mastip.products_page.valve_gates.series.verishot.description'),
       image: VeriShot,
       link: "https://mastip.com/products/valve-gate-technology/verishot/",
-      features: getTranslatedFeatures('mastip_categories.valve_gates.systems.verishot.features')
+      features: getTranslatedFeatures('mastip.products_page.valve_gates.series.verishot.features')
     },
     {
-      title: t('mastip_categories.valve_gates.systems.mvg25.title'),
-      description: t('mastip_categories.valve_gates.systems.mvg25.description'),
+      title: t('mastip.products_page.valve_gates.series.mvg25.title'),
+      description: t('mastip.products_page.valve_gates.series.mvg25.description'),
       image: MVG25,
       link: "https://mastip.com/products/valve-gate-technology/mvg25/",
-      features: getTranslatedFeatures('mastip_categories.valve_gates.systems.mvg25.features')
+      features: getTranslatedFeatures('mastip.products_page.valve_gates.series.mvg25.features')
     },
     {
-      title: t('mastip_categories.valve_gates.systems.mvg40.title'),
-      description: t('mastip_categories.valve_gates.systems.mvg40.description'),
+      title: t('mastip.products_page.valve_gates.series.mvg40.title'),
+      description: t('mastip.products_page.valve_gates.series.mvg40.description'),
       image: MVG40,
       link: "https://mastip.com/products/valve-gate-technology/mvg40/",
-      features: getTranslatedFeatures('mastip_categories.valve_gates.systems.mvg40.features')
+      features: getTranslatedFeatures('mastip.products_page.valve_gates.series.mvg40.features')
     },
     {
-      title: t('mastip_categories.valve_gates.systems.mvg55.title'),
-      description: t('mastip_categories.valve_gates.systems.mvg55.description'),
+      title: t('mastip.products_page.valve_gates.series.mvg55.title'),
+      description: t('mastip.products_page.valve_gates.series.mvg55.description'),
       image: MVG55,
       link: "https://mastip.com/products/valve-gate-technology/mvg55/",
-      features: getTranslatedFeatures('mastip_categories.valve_gates.systems.mvg55.features')
+      features: getTranslatedFeatures('mastip.products_page.valve_gates.series.mvg55.features')
     },
     {
-      title: t('mastip_categories.valve_gates.systems.nexus.title'),
-      description: t('mastip_categories.valve_gates.systems.nexus.description'),
+      title: t('mastip.products_page.valve_gates.series.nexus.title'),
+      description: t('mastip.products_page.valve_gates.series.nexus.description'),
       image: Nexus,
       link: "https://mastip.com/products/valve-gate-technology/nexus-system/",
-      features: getTranslatedFeatures('mastip_categories.valve_gates.systems.nexus.features')
+      features: getTranslatedFeatures('mastip.products_page.valve_gates.series.nexus.features')
     },
     {
-      title: t('mastip_categories.valve_gates.systems.cylix.title'),
-      description: t('mastip_categories.valve_gates.systems.cylix.description'),
+      title: t('mastip.products_page.valve_gates.series.cylix.title'),
+      description: t('mastip.products_page.valve_gates.series.cylix.description'),
       image: Cylix,
       link: "https://mastip.com/products/valve-gate-technology/cylix-hybrid/",
-      features: getTranslatedFeatures('mastip_categories.valve_gates.systems.cylix.features')
+      features: getTranslatedFeatures('mastip.products_page.valve_gates.series.cylix.features')
     }
   ];
 
@@ -119,15 +119,15 @@ const ValveGateSystems = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl font-bold mb-6 text-white">{t('mastip_categories.valve_gates.title')}</h1>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto">
-            {t('mastip_categories.valve_gates.description')}
+          <h1 className="text-5xl font-bold mb-6 text-black">{t('mastip.products_page.valve_gates.title')}</h1>
+          <p className="text-xl text-black/90 max-w-3xl mx-auto">
+            {t('mastip.products_page.valve_gates.description')}
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {systems.map((system, index) => (
-            <SystemCard key={index} {...system} />
+            <SystemCard t={t} key={index} {...system} />
           ))}
         </div>
       </div>

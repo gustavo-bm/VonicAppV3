@@ -67,7 +67,7 @@ const ProductDropdown = ({ isOpen, onClose }) => {
                 </motion.span>
               </Link>
               <AnimatePresence>
-                {activeSubmenu === 'vonic' && (
+                {/* {activeSubmenu === 'vonic' && (
                   <motion.div
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -95,7 +95,7 @@ const ProductDropdown = ({ isOpen, onClose }) => {
                       </Link>
                     ))}
                   </motion.div>
-                )}
+                )} */}
               </AnimatePresence>
             </div>
 

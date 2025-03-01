@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { FaEnvelope, FaWhatsapp, FaMapMarkerAlt, FaPaperPlane, FaArrowRight } from 'react-icons/fa';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { FaEnvelope, FaWhatsapp, FaMapMarkerAlt, FaPaperPlane, FaArrowRight, FaCheckCircle, FaExclamationTriangle, FaTimes } from 'react-icons/fa';
+import { useForm, ValidationError } from '@formspree/react';
 import { HiOutlineLightBulb } from 'react-icons/hi';
 import { useTranslation } from 'react-i18next';
+import emailjs from '@emailjs/browser';
+// import { env } from '../../../env';
+import { emailjsConfig } from '../../config/emailjs';
 
 const ContactCard = ({ icon: Icon, title, content, action, actionText, actionClass, delay }) => (
   <motion.div
@@ -54,7 +58,7 @@ const ContactCard = ({ icon: Icon, title, content, action, actionText, actionCla
   </motion.div>
 );
 
-const InputField = ({ label, id, type = "text", placeholder, value, onChange, required }) => (
+const InputField = ({ label, id, type = "text", placeholder, value, onChange, required, disabled }) => (
   <div className="space-y-2">
     <label className="block text-white text-sm font-medium" htmlFor={id}>
       {label}
@@ -66,9 +70,10 @@ const InputField = ({ label, id, type = "text", placeholder, value, onChange, re
         value={value}
         onChange={onChange}
         rows="5"
-        className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-white/30 focus:outline-none focus:border-[#CE171F]/70 focus:ring-1 focus:ring-[#CE171F]/50 transition-all duration-300 backdrop-blur-sm shadow-sm"
+        className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-white/30 focus:outline-none focus:border-[#CE171F]/70 focus:ring-1 focus:ring-[#CE171F]/50 transition-all duration-300 backdrop-blur-sm shadow-sm disabled:opacity-70 disabled:cursor-not-allowed"
         placeholder={placeholder}
         required={required}
+        disabled={disabled}
       ></textarea>
     ) : (
       <input
@@ -77,13 +82,64 @@ const InputField = ({ label, id, type = "text", placeholder, value, onChange, re
         name={id}
         value={value}
         onChange={onChange}
-        className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-white/30 focus:outline-none focus:border-[#CE171F]/70 focus:ring-1 focus:ring-[#CE171F]/50 transition-all duration-300 backdrop-blur-sm shadow-sm"
+        className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-white/30 focus:outline-none focus:border-[#CE171F]/70 focus:ring-1 focus:ring-[#CE171F]/50 transition-all duration-300 backdrop-blur-sm shadow-sm disabled:opacity-70 disabled:cursor-not-allowed"
         placeholder={placeholder}
         required={required}
+        disabled={disabled}
       />
     )}
   </div>
 );
+
+// Componente de Notificação
+const Notification = ({ type, message, onClose }) => {
+  const variants = {
+    hidden: { opacity: 0, y: -20, scale: 0.95 },
+    visible: { opacity: 1, y: 0, scale: 1 },
+    exit: { opacity: 0, y: -20, scale: 0.95 }
+  };
+
+  let bgColor, icon;
+  
+  if (type === 'success') {
+    bgColor = 'bg-gradient-to-r from-green-600 to-green-500';
+    icon = <FaCheckCircle className="text-xl text-white" />;
+  } else {
+    bgColor = 'bg-gradient-to-r from-red-600 to-red-500';
+    icon = <FaExclamationTriangle className="text-xl text-white" />;
+  }
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      onClose();
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, [onClose]);
+
+  return (
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      variants={variants}
+      transition={{ duration: 0.3, ease: "easeOut" }}
+      className={`fixed top-6 right-6 z-50 ${bgColor} text-white p-4 pr-12 rounded-lg shadow-2xl backdrop-blur-sm border border-white/20 flex items-center max-w-md`}
+    >
+      <div className="mr-3 flex-shrink-0">
+        {icon}
+      </div>
+      <p className="text-sm font-medium">{message}</p>
+      <button
+        onClick={onClose}
+        className="absolute top-3 right-3 text-white/80 hover:text-white transition-colors"
+        aria-label="Fechar notificação"
+      >
+        <FaTimes />
+      </button>
+    </motion.div>
+  );
+};
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -92,29 +148,33 @@ const Contact = () => {
     email: '',
     message: ''
   });
+  const [state, handleSubmit] = useForm("xpwqvrzn");
+  const [notification, setNotification] = useState({ show: false, type: '', message: '' });
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    try {
-      const response = await fetch('https://formspree.io/f/marcos.moraes@vonicsystems.com.br', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
+  // Efeito para limpar os campos após o envio bem-sucedido
+  useEffect(() => {
+    if (state.succeeded) {
+      setFormData({
+        name: '',
+        email: '',
+        message: ''
       });
-
-      if (response.ok) {
-        alert('Mensagem enviada com sucesso!');
-        setFormData({ name: '', email: '', message: '' });
-      } else {
-        alert('Erro ao enviar mensagem. Por favor, tente novamente.');
-      }
-    } catch (error) {
-      alert('Erro ao enviar mensagem. Por favor, tente novamente.');
+      setNotification({
+        show: true,
+        type: 'success',
+        message: t('sections.contact.notifications.success')
+      });
+      
+      // Envia email de confirmação para o remetente
+      sendConfirmationEmail(formData.email, formData.name);
+    } else if (state.errors && state.errors.length > 0) {
+      setNotification({
+        show: true,
+        type: 'error',
+        message: t('sections.contact.notifications.error')
+      });
     }
-  };
+  }, [state.succeeded, state.errors, t]);
 
   const handleChange = (e) => {
     setFormData({
@@ -123,8 +183,45 @@ const Contact = () => {
     });
   };
 
+  const closeNotification = () => {
+    setNotification({ ...notification, show: false });
+  };
+
+  // Função para enviar email de confirmação ao remetente usando EmailJS
+  const sendConfirmationEmail = (email, name) => {
+    const templateParams = {
+      to_email: email,
+      to_name: name,
+      subject: 'Confirmação de Recebimento - Vonic Systems',
+      message: `Olá ${name}, recebemos sua mensagem e entraremos em contato em breve. Obrigado pelo interesse!`
+    };
+
+    emailjs.send(
+      emailjsConfig.serviceId, 
+      emailjsConfig.templateId,
+      templateParams,
+      emailjsConfig.publicKey
+    )
+    .then((result) => {
+      console.log('Email de confirmação enviado com sucesso!', result.text);
+    }, (error) => {
+      console.log('Erro ao enviar email de confirmação:', error.text);
+    });
+  };
+
   return (
     <section id="contato" className="relative py-32 bg-gradient-to-b from-black via-gray-900 to-black overflow-hidden">
+      {/* Sistema de Notificação */}
+      <AnimatePresence>
+        {notification.show && (
+          <Notification
+            type={notification.type}
+            message={notification.message}
+            onClose={closeNotification}
+          />
+        )}
+      </AnimatePresence>
+
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-black to-transparent"></div>
@@ -144,7 +241,7 @@ const Contact = () => {
         >
           <div className="inline-flex items-center justify-center mb-5 bg-white/5 backdrop-blur-sm px-4 py-2 rounded-full border border-white/10">
             <HiOutlineLightBulb className="text-[#CE171F] text-lg mr-2" />
-            <span className="text-white/90 text-sm font-medium">Fale Conosco</span>
+            <span className="text-white/90 text-sm font-medium">{t('sections.contact.speak_with_us')}</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             {t('sections.contact.title')}
@@ -180,7 +277,7 @@ const Contact = () => {
               icon={FaMapMarkerAlt}
               title={t('sections.contact.info.address.title')}
               content={t('sections.contact.info.address.content')}
-              action="https://maps.google.com"
+              action="https://www.google.com/maps/place/VONIC+Hot+Runner+Systems/@-23.638008,-47.577915,15z/data=!4m6!3m5!1s0x94c58faebaec5b47:0x818dcd1aab320d3b!8m2!3d-23.6380076!4d-47.5779152!16s%2Fg%2F11rfcxf25f?hl=pt-BR&entry=ttu&g_ep=EgoyMDI1MDIyNi4xIKXMDSoASAFQAw%3D%3D"
               actionText={t('sections.contact.info.address.action')}
               actionClass="text-[#CE171F] hover:text-white transition-colors"
               delay={0.3}
@@ -208,7 +305,7 @@ const Contact = () => {
                   <div className="md:w-1/3 mb-6 md:mb-0 md:pr-8">
                     <h3 className="text-2xl font-bold text-white mb-4">{t('sections.contact.form.title')}</h3>
                     <p className="text-white/60 text-sm leading-relaxed">
-                      Estamos ansiosos para ouvir de você e responder a quaisquer perguntas que você possa ter sobre nossos produtos e serviços. Nossa equipe está disponível para ajudá-lo.
+                      {t('sections.contact.form.description')}
                     </p>
                     <div className="w-12 h-1 bg-[#CE171F] rounded-full mt-6 mb-6"></div>
                     <div className="hidden md:block">
@@ -216,19 +313,19 @@ const Contact = () => {
                         <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center mr-3">
                           <span className="text-[#CE171F]">01</span>
                         </div>
-                        Preencha o formulário
+                        {t('sections.contact.form.steps.1')}
                       </div>
                       <div className="flex items-center text-white/60 text-sm mb-4">
                         <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center mr-3">
                           <span className="text-[#CE171F]">02</span>
                         </div>
-                        Nossa equipe analisará seu contato
+                        {t('sections.contact.form.steps.2')}
                       </div>
                       <div className="flex items-center text-white/60 text-sm">
                         <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center mr-3">
                           <span className="text-[#CE171F]">03</span>
                         </div>
-                        Responderemos o mais breve possível
+                        {t('sections.contact.form.steps.3')}
                       </div>
                     </div>
                   </div>
@@ -243,6 +340,7 @@ const Contact = () => {
                           value={formData.name}
                           onChange={handleChange}
                           required={true}
+                          disabled={state.submitting}
                         />
                         <InputField
                           label={t('sections.contact.form.email.label')}
@@ -252,6 +350,7 @@ const Contact = () => {
                           value={formData.email}
                           onChange={handleChange}
                           required={true}
+                          disabled={state.submitting}
                         />
                       </div>
                       
@@ -263,20 +362,36 @@ const Contact = () => {
                         value={formData.message}
                         onChange={handleChange}
                         required={true}
+                        disabled={state.submitting}
                       />
                       
                       <motion.button
-                        whileHover={{ scale: 1.02, boxShadow: "0 10px 25px -5px rgba(206, 23, 31, 0.3)" }}
-                        whileTap={{ scale: 0.98 }}
+                        whileHover={{ scale: state.submitting ? 1 : 1.02, boxShadow: state.submitting ? "none" : "0 10px 25px -5px rgba(206, 23, 31, 0.3)" }}
+                        whileTap={{ scale: state.submitting ? 1 : 0.98 }}
                         type="submit"
-                        className="relative bg-gradient-to-r from-[#CE171F] to-[#A30F15] text-white font-medium py-3 px-6 rounded-lg overflow-hidden group flex items-center justify-center shadow-lg"
+                        disabled={state.submitting}
+                        className="relative bg-gradient-to-r from-[#CE171F] to-[#A30F15] text-white font-medium py-3 px-6 rounded-lg overflow-hidden group flex items-center justify-center shadow-lg disabled:opacity-70 disabled:cursor-not-allowed w-full md:w-auto"
                       >
                         <span className="absolute inset-0 bg-gradient-to-r from-[#A30F15] to-[#CE171F] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                         <span className="relative flex items-center">
-                          {t('sections.contact.form.submit')}
-                          <FaPaperPlane className="ml-2 text-sm" />
+                          {state.submitting ? t('sections.contact.form.submitting', 'Enviando...') : t('sections.contact.form.submit')}
+                          {!state.submitting && <FaPaperPlane className="ml-2 text-sm" />}
                         </span>
                       </motion.button>
+                      
+                      {/* Status de validação do formulário */}
+                      <ValidationError 
+                        prefix="Email" 
+                        field="email"
+                        errors={state.errors}
+                        className="text-red-400 text-sm mt-1"
+                      />
+                      <ValidationError 
+                        prefix="Message" 
+                        field="message"
+                        errors={state.errors}
+                        className="text-red-400 text-sm mt-1"
+                      />
                     </form>
                   </div>
                 </div>

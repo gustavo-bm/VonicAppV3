@@ -14,7 +14,7 @@ import Sequential from '../assets/mastip/sequential_controllers.png';
 import CAE from '../assets/mastip/cae.png';
 import Aquilo from '../assets/mastip/new_releases/aquilo.png';
 
-const ProductCard = ({ title, description, image, link, isNew }) => (
+const ProductCard = ({ t, title, description, image, link, isNew }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -43,7 +43,7 @@ const ProductCard = ({ title, description, image, link, isNew }) => (
         to={link}
         className="inline-flex items-center space-x-2 bg-gradient-vonic hover:bg-gradient-vonic-hover text-white font-bold py-3 px-6 rounded-full transition-all duration-300 group"
       >
-        <span>Ver mais</span>
+        <span>{t('more')}</span>
         <FaArrowRight className="transform group-hover:translate-x-1 transition-transform" />
       </Link>
     </div>
@@ -121,15 +121,15 @@ const MastipProducts = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl font-bold mb-6 text-white">{t("mastip.title")}</h1>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto">
+          <h1 className="text-5xl font-bold mb-6 text-black">{t("mastip.title")}</h1>
+          <p className="text-xl text-black/90 max-w-3xl mx-auto">
             {t("mastip.products_page.description")}
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {products.map((product, index) => (
-            <ProductCard key={index} {...product} />
+            <ProductCard t={t} key={index} {...product} />
           ))}
         </div>
       </div>

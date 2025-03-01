@@ -1,10 +1,12 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { FaArrowRight, FaCheck, FaCog } from 'react-icons/fa';
 
-// Importando a imagem do controlador
-import sc2 from '../../../assets/mastip//sequential/sc2.png';
-import sc8 from '../../../assets/mastip/sequential/sc8.png';
+// Importando imagens dos controladores
+import TouchscreenController from '../../../assets/mastip/controllers/touchscreen.png';
+import ModularController from '../../../assets/mastip/controllers/modular.jpg';
+import IntegratedController from '../../../assets/mastip/controllers/integrated.jpg';
 
 const ControllerCard = ({ title, description, image, link, features = [], specs = {} }) => {
   const { t } = useTranslation();
@@ -14,7 +16,7 @@ const ControllerCard = ({ title, description, image, link, features = [], specs 
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col"
+      className="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 mb-12"
     >
       <div className="relative">
         <div className="relative h-64 overflow-hidden">
@@ -26,7 +28,7 @@ const ControllerCard = ({ title, description, image, link, features = [], specs 
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
         </div>
       </div>
-      <div className="p-6 flex-grow">
+      <div className="p-6">
         <h3 className="text-2xl font-bold mb-3 text-[#CE171F]">{title}</h3>
         <p className="text-black/80 mb-4">{description}</p>
         
@@ -43,7 +45,7 @@ const ControllerCard = ({ title, description, image, link, features = [], specs 
         </div>
 
         <div className="mb-6">
-          <h4 className="text-lg font-semibold mb-2 text-gray-700">Especificações:</h4>
+          <h4 className="text-lg font-semibold mb-2 text-gray-700">{t('specifications')}:</h4>
           <ul className="space-y-2">
             {Object.entries(specs).map(([key, value], index) => (
               <li key={index} className="flex items-start space-x-2">
@@ -53,8 +55,7 @@ const ControllerCard = ({ title, description, image, link, features = [], specs 
             ))}
           </ul>
         </div>
-      </div>
-      <div className="p-6 mt-auto">
+
         <a
           href={link}
           target="_blank"
@@ -69,7 +70,7 @@ const ControllerCard = ({ title, description, image, link, features = [], specs 
   );
 };
 
-const SequentialControllers = () => {
+const MastipControllers = () => {
   const { t } = useTranslation();
 
   const getTranslatedFeatures = (path) => {
@@ -84,25 +85,33 @@ const SequentialControllers = () => {
 
   const controllers = [
     {
-      title: t('mastip.products_page.sequential_controllers.systems.sc2.title'),
-      description: t('mastip.products_page.sequential_controllers.systems.sc2.description'),
-      image: sc2,
-      link: "https://mastip.com/products/sequential-controllers/meticom-sc2/",
-      features: getTranslatedFeatures('mastip.products_page.sequential_controllers.systems.sc2.features'),
-      specs: getTranslatedSpecs('mastip.products_page.sequential_controllers.systems.sc2.specs')
+      title: t('mastip.temperature_controllers.systems.touchscreen.title'),
+      description: t('mastip.temperature_controllers.systems.touchscreen.description'),
+      image: TouchscreenController,
+      link: "https://mastip.com/products/temperature-controllers/meticom-touchscreen-temperature-controllers/",
+      features: getTranslatedFeatures('mastip.temperature_controllers.systems.touchscreen.features'),
+      specs: getTranslatedSpecs('mastip.temperature_controllers.systems.touchscreen.specs')
     },
     {
-      title: t('mastip.products_page.sequential_controllers.systems.sc8.title'),
-      description: t('mastip.products_page.sequential_controllers.systems.sc8.description'),
-      image: sc8,
-      link: "https://mastip.com/products/sequential-controllers/meticom-sc8/",
-      features: getTranslatedFeatures('mastip.products_page.sequential_controllers.systems.sc8.features'),
-      specs: getTranslatedSpecs('mastip.products_page.sequential_controllers.systems.sc8.specs')
+      title: t('mastip.temperature_controllers.systems.modular.title'),
+      description: t('mastip.temperature_controllers.systems.modular.description'),
+      image: ModularController,
+      link: "https://mastip.com/products/temperature-controllers/meticom-modular-temperature-controllers/",
+      features: getTranslatedFeatures('mastip.temperature_controllers.systems.modular.features'),
+      specs: getTranslatedSpecs('mastip.temperature_controllers.systems.modular.specs')
+    },
+    {
+      title: t('mastip.temperature_controllers.systems.integrated.title'),
+      description: t('mastip.temperature_controllers.systems.integrated.description'),
+      image: IntegratedController,
+      link: "https://mastip.com/products/temperature-controllers/meticom-integrated-temperature-controllers/",
+      features: getTranslatedFeatures('mastip.temperature_controllers.systems.integrated.features'),
+      specs: getTranslatedSpecs('mastip.temperature_controllers.systems.integrated.specs')
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-vonic-dark pt-24">
+    <div className="min-h-screen bg-white pt-24">
       <div className="container mx-auto px-4 py-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -110,13 +119,13 @@ const SequentialControllers = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl font-bold mb-6 text-black">{t('mastip.products_page.sequential_controllers.title')}</h1>
-          <p className="text-xl text-black/90 max-w-3xl mx-auto">
-            {t('mastip.products_page.sequential_controllers.description')}
+          <h1 className="text-5xl font-bold mb-6 text-[#CE171F]">{t('mastip.temperature_controllers.title')}</h1>
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+            {t('mastip.temperature_controllers.description')}
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="max-w-4xl mx-auto">
           {controllers.map((controller, index) => (
             <ControllerCard key={index} {...controller} />
           ))}
@@ -126,4 +135,4 @@ const SequentialControllers = () => {
   );
 };
 
-export default SequentialControllers; 
+export default MastipControllers; 

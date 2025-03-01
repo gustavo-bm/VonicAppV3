@@ -33,6 +33,8 @@
     "system_shown": "24 vias"
   },
   "features": "Features",
+  "details": "See details",
+  "more": "See more",
   "specifications": "Specifications",
   "mastip": {
     "title": "Mastip Products",
@@ -47,9 +49,9 @@
       "title": "Mastip Products",
       "description": "Complete solutions in hot runner systems",
       "categories": {
-        "recent_projects": {
-          "title": "Recent Projects and innovations",
-          "description": "Successful recent projects and innovations"
+        "new_releases": {
+          "title": "New releases",
+          "description": "Recent innovations"
         },
         "hot_halves": {
           "title": "Hot Half Systems",
@@ -131,6 +133,66 @@
               "Precision": "±0.1°C",
               "Communication": "RS485/USB"
             }
+          },
+          "touchscreen": {
+            "title": "Meticom Touchscreen Temperature Controller",
+            "description": "Temperature controller with touchscreen interface for easy operation",
+            "features": [
+              "Intuitive and colorful touchscreen interface",
+              "Precise temperature control for multiple zones",
+              "Real-time monitoring with graphical visualization",
+              "Advanced fault diagnosis with visual alerts",
+              "Storage for multiple mold configurations",
+              "Advanced safety functions"
+            ],
+            "specs": {
+              "Power": "AC220V (50/60 Hz)",
+              "Display": "7 or 10 inch color touchscreen",
+              "Zones": "6 to 120 zones",
+              "Precision": "±0.1°C",
+              "Communication": "RS485/USB/Ethernet",
+              "Storage": "100+ mold configurations"
+            }
+          },
+          "modular": {
+            "title": "Meticom Modular Temperature Controller",
+            "description": "Expandable modular system for temperature control in large-scale applications",
+            "features": [
+              "Modular design for easy expansion",
+              "Flexible configurations adaptable to customer needs",
+              "User-friendly and intuitive interface",
+              "Advanced real-time diagnostics",
+              "Support for high-density applications",
+              "Excellent cost-benefit for multi-zone applications"
+            ],
+            "specs": {
+              "Power": "AC220V (50/60 Hz)",
+              "Display": "High resolution LCD or touchscreen",
+              "Zones": "6 to 256+ zones",
+              "Precision": "±0.1°C",
+              "Communication": "RS485/USB/Ethernet",
+              "Expandability": "6 or 12 zone modules"
+            }
+          },
+          "integrated": {
+            "title": "Meticom Integrated Temperature Controller",
+            "description": "Integrated temperature control solution for hot runner systems",
+            "features": [
+              "Compact and integrated design",
+              "Complete solution in a single cabinet",
+              "Easy installation and configuration",
+              "Precise control for small to medium applications",
+              "Intuitive and easy-to-operate interface",
+              "Ideal for limited space environments"
+            ],
+            "specs": {
+              "Power": "AC220V (50/60 Hz)",
+              "Display": "Integrated LCD",
+              "Zones": "6 to 48 zones",
+              "Precision": "±0.1°C",
+              "Communication": "RS485/USB",
+              "Dimensions": "Compact for installation in limited spaces"
+            }
           }
         }
       },
@@ -195,7 +257,7 @@
               "Specialized technical support"
             ]
           },
-          "high_quality": {
+          "high_cavity": {
             "title": "Specialty Manifolds",
             "description": "Customized manifolds for specific applications",
             "features": [
@@ -220,6 +282,178 @@
             ]
           }
         }
+      },
+      "nozzles": {
+        "title": "Mastip Injection Nozzles",
+        "description": "High-performance injection nozzles for plastic injection applications",
+        "series": {
+          "mx": {
+            "title": "Standard Injection Nozzles",
+            "description": "High-quality nozzles for general applications",
+            "features": [
+              "Robust design",
+              "High durability",
+              "Easy maintenance",
+              "Compatibility with engineering resins",
+              "Specialized technical support",
+              "Advanced technology"
+            ]
+          },
+          "bx": {
+            "title": "Multi-Tip Nozzles",
+            "description": "Nozzles with multiple tips for specific applications",
+            "features": [
+              "Multiple tips",
+              "Advanced design",
+              "High performance",
+              "Compatibility with multiple materials",
+              "Specialized technical support",
+              "Easy maintenance"
+            ]
+          },
+          "sx": {
+            "title": "Multi-Material Nozzles",
+            "description": "Nozzles for applications with multiple materials",
+            "features": [
+              "Compatibility with multiple materials",
+              "Advanced design",
+              "High durability",
+              "Easy maintenance",
+              "Specialized technical support",
+              "Advanced technology"
+            ]
+          },
+          "flowloc": {
+            "title": "FlowLoc Technology",
+            "description": "Advanced technology for resin flow control",
+            "features": [
+              "Precise flow control",
+              "Pressure reduction",
+              "Improvement in part quality",
+              "Compatibility with engineering resins",
+              "Easy maintenance",
+              "Specialized technical support"
+            ]
+          },
+          "multigate": {
+            "title": "Multi-Gate Technology",
+            "description": "Innovative solutions for complex applications",
+            "features": [
+              "Advanced design",
+              "High performance",
+              "Compatibility with multiple materials",
+              "Easy maintenance",
+              "Specialized technical support",
+              "Advanced technology"
+            ]
+          }
+        }
+      },
+      "valve_gates": {
+        "title": "Mastip Valve Gate Technology",
+        "description": "Advanced valve gate systems for plastic injection",
+        "series": {
+          "cylix": {
+            "title": "Standard Valve Gates",
+            "description": "High-quality valve gates for general applications",
+            "features": [
+              "Robust design",
+              "High durability",
+              "Easy maintenance",
+              "Compatibility with engineering resins",
+              "Specialized technical support",
+              "Advanced technology"
+            ]
+          },
+          "mvg25": {
+            "title": "Compact Valve Gates",
+            "description": "Compact valve gates for specific applications",
+            "features": [
+              "Compact design",
+              "High performance",
+              "Compatibility with multiple materials",
+              "Specialized technical support",
+              "Easy maintenance",
+              "Advanced technology"
+            ]
+          },
+          "mvg40": {
+            "title": "Mini Valve Gates",
+            "description": "Miniature valve gates for small parts",
+            "features": [
+              "Miniature design",
+              "High durability",
+              "Easy maintenance",
+              "Compatibility with engineering resins",
+              "Specialized technical support",
+              "Advanced technology"
+            ]
+          },
+          "mvg55": {
+            "title": "Multi-Tip Valve Gates",
+            "description": "Valve gates with multiple tips for specific applications",
+            "features": [
+              "Multiple tips",
+              "Advanced design",
+              "High performance",
+              "Compatibility with multiple materials",
+              "Specialized technical support",
+              "Easy maintenance"
+            ]
+          },
+          "nexus": {
+            "title": "Multi-Tip Valve Gates",
+            "description": "Valve gates with multiple tips for specific applications",
+            "features": [
+              "Multiple tips",
+              "Advanced design",
+              "High performance",
+              "Compatibility with multiple materials",
+              "Specialized technical support",
+              "Easy maintenance"
+            ]
+          },
+          "verishot": {
+            "title": "Multi-Tip Valve Gates",
+            "description": "Valve gates with multiple tips for specific applications",
+            "features": [
+              "Multiple tips",
+              "Advanced design",
+              "High performance",
+              "Compatibility with multiple materials",
+              "Specialized technical support",
+              "Easy maintenance"
+            ]
+          }
+        }
+      },
+    "cae": {
+      "title": "Mastip CAE Services",
+      "description": "Computer-aided engineering services for plastic injection",
+      "thermal": {
+        "title": "Thermal Analysis",
+        "description": "Advanced thermal analysis for mold design optimization",
+        "features": [
+          "Thermal simulation",
+          "Mold design optimization",
+          "Efficiency improvement",
+          "Cost reduction",
+          "Specialized technical support",
+          "Advanced technology"
+        ]            
+      },
+      "flow": {
+        "title": "Flow Analysis",
+        "description": "Flow analysis for resin distribution optimization",
+        "features": [
+          "Resin flow simulation",
+          "Balanced distribution",
+          "Quality improvement",
+          "Compatibility with multiple materials",
+          "Specialized technical support",
+          "Advanced technology"
+        ]
+      }
       }
     }
   },
@@ -268,31 +502,56 @@
       "description": "Discover our complete line of plastic injection products"
     },
     "about": {
+      "history": "Our History",
       "title": "About Us",
       "description": "Vonic Systems is a company specialized in hot runner systems, offering complete solutions for the plastic injection industry.",
+      "excellence": "Excellence in Hot Runner Systems",
+      "commitment": "Committed to innovations that enhance plastic injection processes",
       "text": "We use exclusive logical technology that allows us to improve the efficiency of plastic production. Our technology comes from years of experience, listening to typical molding problems and constantly coming up with SOLUTIONS. We can help your company with new or existing projects to become more efficient than you are today!",
       "features": {
-        "headquarters": {
-          "title": "Headquarters in Salto de Pirapora - SP",
-          "description": "New Manufacturer and Supplier of Hot Runner Systems"
+      "headquarters": {
+        "title": "Headquarters in Salto de Pirapora - SP",
+        "description": "New Manufacturer and Supplier of Hot Runner Systems"
+      },
+      "certified": {
+        "title": "Certified Products",
+        "description": "Manufactured with certified materials for each application"
+      },
+      "commitment": {
+        "title": "Commitment",
+        "description": "Flexibility, trust and commitment to each project"
+      },
+      "smart": {
+        "title": "Smart Projects",
+        "description": "Smart and Standardized Products and Projects"
+      }
+      },
+      "certified": "Certified company",
+      "mission": "Our mission is to provide solutions that ensure the highest quality, efficiency, and reliability for all our customers.",
+      "time": "+15 years in the market",
+      "cards": {
+        "1": {
+          "title": "Completed Projects",
+          "description": "Projects Completed"
         },
-        "certified": {
-          "title": "Certified Products",
-          "description": "Manufactured with certified materials for each application"
+        "2": {
+          "title": "Satisfied Clients",
+          "description": "Satisfied Clients"
         },
-        "commitment": {
-          "title": "Commitment",
-          "description": "Flexibility, trust and commitment to each project"
+        "3": {
+          "title": "Years of Experience",
+          "description": "Years of Experience"
         },
-        "smart": {
-          "title": "Smart Projects",
-          "description": "Smart and Standardized Products and Projects"
+        "4": {
+          "title": "Commitment to Quality",
+          "description": "Commitment to Quality"
         }
       }
     },
     "contact": {
-      "title": "Contact Us",
-      "subtitle": "We are ready to assist you",
+      "speak_with_us": "Have an idea?",
+      "title": "Contact Us!",
+      "subtitle": "We are fully prepared and dedicated to providing you with the best service, offering personalized and high-quality solutions",
       "info": {
         "email": {
           "title": "Email",
@@ -312,6 +571,12 @@
       },
       "form": {
         "title": "Send us a message",
+        "description": "We look forward to hearing from you and answering any questions you may have about our products and services. Our team is available to assist you.",
+        "steps": {
+          "1": "Fill out the form",
+          "2": "Our team will review your contact",
+          "3": "We will respond as soon as possible"
+        },
         "name": {
           "label": "Name",
           "placeholder": "Enter your name"
@@ -324,7 +589,12 @@
           "label": "Message",
           "placeholder": "Enter your message"
         },
-        "submit": "Send message"
+        "submit": "Send message",
+        "submitting": "Sending..."
+      },
+      "notifications": {
+        "success": "Message sent successfully! We will contact you soon.",
+        "error": "An error occurred while sending your message. Please try again."
       }
     },
     "mastip": {
@@ -372,8 +642,9 @@
       }
     },
     "partners": {
+      "companies_trusted": "Companies relying on our solutions",
       "title": "Our Partners",
-      "subtitle": "Companies that trust our solutions"
+      "subtitle": "Companies that take pride in the outstanding results achieved through Vonic's specialized expertise and dedication."
     }
   },
   "testimonials": {

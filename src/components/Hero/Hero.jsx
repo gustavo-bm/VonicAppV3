@@ -134,13 +134,13 @@ const Hero = () => {
                 variants={itemVariants} 
                 className="text-base md:text-lg text-white/80 max-w-xl leading-relaxed border-l-4 border-[#CE171F]/30 pl-4"
               >
-                {t('hero.hero_description')}
+                {t('hero.description')}
               </motion.p>
             </div>
 
             {/* CTA Buttons - More polished with advanced hover effects */}
             <motion.div variants={itemVariants} className="flex flex-wrap gap-4 pt-5">
-              <Link to="/produtos" onClick={() => window.scrollTo(0, 0)}>
+              <Link to="/produtos/vonic" onClick={() => window.scrollTo(0, 0)}>
                 <motion.div
                   whileHover={{ scale: 1.03, y: -3 }}
                   whileTap={{ scale: 0.98 }}

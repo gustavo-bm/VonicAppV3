@@ -8,7 +8,7 @@ import StandardManifold from '../../../assets/mastip/manifolds/standard.png';
 import HighCavityManifold from '../../../assets/mastip/manifolds/high_cavity.png';
 import MultiMaterialManifold from '../../../assets/mastip/manifolds/multi_material.png';
 
-const SystemCard = ({ title, description, image, link, features = [] }) => (
+const SystemCard = ({ title, description, image, link, features = [], t }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -30,7 +30,7 @@ const SystemCard = ({ title, description, image, link, features = [] }) => (
       <p className="text-black/80 mb-4">{description}</p>
       
       <div className="mb-6">
-        <h4 className="text-lg font-semibold mb-2 text-gray-700">Características:</h4>
+        <h4 className="text-lg font-semibold mb-2 text-gray-700">{t('features')}</h4>
         <ul className="space-y-2">
           {Array.isArray(features) && features.map((feature, index) => (
             <li key={index} className="flex items-start space-x-2">
@@ -47,7 +47,7 @@ const SystemCard = ({ title, description, image, link, features = [] }) => (
         rel="noopener noreferrer"
         className="inline-flex items-center space-x-2 bg-gradient-vonic hover:bg-gradient-vonic-hover text-white font-bold py-3 px-6 rounded-full transition-all duration-300 group"
       >
-        <span>Ver detalhes</span>
+        <span>{t('details')}</span>
         <FaArrowRight className="transform group-hover:translate-x-1 transition-transform" />
       </a>
     </div>
@@ -64,25 +64,25 @@ const ManifoldSystems = () => {
 
   const systems = [
     {
-      title: t('mastip.manifolds_available.systems.standard.title'),
-      description: t('mastip.manifolds_available.systems.standard.description'),
+      title: t('mastip.products_page.manifolds_available.systems.standard.title'),
+      description: t('mastip.products_page.manifolds_available.systems.standard.description'),
       image: StandardManifold,
       link: "https://mastip.com/products/manifold-special-systems/standard-manifold-systems/",
-      features: getTranslatedFeatures('mastip.manifolds_available.systems.standard.features')
+      features: getTranslatedFeatures('mastip.products_page.manifolds_available.systems.standard.features')
     },
     {
-      title: t('mastip.manifolds_available.systems.high_cavity.title'),
-      description: t('mastip.manifolds_available.systems.high_cavity.description'),
+      title: t('mastip.products_page.manifolds_available.systems.high_cavity.title'),
+      description: t('mastip.products_page.manifolds_available.systems.high_cavity.description'),
       image: HighCavityManifold,
       link: "https://mastip.com/products/manifold-special-systems/high-cavity-manifold-systems/",
-      features: getTranslatedFeatures('mastip.manifolds_available.systems.high_cavity.features')
+      features: getTranslatedFeatures('mastip.products_page.manifolds_available.systems.high_cavity.features')
     },
     {
-      title: t('mastip.manifolds_available.systems.multi_material.title'),
-      description: t('mastip.manifolds_available.systems.multi_material.description'),
+      title: t('mastip.products_page.manifolds_available.systems.multi_material.title'),
+      description: t('mastip.products_page.manifolds_available.systems.multi_material.description'),
       image: MultiMaterialManifold,
       link: "https://mastip.com/products/manifold-special-systems/multi-material-system/",
-      features: getTranslatedFeatures('mastip.manifolds_available.systems.multi_material.features')
+      features: getTranslatedFeatures('mastip.products_page.manifolds_available.systems.multi_material.features')
     }
   ];
 
@@ -95,15 +95,15 @@ const ManifoldSystems = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl font-bold mb-6 text-white">{t('mastip.manifolds_available.title')}</h1>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto">
-            {t('mastip.manifolds_available.description')}
+          <h1 className="text-5xl font-bold mb-6 text-black">{t('mastip.products_page.manifolds_available.title')}</h1>
+          <p className="text-xl text-black/90 max-w-3xl mx-auto">
+            {t('mastip.products_page.manifolds_available.description')}
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {systems.map((system, index) => (
-            <SystemCard key={index} {...system} />
+            <SystemCard key={index} {...system} t={t} />
           ))}
         </div>
       </div>

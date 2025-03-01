@@ -29,7 +29,7 @@ const NewProductCard = ({ image, title, description, link, releaseDate }) => (
         to={link}
         className="inline-flex items-center space-x-2 bg-gradient-vonic hover:bg-gradient-vonic-hover text-white font-bold py-3 px-6 rounded-full transition-all duration-300 group"
       >
-        <span>Ver detalhes</span>
+        <span>{t('details')}</span>
         <FaArrowRight className="transform group-hover:translate-x-1 transition-transform" />
       </Link>
     </div>

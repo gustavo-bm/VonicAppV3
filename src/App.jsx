@@ -42,6 +42,8 @@ import ManifoldSystems from './pages/products/mastip/ManifoldSystems';
 import NozzleSystems from './pages/products/mastip/NozzleSystems';
 import ValveGateSystems from './pages/products/mastip/ValveGateSystems';
 import SequentialControllers from './pages/products/mastip/SequentialControllers';
+import MastipControllers from './pages/products/mastip/MastipControllers';
+import CAE from './pages/products/mastip/CAE';
 
 // Layout Wrapper com transição
 const PageTransition = ({ children }) => {
@@ -121,8 +123,8 @@ function App() {
             <Route path="/produtos/mastip/nozzles" element={<NozzleSystems />} />
             <Route path="/produtos/mastip/valve-gates" element={<ValveGateSystems />} />
             <Route path="/produtos/mastip/sequential" element={<SequentialControllers />} />
-            <Route path="/produtos/mastip/controllers" element={<MastipProducts category="controllers" />} />
-            <Route path="/produtos/mastip/cae" element={<MastipProducts category="cae" />} />
+            <Route path="/produtos/mastip/controllers" element={<MastipControllers />} />
+            <Route path="/produtos/mastip/cae" element={<CAE />} />
 
             {/* Mastip Series Routes */}
             {/* <Route path="/produtos/mastip/nozzles/mx" element={<MXSeries />} />

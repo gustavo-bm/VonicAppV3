@@ -91,7 +91,7 @@ const Filters = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl font-bold mb-6 text-white">Características</h2>
+            <h2 className="text-3xl font-bold mb-6 text-white">{t('features')}</h2>
             <ul className="space-y-4 text-white/80">
               <li className="flex items-start">
                 <span className="w-2 h-2 bg-[#CE171F] rounded-full mt-2 mr-3 flex-shrink-0"></span>

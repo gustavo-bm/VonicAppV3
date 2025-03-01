@@ -49,7 +49,7 @@ const About = () => {
         >
           <div className="inline-flex items-center justify-center mb-5 bg-[#CE171F]/5 backdrop-blur-sm px-4 py-2 rounded-full border border-[#CE171F]/10">
             <HiOutlineLightBulb className="text-[#CE171F] text-lg mr-2" />
-            <span className="text-gray-700 text-sm font-medium">Nossa História</span>
+            <span className="text-gray-700 text-sm font-medium">{t('sections.about.history')}</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">{t('sections.about.title')}</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-[#CE171F] to-[#CE171F]/30 mx-auto rounded-full mb-8"></div>
@@ -82,12 +82,12 @@ const About = () => {
                 <div className="flex items-center">
                   <div className="w-12 h-0.5 bg-[#CE171F]"></div>
                   <h3 className="text-xl text-[#CE171F] font-medium ml-4">
-                    Excelência em Sistemas de Câmara Quente
+                    {t('sections.about.excellence')}
                   </h3>
                 </div>
                 
                 <h4 className="text-3xl font-bold text-gray-900 leading-tight">
-                  Comprometida com inovações que aprimoram os processos de injeção plástica
+                  {t('sections.about.commitment')}
                 </h4>
                 
                 <div className="text-gray-700 space-y-6">
@@ -96,8 +96,7 @@ const About = () => {
                   </p>
                   
                   <div className="pl-5 border-l-4 border-[#CE171F]/20 italic text-gray-600">
-                    Nossa missão é fornecer soluções que garantam a mais alta qualidade, 
-                    eficiência e confiabilidade para todos os nossos clientes.
+                    {t('sections.about.mission')}
                   </div>
                 </div>
                 
@@ -106,13 +105,13 @@ const About = () => {
                     <div className="bg-white p-2 rounded-full shadow-sm mr-3">
                       <FaCertificate className="text-lg text-[#CE171F]" />
                     </div>
-                    <span className="font-medium text-gray-900">Empresa certificada</span>
+                    <span className="font-medium text-gray-900">{t('sections.about.certified')}</span>
                   </div>
                   <div className="bg-[#CE171F]/5 rounded-lg p-4 flex items-center">
                     <div className="bg-white p-2 rounded-full shadow-sm mr-3">
                       <FaIndustry className="text-lg text-[#CE171F]" />
                     </div>
-                    <span className="font-medium text-gray-900">+15 anos no mercado</span>
+                    <span className="font-medium text-gray-900">{t('sections.about.time')}</span>
                   </div>
                 </div>
               </motion.div>
@@ -171,20 +170,20 @@ const About = () => {
           className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center"
         >
           <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
-            <div className="text-4xl font-bold text-[#CE171F] mb-2">+500</div>
-            <div className="text-gray-600 text-sm">Projetos Realizados</div>
+            <div className="text-4xl font-bold text-[#CE171F] mb-2">+200</div>
+            <div className="text-gray-600 text-sm">{t('sections.about.cards.1.description')}</div>
           </div>
           <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
-            <div className="text-4xl font-bold text-[#CE171F] mb-2">+70</div>
-            <div className="text-gray-600 text-sm">Clientes Satisfeitos</div>
+            <div className="text-4xl font-bold text-[#CE171F] mb-2">+50</div>
+            <div className="text-gray-600 text-sm">{t('sections.about.cards.2.description')}</div>
           </div>
           <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
-            <div className="text-4xl font-bold text-[#CE171F] mb-2">+15</div>
-            <div className="text-gray-600 text-sm">Anos de Experiência</div>
+            <div className="text-4xl font-bold text-[#CE171F] mb-2">+30</div>
+            <div className="text-gray-600 text-sm">{t('sections.about.cards.3.description')}</div>
           </div>
           <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
             <div className="text-4xl font-bold text-[#CE171F] mb-2">100%</div>
-            <div className="text-gray-600 text-sm">Compromisso com Qualidade</div>
+            <div className="text-gray-600 text-sm">{t('sections.about.cards.4.description')}</div>
           </div>
         </motion.div>
       </div>

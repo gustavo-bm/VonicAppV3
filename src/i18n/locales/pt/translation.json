@@ -24,15 +24,16 @@
   "hero": {
     "title": "Soluções em Câmara Quente",
     "description": "Somos especialistas em sistemas de câmara quente e soluções para injeção plástica, oferecendo produtos de alta qualidade e suporte técnico especializado.",
-    "years_market": "Mais de 20 anos no mercado",
+    "years_market": "Há mais de 20 anos no mercado",
     "delivering": "Entregando",
     "solutions": "Soluções",
     "solutions_exclamation": "!",
-    "hero_description": "Somos especialistas em sistemas de câmara quente e soluções para injeção plástica, oferecendo produtos de alta qualidade e suporte técnico especializado.",
     "innovation_indicator": "Inovação e tecnologia em sistemas de câmara quente",
     "system_shown": "24 vias"
   },
   "features": "Características",
+  "details": "Ver detalhes",
+  "more": "Ver mais",
   "specifications": "Especificações",
   "mastip": {
     "title": "Produtos Mastip",
@@ -131,6 +132,66 @@
               "Precisão": "±0.1°C",
               "Comunicação": "RS485/USB"
             }
+          },
+          "touchscreen": {
+            "title": "Controlador de Temperatura Meticom Touchscreen",
+            "description": "Controlador de temperatura com interface touchscreen para fácil operação",
+            "features": [
+              "Interface touchscreen colorida e intuitiva",
+              "Controle preciso de temperatura para múltiplas zonas",
+              "Monitoramento em tempo real com visualização gráfica",
+              "Diagnóstico avançado de falhas com alertas visuais",
+              "Armazenamento de configurações de múltiplos moldes",
+              "Funções de segurança avançadas"
+            ],
+            "specs": {
+              "Alimentação": "AC220V (50/60 Hz)",
+              "Display": "Touchscreen colorido de 7 ou 10 polegadas",
+              "Zonas": "6 a 120 zonas",
+              "Precisão": "±0.1°C",
+              "Comunicação": "RS485/USB/Ethernet",
+              "Armazenamento": "100+ configurações de moldes"
+            }
+          },
+          "modular": {
+            "title": "Controlador de Temperatura Meticom Modular",
+            "description": "Sistema modular expansível para controle de temperatura em aplicações de grande escala",
+            "features": [
+              "Design modular para fácil expansão",
+              "Configurações flexíveis adaptáveis às necessidades do cliente",
+              "Interface amigável e intuitiva",
+              "Diagnóstico avançado em tempo real",
+              "Suporte para aplicações de alta densidade",
+              "Excelente custo-benefício para aplicações de múltiplas zonas"
+            ],
+            "specs": {
+              "Alimentação": "AC220V (50/60 Hz)",
+              "Display": "LCD de alta resolução ou touchscreen",
+              "Zonas": "6 a 256+ zonas",
+              "Precisão": "±0.1°C",
+              "Comunicação": "RS485/USB/Ethernet",
+              "Expansibilidade": "Módulos de 6 ou 12 zonas"
+            }
+          },
+          "integrated": {
+            "title": "Controlador de Temperatura Meticom Integrado",
+            "description": "Solução integrada de controle de temperatura para sistemas de câmara quente",
+            "features": [
+              "Design compacto e integrado",
+              "Solução completa em um único gabinete",
+              "Fácil instalação e configuração",
+              "Controle preciso para pequenas e médias aplicações",
+              "Interface intuitiva e de fácil operação",
+              "Ideal para espaços limitados"
+            ],
+            "specs": {
+              "Alimentação": "AC220V (50/60 Hz)",
+              "Display": "LCD integrado",
+              "Zonas": "6 a 48 zonas",
+              "Precisão": "±0.1°C",
+              "Comunicação": "RS485/USB",
+              "Dimensões": "Compacto para instalação em espaços limitados"
+            }
           }
         }
       },
@@ -195,7 +256,7 @@
               "Suporte técnico especializado"
             ]
           },
-          "high_quality": {
+          "high_cavity": {
             "title": "Manifolds Especiais",
             "description": "Manifolds customizados para aplicações específicas",
             "features": [
@@ -220,12 +281,184 @@
             ]
           }
         }
+      },
+      "nozzles": {
+        "title": "Bicos de Injeção Mastip",
+        "description": "Bicos de injeção de alta performance para aplicações de injeção plástica",
+        "series": {
+          "mx": {
+            "title": "Bicos de Injeção Padrão",
+            "description": "Bicos de alta qualidade para aplicações gerais",
+            "features": [
+              "Design robusto",
+              "Alta resistência",
+              "Fácil manutenção",
+              "Compatibilidade com resinas de engenharia",
+              "Suporte técnico especializado",
+              "Tecnologia avançada"
+            ]
+          },
+          "bx": {
+            "title": "Bicos Multi-Tip",
+            "description": "Bicos com múltiplas pontas para aplicações específicas",
+            "features": [
+              "Múltiplas pontas",
+              "Design avançado",
+              "Alta performance",
+              "Compatibilidade com múltiplos materiais",
+              "Suporte técnico especializado",
+              "Fácil manutenção"
+            ]
+          },
+          "sx": {
+            "title": "Bicos Multi-Material",
+            "description": "Bicos para aplicações com múltiplos materiais",
+            "features": [
+              "Compatibilidade com múltiplos materiais",
+              "Design avançado",
+              "Alta resistência",
+              "Fácil manutenção",
+              "Suporte técnico especializado",
+              "Tecnologia avançada"
+            ]
+          },
+          "flowloc": {
+            "title": "Tecnologia FlowLoc",
+            "description": "Tecnologia avançada para controle de fluxo de resina",
+            "features": [
+              "Controle preciso de fluxo",
+              "Redução de pressão",
+              "Melhoria na qualidade da peça",
+              "Compatibilidade com resinas de engenharia",
+              "Fácil manutenção",
+              "Suporte técnico especializado"
+            ]
+          },
+          "multigate": {
+            "title": "Tecnologia Multi-Gate",
+            "description": "Soluções inovadoras para aplicações complexas",
+            "features": [
+              "Design avançado",
+              "Alta performance",
+              "Compatibilidade com múltiplos materiais",
+              "Fácil manutenção",
+              "Suporte técnico especializado",
+              "Tecnologia avançada"
+            ]
+          }
+        }
+      },
+      "valve_gates": {
+        "title": "Mastip Valve Gate Technology",
+        "description": "Advanced valve gate systems for plastic injection",
+        "series": {
+          "cylix": {
+            "title": "Standard Valve Gates",
+            "description": "High-quality valve gates for general applications",
+            "features": [
+              "Robust design",
+              "High durability",
+              "Easy maintenance",
+              "Compatibility with engineering resins",
+              "Specialized technical support",
+              "Advanced technology"
+            ]
+          },
+          "mvg25": {
+            "title": "Compact Valve Gates",
+            "description": "Compact valve gates for specific applications",
+            "features": [
+              "Compact design",
+              "High performance",
+              "Compatibility with multiple materials",
+              "Specialized technical support",
+              "Easy maintenance",
+              "Advanced technology"
+            ]
+          },
+          "mvg40": {
+            "title": "Mini Valve Gates",
+            "description": "Miniature valve gates for small parts",
+            "features": [
+              "Miniature design",
+              "High durability",
+              "Easy maintenance",
+              "Compatibility with engineering resins",
+              "Specialized technical support",
+              "Advanced technology"
+            ]
+          },
+          "mvg55": {
+            "title": "Multi-Tip Valve Gates",
+            "description": "Valve gates with multiple tips for specific applications",
+            "features": [
+              "Multiple tips",
+              "Advanced design",
+              "High performance",
+              "Compatibility with multiple materials",
+              "Specialized technical support",
+              "Easy maintenance"
+            ]
+          },
+          "nexus": {
+            "title": "Multi-Tip Valve Gates",
+            "description": "Valve gates with multiple tips for specific applications",
+            "features": [
+              "Multiple tips",
+              "Advanced design",
+              "High performance",
+              "Compatibility with multiple materials",
+              "Specialized technical support",
+              "Easy maintenance"
+            ]
+          },
+          "verishot": {
+            "title": "Multi-Tip Valve Gates",
+            "description": "Valve gates with multiple tips for specific applications",
+            "features": [
+              "Multiple tips",
+              "Advanced design",
+              "High performance",
+              "Compatibility with multiple materials",
+              "Specialized technical support",
+              "Easy maintenance"
+            ]
+          }
+        }
+      },
+      "cae": {
+        "title": "Serviços CAE Mastip",
+        "description": "Serviços de engenharia assistida por computador para injeção plástica",
+        "thermal": {
+          "title": "Análise Térmica",
+          "description": "Análise térmica avançada para otimização do design do molde",
+          "features": [
+            "Simulação térmica",
+            "Otimização do design do molde",
+            "Melhoria da eficiência",
+            "Redução de custos",
+            "Suporte técnico especializado",
+            "Tecnologia avançada"
+          ]
+        },
+        "flow": {
+          "title": "Análise de Fluxo",
+          "description": "Análise de fluxo para otimização da distribuição de resina",
+          "features": [
+            "Simulação de fluxo de resina",
+            "Distribuição balanceada",
+            "Melhoria da qualidade",
+            "Compatibilidade com múltiplos materiais",
+            "Suporte técnico especializado",
+            "Tecnologia avançada"
+          ]
+        }
       }
     }
   },
   "vonic": {
     "title": "Produtos Vonic",
-    "new_releases": "Projetos recentes de sucesso",
+    "new_releases": "Projetos recentes e inovações",
     "nozzles": "Bicos de injeção de alta performance",
     "manifolds": "Sistemas de câmara quente",
     "hot_half": "Sistemas completos de câmara quente",
@@ -237,7 +470,7 @@
       "categories": {
         "new_releases": {
           "title": "Novidades",
-          "description": "Projetos recentes de sucesso"
+          "description": "Projetos recentes e inovações"
         },
         "hot_nozzles": {
           "title": "Bicos de Injeção",
@@ -268,8 +501,11 @@
       "description": "Conheça nossa linha completa de produtos para injeção plástica"
     },
     "about": {
+      "history": "Nossa história",
       "title": "Sobre Nós",
       "description": "A Vonic Systems é uma empresa especializada em sistemas de câmara quente, oferecendo soluções completas para a indústria de injeção plástica.",
+      "excellence": "Excelência em Sistemas de Câmara Quente",
+      "commitment": "Comprometida com inovações que aprimoram os processos de injeção plástica",
       "text": "Utilizamos tecnologia lógica exclusiva que permite melhorar a eficiência da produção de plástico. Nossa tecnologia vem de anos de experiência, ouvindo problemas típicos de moldagem e constantemente surgindo com SOLUÇÕES. Podemos ajudar sua empresa com projetos novos ou existentes a se tornar mais eficiente do que você é hoje!",
       "features": {
         "headquarters": {
@@ -288,11 +524,33 @@
           "title": "Projetos Inteligentes",
           "description": "Produtos e Projetos Inteligentes - Padronizados"
         }
+      },
+      "certified": "Empresa certificada",
+      "mission": "Nossa missão é fornecer soluções que garantam a mais alta qualidade, eficiência e confiabilidade para todos os nossos clientes.",
+      "time": "+15 anos no mercado",
+      "cards": {
+        "1": {
+          "title": "",
+          "description": "Projetos Realizados"
+        },
+        "2": {
+          "title": "",
+          "description": "Clientes satisfeitos"
+        },
+        "3": {
+          "title": "",
+          "description": "Anos de experiência"
+        },
+        "4": {
+          "title": "",
+          "description": "Compromisso com Qualidade"
+        }
       }
     },
     "contact": {
-      "title": "Entre em Contato",
-      "subtitle": "Estamos prontos para atender você",
+      "speak_with_us": "Tem uma ideia?",
+      "title": "Entre em Contato!",
+      "subtitle": "Estamos totalmente preparados e comprometidos para oferecer a você o melhor atendimento, com soluções personalizadas e de alta qualidade",
       "info": {
         "email": {
           "title": "E-mail",
@@ -312,6 +570,12 @@
       },
       "form": {
         "title": "Envie uma mensagem",
+        "description": "Estamos ansiosos para ouvir de você e responder a quaisquer perguntas que você possa ter sobre nossos produtos e serviços. Nossa equipe está disponível para ajudá-lo.",
+        "steps": {
+          "1": "Preencha o formulário",
+          "2": "Nossa equipe analisará seu contato",
+          "3": "Responderemos o mais rápido possível"
+        },
         "name": {
           "label": "Nome",
           "placeholder": "Digite seu nome"
@@ -324,7 +588,12 @@
           "label": "Mensagem",
           "placeholder": "Digite sua mensagem"
         },
-        "submit": "Enviar mensagem"
+        "submit": "Enviar mensagem",
+        "submitting": "Enviando..."
+      },
+      "notifications": {
+        "success": "Mensagem enviada com sucesso! Em breve entraremos em contato.",
+        "error": "Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente."
       }
     },
     "mastip": {
@@ -372,8 +641,9 @@
       }
     },
     "partners": {
+      "companies_trusted": "Empresas que confiam",
       "title": "Nossos Parceiros",
-      "subtitle": "Conheça quem confia em nossas soluções"
+      "subtitle": "Empresas que se orgulham dos resultados excepcionais alcançados por meio da expertise especializada e dedicação da Vonic."
     }
   },
   "testimonials": {

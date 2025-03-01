@@ -98,7 +98,7 @@ function Partners() {
         >
           <div className="inline-flex items-center justify-center mb-6 bg-white/10 backdrop-blur-md px-6 py-2.5 rounded-full border border-white/20 shadow-glow-sm">
             <HiOutlineLightBulb className="text-vonics-500 text-xl mr-2" />
-            <span className="text-gray-800 text-sm font-medium">Empresas que confiam</span>
+            <span className="text-gray-800 text-sm font-medium">{t('sections.partners.companies_trusted')}</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">{t('sections.partners.title')}</h2>
           <div className="w-24 h-1 bg-[#CE171F] mx-auto mb-6 rounded-full"></div>

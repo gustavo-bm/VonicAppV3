@@ -3,10 +3,11 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { FaArrowRight, FaCheck, FaCog } from 'react-icons/fa';
 
-// Importando a imagem do controlador
-import TemperatureController from '../../../assets/mastip/controllers.png';
+// Importando imagens dos serviços CAE
+import FlowAnalysis from '../../../assets/mastip/cae/flow.jpg';
+import ThermalAnalysis from '../../../assets/mastip/cae/thermal.gif';
 
-const ControllerCard = ({ title, description, image, link, features = [], specs = {} }) => {
+const ComputerAidedCard = ({ title, description, image, link, features = [] }) => {
   const { t } = useTranslation();
   
   return (
@@ -14,7 +15,7 @@ const ControllerCard = ({ title, description, image, link, features = [], specs 
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300"
+      className="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 mb-12"
     >
       <div className="relative">
         <div className="relative h-64 overflow-hidden">
@@ -31,24 +32,12 @@ const ControllerCard = ({ title, description, image, link, features = [], specs 
         <p className="text-black/80 mb-4">{description}</p>
         
         <div className="mb-6">
-          <h4 className="text-lg font-semibold mb-2 text-gray-700">Características:</h4>
+          <h4 className="text-lg font-semibold mb-2 text-gray-700">{t('features')}:</h4>
           <ul className="space-y-2">
             {Array.isArray(features) && features.map((feature, index) => (
               <li key={index} className="flex items-start space-x-2">
                 <FaCheck className="text-[#CE171F] mt-1 flex-shrink-0" />
                 <span className="text-gray-600">{feature}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="mb-6">
-          <h4 className="text-lg font-semibold mb-2 text-gray-700">Especificações:</h4>
-          <ul className="space-y-2">
-            {Object.entries(specs).map(([key, value], index) => (
-              <li key={index} className="flex items-start space-x-2">
-                <FaCog className="text-[#CE171F] mt-1 flex-shrink-0" />
-                <span className="text-gray-600">{key}: {value}</span>
               </li>
             ))}
           </ul>
@@ -68,7 +57,7 @@ const ControllerCard = ({ title, description, image, link, features = [], specs 
   );
 };
 
-const Controllers = () => {
+const CAE = () => {
   const { t } = useTranslation();
 
   const getTranslatedFeatures = (path) => {
@@ -76,22 +65,25 @@ const Controllers = () => {
     return Array.isArray(features) ? features : [];
   };
 
-  const getTranslatedSpecs = (path) => {
-    const specs = t(path, { returnObjects: true });
-    return typeof specs === 'object' ? specs : {};
-  };
-
-  const controller = {
-    title: t('mastip.temperature_controllers.systems.standard.title'),
-    description: t('mastip.temperature_controllers.systems.standard.description'),
-    image: TemperatureController,
-    link: "https://mastip.com/products/temperature-controllers/",
-    features: getTranslatedFeatures('mastip.temperature_controllers.systems.standard.features'),
-    specs: getTranslatedSpecs('mastip.temperature_controllers.systems.standard.specs')
-  };
+  const caeServices = [
+    {
+      title: t('mastip.products_page.cae.thermal.title'),
+      description: t('mastip.products_page.cae.thermal.description'),
+      image: ThermalAnalysis,
+      link: "https://mastip.com/products/computer-aided-engineering/thermal-analysis/",
+      features: getTranslatedFeatures('mastip.products_page.cae.thermal.features'),
+    },
+    {
+      title: t('mastip.products_page.cae.flow.title'),
+      description: t('mastip.products_page.cae.flow.description'),
+      image: FlowAnalysis,
+      link: "https://mastip.com/products/computer-aided-engineering/flow-analysis/",
+      features: getTranslatedFeatures('mastip.products_page.cae.flow.features'),
+    }
+  ];
 
   return (
-    <div className="min-h-screen bg-gradient-vonic-dark pt-24">
+    <div className="min-h-screen bg-white pt-24">
       <div className="container mx-auto px-4 py-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -99,18 +91,20 @@ const Controllers = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl font-bold mb-6 text-white">{t('mastip.temperature_controllers.title')}</h1>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto">
-            {t('mastip.temperature_controllers.description')}
+          <h1 className="text-5xl font-bold mb-6 text-[#CE171F]">{t('mastip.products_page.cae.title')}</h1>
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+            {t('mastip.products_page.cae.description')}
           </p>
         </motion.div>
 
         <div className="max-w-4xl mx-auto">
-          <ControllerCard {...controller} />
+          {caeServices.map((service, index) => (
+            <ComputerAidedCard key={index} {...service} />
+          ))}
         </div>
       </div>
     </div>
   );
 };
 
-export default Controllers; 
+export default CAE; 

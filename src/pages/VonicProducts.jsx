@@ -41,7 +41,7 @@ const ProductCard = ({ title, description, image, link, isNew }) => (
         to={link}
         className="inline-flex items-center space-x-2 bg-gradient-vonic hover:bg-gradient-vonic-hover text-white font-bold py-3 px-6 rounded-full transition-all duration-300 group"
       >
-        <span>Ver mais</span>
+        <span>{t('more')}</span>
         <FaArrowRight className="transform group-hover:translate-x-1 transition-transform" />
       </Link> */}
     </div>
@@ -105,8 +105,8 @@ const VonicProducts = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl font-bold mb-6 text-white">{t('vonic.products_page.title')}</h1>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto">
+          <h1 className="text-5xl font-bold mb-6 text-black">{t('vonic.products_page.title')}</h1>
+          <p className="text-xl text-black/90 max-w-3xl mx-auto">
             {t('vonic.products_page.description')}
           </p>
         </motion.div>
