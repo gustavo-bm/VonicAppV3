@@ -501,6 +501,38 @@
       "title": "Our Products",
       "description": "Discover our complete line of plastic injection products"
     },
+    "projects": {
+      "title": "Completed Projects",
+      "subtitle": "Successfully delivered systems for various industrial sectors",
+      "featured_cases": "Success Cases",
+      "gallery": "Project Gallery",
+      "cases": {
+        "24_channels": {
+          "title": "24 Channels System",
+          "description": "Hot runner system with 24 injection points for technical parts production",
+          "applications": "Applications: Automotive parts, electrical connectors, and precision components",
+          "industries": "Industries: Automotive and Electronics",
+          "materials": "Compatible materials: PA66, POM, ABS, PC"
+        },
+        "48_channels": {
+          "title": "48 Channels System",
+          "description": "Complex hot runner system for high-performance multi-point injection",
+          "applications": "Applications: Medical components, multi-cavity packaging, and engineering parts",
+          "industries": "Industries: Medical and Packaging",
+          "materials": "Compatible materials: PP, PE, PS, TPE, Elastomers"
+        },
+        "64_channels": {
+          "title": "64 Channels System",
+          "description": "Advanced solution for mass production with high efficiency and precise thermal balancing",
+          "applications": "Applications: Caps, multi-cavity packaging, and disposable products",
+          "industries": "Industries: Household items, Disposables, and Packaging",
+          "materials": "Compatible materials: PP, PE, PS"
+        }
+      },
+      "specifications": "Technical Specifications",
+      "view_details": "View details",
+      "view_gallery": "See more projects"
+    },
     "about": {
       "history": "Our History",
       "title": "About Us",

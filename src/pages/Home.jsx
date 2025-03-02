@@ -5,6 +5,7 @@ import Services from '../components/Services/Services';
 import Contact from '../components/Contact/Contact';
 import MastipSection from '../components/Sections/MastipSection';
 import Partners from '../components/Partners/Partners';
+import Projects from '../components/Projects/Projects';
 
 const Home = () => {
   return (
@@ -25,9 +26,13 @@ const Home = () => {
         <Services />
       </section>
 
-      <section id="partners">
-        <Partners />
+      <section id="projects">
+        <Projects />
       </section>
+
+      {/* <section id="partners">
+        <Partners />
+      </section> */}
       
       <section id="contato">
         <Contact />

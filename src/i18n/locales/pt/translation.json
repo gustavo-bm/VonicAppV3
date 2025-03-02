@@ -500,6 +500,38 @@
       "title": "Nossos Produtos",
       "description": "Conheça nossa linha completa de produtos para injeção plástica"
     },
+    "projects": {
+      "title": "Projetos Realizados",
+      "subtitle": "Sistemas entregues com sucesso para diversos setores industriais",
+      "featured_cases": "Cases de Sucesso",
+      "gallery": "Galeria de Projetos",
+      "cases": {
+        "24_channels": {
+          "title": "Sistema 24 Vias",
+          "description": "Sistema de câmara quente com 24 pontos de injeção para produção de peças técnicas",
+          "applications": "Aplicações: Peças automotivas, conectores elétricos e componentes de precisão",
+          "industries": "Setores: Automotivo e Eletroeletrônico",
+          "materials": "Materiais compatíveis: PA66, POM, ABS, PC"
+        },
+        "48_channels": {
+          "title": "Sistema 48 Vias",
+          "description": "Sistema complexo de câmara quente para injeção multipontos de alta performance",
+          "applications": "Aplicações: Componentes médicos, embalagens multicavidade e peças de engenharia",
+          "industries": "Setores: Médico-hospitalar e Embalagens",
+          "materials": "Materiais compatíveis: PP, PE, PS, TPE, Elastômeros"
+        },
+        "64_channels": {
+          "title": "Sistema 64 Vias",
+          "description": "Solução avançada para produção em massa com alta eficiência e balanceamento térmico preciso",
+          "applications": "Aplicações: Tampas, embalagens multicavidade e produtos descartáveis",
+          "industries": "Setores: Utensílios domésticos, Descartáveis e Embalagens",
+          "materials": "Materiais compatíveis: PP, PE, PS"
+        }
+      },
+      "specifications": "Especificações Técnicas",
+      "view_details": "Ver detalhes",
+      "view_gallery": "Ver mais projetos"
+    },
     "about": {
       "history": "Nossa história",
       "title": "Sobre Nós",

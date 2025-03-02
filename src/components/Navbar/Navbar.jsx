@@ -45,7 +45,7 @@ const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const sections = ['home', 'sobre', 'servicos', 'partners', 'contato'];
+  const sections = ['home', 'sobre', 'servicos', 'projects', 'contato'];
 
   const determineActiveSection = useCallback((scrollPosition) => {
     let newSection = 'home';
@@ -231,8 +231,8 @@ const Navbar = () => {
 
             <NavLink
               to="/"
-              onClick={() => handleNavClick('partners')}
-              isActive={location.pathname === '/' && activeSection === 'partners'}
+              onClick={() => handleNavClick('projects')}
+              isActive={location.pathname === '/' && activeSection === 'projects'}
             >
               {t('navigation.partners')}
             </NavLink>
