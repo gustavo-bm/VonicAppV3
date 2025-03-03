@@ -1,0 +1,28 @@
+{
+  "sections": {
+    "services": {
+      "title": "Nossos Serviços",
+      "subtitle": "Soluções Técnicas Avançadas",
+      "description": "Oferecemos serviços especializados para atender às necessidades específicas do seu projeto",
+      "maintenance": {
+        "title": "Manutenção",
+        "description": "Serviços de manutenção preventiva e corretiva para garantir o funcionamento otimizado dos seus equipamentos"
+      },
+      "manufacturing": {
+        "title": "Fabricação",
+        "description": "Desenvolvimento e fabricação de soluções personalizadas para sua indústria"
+      },
+      "optimization": {
+        "title": "Otimização",
+        "description": "Melhoria contínua de processos e otimização de performance dos seus sistemas"
+      },
+      "consulting": {
+        "title": "Consultoria",
+        "description": "Assessoria técnica especializada para impulsionar seus projetos"
+      }
+    }
+  },
+  "buttons": {
+    "contact_us": "Entre em Contato"
+  }
+} 

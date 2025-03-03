@@ -5,12 +5,16 @@ import partnership from '../../assets/business-partners-handshake-international-
 import { useTranslation } from 'react-i18next';
 import { FaHandshake, FaCheckCircle, FaIndustry, FaArrowRight, FaCubes } from 'react-icons/fa';
 import { HiOutlineLightBulb } from 'react-icons/hi';
+import HexagonBackground from '../Services/MovingPoints';
+import { OrbitControls } from '@react-three/drei';
+import { Canvas } from '@react-three/fiber';
 
 const MastipSection = () => {
   const { t } = useTranslation();
 
   return (
     <section className="py-16 bg-gradient-to-b from-black to-gray-900 relative">
+
       {/* Decorative Elements */}
       <div className="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-black to-transparent z-10" />
       <div className="absolute top-[20%] right-0 w-64 h-64 rounded-full bg-[#CE171F]/10 filter blur-[100px] opacity-60" />

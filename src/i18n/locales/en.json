@@ -1,0 +1,28 @@
+{
+  "sections": {
+    "services": {
+      "title": "Our Services",
+      "subtitle": "Advanced Technical Solutions",
+      "description": "We offer specialized services to meet the specific needs of your project",
+      "maintenance": {
+        "title": "Maintenance",
+        "description": "Preventive and corrective maintenance services to ensure optimal operation of your equipment"
+      },
+      "manufacturing": {
+        "title": "Manufacturing",
+        "description": "Development and manufacturing of customized solutions for your industry"
+      },
+      "optimization": {
+        "title": "Optimization",
+        "description": "Continuous process improvement and performance optimization of your systems"
+      },
+      "consulting": {
+        "title": "Consulting",
+        "description": "Specialized technical consulting to drive your projects"
+      }
+    }
+  },
+  "buttons": {
+    "contact_us": "Contact Us"
+  }
+} 

@@ -93,6 +93,21 @@ body {
   bottom: -1rem;
 }
 
+.hexagon-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none; /* Garante que o usuário possa interagir com os elementos acima */
+}
+
+.relative {
+  position: relative;
+  z-index: 10; /* Mantém o conteúdo acima do fundo */
+}
+
 .testimonial-author {
   @apply text-right pt-4 border-t border-gray-200;
 }

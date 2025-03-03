@@ -44,24 +44,26 @@ import ValveGateSystems from './pages/products/mastip/ValveGateSystems';
 import SequentialControllers from './pages/products/mastip/SequentialControllers';
 import MastipControllers from './pages/products/mastip/MastipControllers';
 import CAE from './pages/products/mastip/CAE';
+import HexagonBackground from './components/Services/MovingPoints';
+import { Canvas } from '@react-three/fiber';
 
 // Layout Wrapper com transição
 const PageTransition = ({ children }) => {
   const variants = {
     hidden: { opacity: 0 },
-    enter: { 
+    enter: {
       opacity: 1,
-      transition: { 
+      transition: {
         duration: 0.4,
         when: "beforeChildren",
-        ease: "easeOut" 
+        ease: "easeOut"
       }
     },
     exit: {
       opacity: 0,
-      transition: { 
+      transition: {
         duration: 0.3,
-        ease: "easeIn" 
+        ease: "easeIn"
       }
     }
   };
@@ -91,51 +93,65 @@ const PageTransition = ({ children }) => {
 
 function App() {
   return (
-    <Router>
-      <div className="flex flex-col min-h-screen">
-        <Navbar />
-        <PageTransition>
-          <Routes>
-            {/* Rotas Principais */}
-            <Route path="/" element={<Home />} />
-            
-            {/* Rotas Base de Produtos */}
-            <Route path="/produtos/vonic" element={<VonicProducts />} />
-            <Route path="/produtos/mastip" element={<MastipProducts />} />
-            
-            {/* Vonic Products Routes */}
-            <Route path="/produtos/vonic/novidades" element={<NewProducts />} />
-            <Route path="/produtos/vonic/bicos" element={<HotNozzles />} />
-            <Route path="/produtos/vonic/manifolds" element={<Manifolds />} />
-            <Route path="/produtos/vonic/hot-half" element={<HotHalf />} />
-            <Route path="/produtos/vonic/controladores" element={<Controllers />} />
-            <Route path="/produtos/vonic/filtros" element={<Filters />} />
-            
-            {/* Vonic Series Routes */}
-            <Route path="/produtos/vonic/bicos/vh" element={<VHSeries />} />
-            <Route path="/produtos/vonic/bicos/vp" element={<VPSeries />} />
-            <Route path="/produtos/vonic/bicos/vt" element={<VTSeries />} />
+    <div className="relative w-full h-full">
+      {/* Fundo 3D fixo */}
+      {/* <div className="fixed inset-0 -z-10">
+        <Canvas
+          camera={{ position: [0, 0, 20], fov: 45 }}
+          gl={{ antialias: true, alpha: true }}
+          dpr={[1, 2]}
+        >
+          <HexagonBackground />
+        </Canvas>
+      </div> */}
 
-            {/* Mastip Products Routes */}
-            <Route path="/produtos/mastip/novidades" element={<MastipNewReleases />} />
-            <Route path="/produtos/mastip/hot-halves" element={<HotHalfSystems />} />
-            <Route path="/produtos/mastip/manifolds" element={<ManifoldSystems />} />
-            <Route path="/produtos/mastip/nozzles" element={<NozzleSystems />} />
-            <Route path="/produtos/mastip/valve-gates" element={<ValveGateSystems />} />
-            <Route path="/produtos/mastip/sequential" element={<SequentialControllers />} />
-            <Route path="/produtos/mastip/controllers" element={<MastipControllers />} />
-            <Route path="/produtos/mastip/cae" element={<CAE />} />
+      <Router>
+        <div className="flex flex-col min-h-screen">
+          <Navbar />
+          <PageTransition>
+            <Routes>
+              {/* Rotas Principais */}
+              <Route path="/" element={<Home />} />
 
-            {/* Mastip Series Routes */}
-            {/* <Route path="/produtos/mastip/nozzles/mx" element={<MXSeries />} />
+              {/* Rotas Base de Produtos */}
+              <Route path="/produtos/vonic" element={<VonicProducts />} />
+              <Route path="/produtos/mastip" element={<MastipProducts />} />
+
+              {/* Vonic Products Routes */}
+              <Route path="/produtos/vonic/novidades" element={<NewProducts />} />
+              <Route path="/produtos/vonic/bicos" element={<HotNozzles />} />
+              <Route path="/produtos/vonic/manifolds" element={<Manifolds />} />
+              <Route path="/produtos/vonic/hot-half" element={<HotHalf />} />
+              <Route path="/produtos/vonic/controladores" element={<Controllers />} />
+              <Route path="/produtos/vonic/filtros" element={<Filters />} />
+
+              {/* Vonic Series Routes */}
+              <Route path="/produtos/vonic/bicos/vh" element={<VHSeries />} />
+              <Route path="/produtos/vonic/bicos/vp" element={<VPSeries />} />
+              <Route path="/produtos/vonic/bicos/vt" element={<VTSeries />} />
+
+              {/* Mastip Products Routes */}
+              <Route path="/produtos/mastip/novidades" element={<MastipNewReleases />} />
+              <Route path="/produtos/mastip/hot-halves" element={<HotHalfSystems />} />
+              <Route path="/produtos/mastip/manifolds" element={<ManifoldSystems />} />
+              <Route path="/produtos/mastip/nozzles" element={<NozzleSystems />} />
+              <Route path="/produtos/mastip/valve-gates" element={<ValveGateSystems />} />
+              <Route path="/produtos/mastip/sequential" element={<SequentialControllers />} />
+              <Route path="/produtos/mastip/controllers" element={<MastipControllers />} />
+              <Route path="/produtos/mastip/cae" element={<CAE />} />
+
+              {/* Mastip Series Routes */}
+              {/* <Route path="/produtos/mastip/nozzles/mx" element={<MXSeries />} />
             <Route path="/produtos/mastip/nozzles/bx" element={<BXSeries />} />
             <Route path="/produtos/mastip/nozzles/sx" element={<SXSeries />} />
             <Route path="/produtos/mastip/nozzles/flowloc" element={<FlowLocSeries />} /> */}
-          </Routes>
-        </PageTransition>
-        <Footer />
-      </div>
-    </Router>
+            </Routes>
+          </PageTransition>
+          <Footer />
+        </div>
+      </Router>
+    </div>
+
   );
 }
 

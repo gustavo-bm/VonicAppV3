@@ -147,6 +147,21 @@
   background: white;
 }
 
+.hexagon-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none; /* Garante que o usuário possa interagir com os elementos acima */
+}
+
+.relative {
+  position: relative;
+  z-index: 10; /* Mantém o conteúdo acima do fundo */
+}
+
 @media (max-width: 768px) {
   .partners-section {
     padding: 4rem 0;
