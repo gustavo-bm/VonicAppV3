@@ -44,7 +44,7 @@ import ValveGateSystems from './pages/products/mastip/ValveGateSystems';
 import SequentialControllers from './pages/products/mastip/SequentialControllers';
 import MastipControllers from './pages/products/mastip/MastipControllers';
 import CAE from './pages/products/mastip/CAE';
-import HexagonBackground from './components/Services/MovingPoints';
+import ParticlesBackground from './components/Services/ParticlesBackground';
 import { Canvas } from '@react-three/fiber';
 
 // Layout Wrapper com transição
@@ -101,7 +101,7 @@ function App() {
           gl={{ antialias: true, alpha: true }}
           dpr={[1, 2]}
         >
-          <HexagonBackground />
+          <ParticlesBackground />
         </Canvas>
       </div> */}
 

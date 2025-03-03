@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import heroSystem from '../../assets/vonic/hero-system.png';
 import { FaIndustry, FaChevronDown } from 'react-icons/fa';
 import { HiOutlineLightBulb } from 'react-icons/hi';
+import ParticlesBackground from '../Services/ParticlesBackground';
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -71,28 +72,17 @@ const Hero = () => {
   };
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-b from-black via-gray-900 to-black overflow-hidden flex items-center" id="home">
-
-      {/* Background Elements - Enhanced for better depth */}
-      <div className="absolute inset-0 z-0">
-        {/* Primary gradients */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black opacity-90" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-transparent to-black/80" />
-
-        {/* Artistic gradient overlays */}
-        <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-black to-transparent z-10" />
-        <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-black to-transparent z-10" />
-
-        {/* Decorative colored glows */}
-        <div className="absolute top-[30%] left-[5%] w-[500px] h-[500px] bg-[#CE171F]/10 rounded-full filter blur-[120px] opacity-40" />
-        <div className="absolute bottom-[20%] right-[5%] w-[600px] h-[600px] bg-[#CE171F]/5 rounded-full filter blur-[100px] opacity-30" />
-
-        {/* Subtle pattern overlay for texture */}
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY3RhbE5vaXNlIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxwYXRoIGQ9Ik0wIDBoMzAwdjMwMEgweiIgZmlsdGVyPSJ1cmwoI2EpIiBvcGFjaXR5PSIuMDUiLz48L3N2Zz4=')]" />
-      </div>
-
-      {/* Content Container - Better grid layout */}
-      <div className="relative z-20 container mx-auto px-6 py-16 md:py-20">
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#0f0f0f] to-black min-h-screen flex flex-col justify-center">
+      {/* Background de partículas com configurações equivalentes às de Services */}
+      <ParticlesBackground particleCount={160} interactionStrength={1.3} color="red" />
+      
+      {/* Overlay gradient ajustado para mesma opacidade de Services */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-gray-900/75 to-black/85 z-10"></div>
+      
+      {/* Removendo padrão de textura que pode interferir na visibilidade */}
+      
+      {/* Conteúdo do Hero */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 relative z-20">
         <motion.div
           initial="hidden"
           animate="visible"
@@ -103,7 +93,7 @@ const Hero = () => {
           <div className="text-white space-y-8 lg:col-span-6">
             {/* Badge - Enhanced with better positioning */}
             <motion.div variants={itemVariants} className="inline-flex items-center">
-              <span className="bg-black/60 backdrop-blur-md px-5 py-2 rounded-full border border-white/10 flex items-center space-x-3 shadow-lg">
+              <span className="bg-black/60 px-5 py-2 rounded-full border border-white/10 flex items-center space-x-3 shadow-lg">
                 <FaIndustry className="w-5 h-5 text-[#CE171F]" />
                 <span className="text-base font-medium text-white/90">{t('hero.years_market')}</span>
               </span>
@@ -172,7 +162,7 @@ const Hero = () => {
                 whileHover={{ scale: 1.03, y: -3 }}
                 whileTap={{ scale: 0.98 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                className="relative bg-black/40 backdrop-blur-md border border-white/20 text-white px-7 py-3 rounded-lg font-medium shadow-md flex items-center space-x-2 hover:bg-black/60 hover:border-white/30 transition-all duration-300"
+                className="relative bg-black/40 border border-white/20 text-white px-7 py-3 rounded-lg font-medium shadow-md flex items-center space-x-2 hover:bg-black/60 hover:border-white/30 transition-all duration-300"
               >
                 <span>{t('buttons.learn_more')}</span>
                 <motion.span
@@ -187,7 +177,7 @@ const Hero = () => {
             {/* Innovation Indicator - Redesigned with better style */}
             <motion.div
               variants={itemVariants}
-              className="inline-flex items-center mt-8 px-4 py-3 bg-gradient-to-r from-black/80 to-black/60 backdrop-blur-md rounded-lg border-l-4 border-[#CE171F] shadow-lg"
+              className="inline-flex items-center mt-8 px-4 py-3 bg-gradient-to-r from-black/80 to-black/60 rounded-lg border-l-4 border-[#CE171F] shadow-lg"
             >
               <HiOutlineLightBulb className="text-[#CE171F] text-xl mr-3 flex-shrink-0" />
               <span className="text-sm text-white/90 font-medium">
@@ -204,7 +194,7 @@ const Hero = () => {
             {/* Circle background with improved styling */}
             <motion.div
               variants={itemVariants}
-              className="absolute inset-0 m-auto w-[75%] h-[75%] rounded-full bg-gray-900/80 border border-white/5 backdrop-blur-sm z-10"
+              className="absolute inset-0 m-auto w-[75%] h-[75%] rounded-full bg-gray-900/80 border border-white/5 z-10"
             />
 
             {/* Orbital ring effect */}
@@ -245,14 +235,14 @@ const Hero = () => {
             {/* Technical Specs Label - Redesigned for better visibility */}
             <motion.div
               variants={highlightVariants}
-              className="absolute bottom-8 right-0 bg-black/80 backdrop-blur-xl px-4 py-3 rounded-lg border-l-2 border-[#CE171F] shadow-xl z-30"
+              className="absolute bottom-8 right-0 bg-black/80 px-4 py-3 rounded-lg border-l-2 border-[#CE171F] shadow-xl z-30"
             >
               <span className="text-sm text-white font-medium">{t('hero.system_shown')}</span>
             </motion.div>
           </div>
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 

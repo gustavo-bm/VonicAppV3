@@ -5,6 +5,7 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import MovingPoints from './MovingPoints';
 import Scene from './MovingPoints';
+import ParticlesBackground from './ParticlesBackground';
 
 const Services = () => {
   const { t } = useTranslation();
@@ -89,8 +90,8 @@ const Services = () => {
 
   return (
     <section className="py-24 bg-gradient-to-b from-black via-gray-900 to-[#0F0F0F] relative overflow-hidden">
-      {/* Background 3D */}
-      {/* <Scene /> */}
+      {/* Background de Particulas - configuração de referência */}
+      <ParticlesBackground particleCount={160} interactionStrength={1.3} color="red" />
 
       {/* Overlay gradient mais suave */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-gray-900/75 to-[#0F0F0F]/85 z-10"></div>

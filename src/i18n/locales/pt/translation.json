@@ -661,8 +661,9 @@
       }
     },
     "services": {
-      "title": "Nossos Serviços",
-      "subtitle": "Soluções completas para sua indústria",
+      "title": "Nossos serviços",
+      "subtitle": "Expertise",
+      "description": "A Vonic entende suas necessidades e oferece soluções personalizadas com eficiência e inovação.",
       "maintenance": {
         "title": "Manutenção Especializada",
         "description": "Serviços de manutenção preventiva e corretiva para sistemas de câmara quente"

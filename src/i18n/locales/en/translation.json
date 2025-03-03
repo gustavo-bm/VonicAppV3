@@ -662,8 +662,9 @@
       }
     },
     "services": {
-      "title": "Our Services",
-      "subtitle": "Complete solutions for your industry",
+      "title": "Our services",
+      "subtitle": "Expertise",
+      "description": "Vonic understands your needs and provides tailored solutions with efficiency and innovation.",
       "maintenance": {
         "title": "Specialized Maintenance",
         "description": "Preventive and corrective maintenance services for hot runner systems"

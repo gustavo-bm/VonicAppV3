@@ -5,22 +5,22 @@ import partnership from '../../assets/business-partners-handshake-international-
 import { useTranslation } from 'react-i18next';
 import { FaHandshake, FaCheckCircle, FaIndustry, FaArrowRight, FaCubes } from 'react-icons/fa';
 import { HiOutlineLightBulb } from 'react-icons/hi';
-import HexagonBackground from '../Services/MovingPoints';
+import HexagonBackground from '../Services/ParticlesBackground';
 import { OrbitControls } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
+import ParticlesBackground from '../Services/ParticlesBackground';
 
 const MastipSection = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="py-16 bg-gradient-to-b from-black to-gray-900 relative">
+    <section className="py-16 bg-gradient-to-b from-black to-gray-900 relative ">
+      {/* Background de Particulas com configurações equivalentes às de Services */}
+      <ParticlesBackground particleCount={160} interactionStrength={1.3} color="blue" />
 
-      {/* Decorative Elements */}
-      <div className="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-black to-transparent z-10" />
-      <div className="absolute top-[20%] right-0 w-64 h-64 rounded-full bg-[#CE171F]/10 filter blur-[100px] opacity-60" />
-      <div className="absolute bottom-[30%] left-[20%] w-96 h-96 rounded-full bg-[#CE171F]/5 filter blur-[80px] opacity-50" />
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY3RhbE5vaXNlIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxwYXRoIGQ9Ik0wIDBoMzAwdjMwMEgweiIgZmlsdGVyPSJ1cmwoI2EpIiBvcGFjaXR5PSIuMDUiLz48L3N2Zz4=')]" />
-
+      {/* Overlay gradient ajustado para mesma opacidade de Services */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-gray-900/75 to-[#0F0F0F]/85 z-10"></div>
+      
       {/* Section Header - Modernized and compact */}
       <div className="container mx-auto px-6 mb-16 relative z-20">
         <motion.div
@@ -209,7 +209,7 @@ const MastipSection = () => {
             {/* Decorative corner accent */}
             <div className="absolute top-0 right-0 w-32 h-32 rounded-tl-3xl border-l border-b border-white/10 z-40"></div>
           </motion.div>
-          
+
         </div>
       </div>
     </section>
