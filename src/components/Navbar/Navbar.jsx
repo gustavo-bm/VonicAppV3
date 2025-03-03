@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, memo } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaBars, FaTimes, FaChevronDown } from 'react-icons/fa';
@@ -7,7 +7,7 @@ import LanguageSelector from '../LanguageSelector/LanguageSelector';
 import ProductDropdown from './ProductDropdown';
 import VonicLogo from '../../assets/VONIC.png';
 
-const NavLink = ({ to, onClick, children, isActive }) => (
+const NavLink = memo(({ to, onClick, children, isActive, sectionId }) => (
   <motion.button
     onClick={onClick}
     className={`relative h-full px-4 text-base font-medium transition-colors flex items-center ${
@@ -18,7 +18,7 @@ const NavLink = ({ to, onClick, children, isActive }) => (
     <AnimatePresence>
       {isActive && (
         <motion.div
-          layoutId="activeSection"
+          layoutId={`navSection-${sectionId}`}
           initial={{ opacity: 0, width: '0%' }}
           animate={{ opacity: 1, width: '100%' }}
           exit={{ opacity: 0, width: '0%' }}
@@ -33,7 +33,7 @@ const NavLink = ({ to, onClick, children, isActive }) => (
       )}
     </AnimatePresence>
   </motion.button>
-);
+));
 
 const Navbar = () => {
   const { t } = useTranslation();
@@ -116,14 +116,19 @@ const Navbar = () => {
   }, [location.pathname, determineActiveSection, isScrolling, activeSection]);
 
   useEffect(() => {
-    if (location.pathname !== '/') {
+    // Verifica se é apenas uma mudança de idioma, não uma navegação real
+    const isLanguageChange = location.search.includes('lng=') || 
+                            (location.state && location.state.languageChange);
+    
+    if (location.pathname !== '/' && !isLanguageChange) {
       setActiveSection('');
-    } else {
+    } else if (!isLanguageChange) {
       const scrollPosition = window.scrollY + 60;
       const newSection = determineActiveSection(scrollPosition);
       setActiveSection(newSection);
     }
-  }, [location.pathname, determineActiveSection]);
+    // Note que não alteramos o activeSection se for apenas uma mudança de idioma
+  }, [location.pathname, location.search, determineActiveSection]);
 
   const handleNavClick = (sectionId) => {
     const currentPath = location.pathname;
@@ -134,7 +139,7 @@ const Navbar = () => {
       setActiveSection(sectionId);
     } else {
       // Se estiver em outra página, primeiro navega para a home e configura para rolar para a seção depois
-      navigate('/');
+      navigate('/', { state: { targetSection: sectionId } });
       // Aguarda o carregamento da página e depois rola para a seção
       setTimeout(() => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -151,7 +156,7 @@ const Navbar = () => {
   return (
     <motion.header
       animate={{
-        height: isScrolled ? 70 : 85,
+        height: isScrolled ? 80 : 95,
         backgroundColor: isScrolled ? 'rgba(255, 255, 255, 0.92)' : 'rgba(255, 255, 255, 0.98)',
         backdropFilter: isScrolled ? 'blur(8px)' : 'blur(4px)',
       }}
@@ -188,6 +193,7 @@ const Navbar = () => {
               to="/"
               onClick={() => handleNavClick('home')}
               isActive={location.pathname === '/' && activeSection === 'home'}
+              sectionId="home"
             >
               {t('navigation.home')}
             </NavLink>
@@ -204,6 +210,7 @@ const Navbar = () => {
                   window.scrollTo(0, 0);
                 }}
                 isActive={location.pathname.includes('/produtos')}
+                sectionId="products"
               >
                 <span className="flex items-center">
                   {t('navigation.products')}
@@ -217,6 +224,7 @@ const Navbar = () => {
               to="/"
               onClick={() => handleNavClick('sobre')}
               isActive={location.pathname === '/' && activeSection === 'sobre'}
+              sectionId="sobre"
             >
               {t('navigation.about')}
             </NavLink>
@@ -225,6 +233,7 @@ const Navbar = () => {
               to="/"
               onClick={() => handleNavClick('servicos')}
               isActive={location.pathname === '/' && activeSection === 'servicos'}
+              sectionId="servicos"
             >
               {t('navigation.services')}
             </NavLink>
@@ -233,14 +242,16 @@ const Navbar = () => {
               to="/"
               onClick={() => handleNavClick('projects')}
               isActive={location.pathname === '/' && activeSection === 'projects'}
+              sectionId="projects"
             >
-              {t('navigation.partners')}
+              {t('navigation.projects')}
             </NavLink>
 
             <NavLink
               to="/"
               onClick={() => handleNavClick('contato')}
               isActive={location.pathname === '/' && activeSection === 'contato'}
+              sectionId="contato"
             >
               {t('navigation.contact')}
             </NavLink>

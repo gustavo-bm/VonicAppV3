@@ -5,6 +5,7 @@
     "about": "SOBRE NÓS",
     "services": "SERVIÇOS",
     "partners": "PARCEIROS",
+    "projects": "PROJETOS",
     "contact": "CONTATO"
   },
   "buttons": {
@@ -506,31 +507,38 @@
       "featured_cases": "Cases de Sucesso",
       "gallery": "Galeria de Projetos",
       "cases": {
+        "16_channels": {
+          "title": "Sistema 16 Vias",
+          "description": "16 pontos de injeção, projetado para a produção eficiente de peças técnicas com alta precisão.",
+          "industries": "Setor: Construção civil",
+          "materials": "Material: PEAD",
+          "cycle": "Ciclo de injeção: 16s"
+        },
         "24_channels": {
           "title": "Sistema 24 Vias",
-          "description": "Sistema de câmara quente com 24 pontos de injeção para produção de peças técnicas",
-          "applications": "Aplicações: Peças automotivas, conectores elétricos e componentes de precisão",
-          "industries": "Setores: Automotivo e Eletroeletrônico",
-          "materials": "Materiais compatíveis: PA66, POM, ABS, PC"
+          "description": "24 pontos de injeção, ideal para a fabricação contínua e consistente de peças relacionadas a embalagens.",
+          "industries": "Setores: Indústria de Embalagens",
+          "materials": "Material: PP",
+          "cycle": "Ciclo de injeção: 9s"
         },
-        "48_channels": {
-          "title": "Sistema 48 Vias",
-          "description": "Sistema complexo de câmara quente para injeção multipontos de alta performance",
-          "applications": "Aplicações: Componentes médicos, embalagens multicavidade e peças de engenharia",
-          "industries": "Setores: Médico-hospitalar e Embalagens",
-          "materials": "Materiais compatíveis: PP, PE, PS, TPE, Elastômeros"
+        "32_channels": {
+          "title": "Sistema 32 Vias",
+          "description": "32 pontos de injeção, desenvolvido para atender às demandas da indústria da engenharia civil com alta eficiência.",
+          "industries": "Setor: Construção Civil",
+          "materials": "Materiais: PEAD",
+          "cycle": "Ciclo de injeção: 24s"
         },
         "64_channels": {
           "title": "Sistema 64 Vias",
-          "description": "Solução avançada para produção em massa com alta eficiência e balanceamento térmico preciso",
-          "applications": "Aplicações: Tampas, embalagens multicavidade e produtos descartáveis",
-          "industries": "Setores: Utensílios domésticos, Descartáveis e Embalagens",
-          "materials": "Materiais compatíveis: PP, PE, PS"
+          "description": "64 pontos de injeção, projetado para produção em larga escala com alta precisão dimensional e controle térmico avançado.",
+          "industries": "Setor: Medicina e Saúde",
+          "materials": "Material: TPU",
+          "cycle": "Ciclo de injeção: 25s"
         }
       },
       "specifications": "Especificações Técnicas",
       "view_details": "Ver detalhes",
-      "view_gallery": "Ver mais projetos"
+      "view_gallery": "Ver nosso portfólio"
     },
     "about": {
       "history": "Nossa história",

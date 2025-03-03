@@ -5,6 +5,7 @@
     "about": "ABOUT US",
     "services": "SERVICES",
     "partners": "PARTNERS",
+    "projects": "PROJECTS",
     "contact": "CONTACT"
   },
   "buttons": {
@@ -427,33 +428,33 @@
           }
         }
       },
-    "cae": {
-      "title": "Mastip CAE Services",
-      "description": "Computer-aided engineering services for plastic injection",
-      "thermal": {
-        "title": "Thermal Analysis",
-        "description": "Advanced thermal analysis for mold design optimization",
-        "features": [
-          "Thermal simulation",
-          "Mold design optimization",
-          "Efficiency improvement",
-          "Cost reduction",
-          "Specialized technical support",
-          "Advanced technology"
-        ]            
-      },
-      "flow": {
-        "title": "Flow Analysis",
-        "description": "Flow analysis for resin distribution optimization",
-        "features": [
-          "Resin flow simulation",
-          "Balanced distribution",
-          "Quality improvement",
-          "Compatibility with multiple materials",
-          "Specialized technical support",
-          "Advanced technology"
-        ]
-      }
+      "cae": {
+        "title": "Mastip CAE Services",
+        "description": "Computer-aided engineering services for plastic injection",
+        "thermal": {
+          "title": "Thermal Analysis",
+          "description": "Advanced thermal analysis for mold design optimization",
+          "features": [
+            "Thermal simulation",
+            "Mold design optimization",
+            "Efficiency improvement",
+            "Cost reduction",
+            "Specialized technical support",
+            "Advanced technology"
+          ]
+        },
+        "flow": {
+          "title": "Flow Analysis",
+          "description": "Flow analysis for resin distribution optimization",
+          "features": [
+            "Resin flow simulation",
+            "Balanced distribution",
+            "Quality improvement",
+            "Compatibility with multiple materials",
+            "Specialized technical support",
+            "Advanced technology"
+          ]
+        }
       }
     }
   },
@@ -507,31 +508,38 @@
       "featured_cases": "Success Cases",
       "gallery": "Project Gallery",
       "cases": {
-        "24_channels": {
-          "title": "24 Channels System",
-          "description": "Hot runner system with 24 injection points for technical parts production",
-          "applications": "Applications: Automotive parts, electrical connectors, and precision components",
-          "industries": "Industries: Automotive and Electronics",
-          "materials": "Compatible materials: PA66, POM, ABS, PC"
+        "16_channels": {
+          "title": "16-Channel System",
+          "description": "16 injection points, designed for the efficient production of high-precision technical parts.",
+          "industries": "Sector: Construction",
+          "materials": "Material: HDPE",
+          "cycle": "Injection cycle: 16s"
         },
-        "48_channels": {
-          "title": "48 Channels System",
-          "description": "Complex hot runner system for high-performance multi-point injection",
-          "applications": "Applications: Medical components, multi-cavity packaging, and engineering parts",
-          "industries": "Industries: Medical and Packaging",
-          "materials": "Compatible materials: PP, PE, PS, TPE, Elastomers"
+        "24_channels": {
+          "title": "24-Channel System",
+          "description": "24 injection points, ideal for continuous and consistent manufacturing of packaging-related parts.",
+          "industries": "Sector: Packaging Industry",
+          "materials": "Material: PP",
+          "cycle": "Injection cycle: 9s"
+        },
+        "32_channels": {
+          "title": "32-Channel System",
+          "description": "32 injection points, developed to meet the demands of the civil engineering industry with high efficiency.",
+          "industries": "Sector: Construction",
+          "materials": "Material: HDPE",
+          "cycle": "Injection cycle: 24s"
         },
         "64_channels": {
-          "title": "64 Channels System",
-          "description": "Advanced solution for mass production with high efficiency and precise thermal balancing",
-          "applications": "Applications: Caps, multi-cavity packaging, and disposable products",
-          "industries": "Industries: Household items, Disposables, and Packaging",
-          "materials": "Compatible materials: PP, PE, PS"
+          "title": "64-Channel System",
+          "description": "64 injection points, designed for large-scale production with high dimensional precision and advanced thermal control.",
+          "industries": "Sector: Medical & Healthcare",
+          "materials": "Material: TPU",
+          "cycle": "Injection cycle: 25s"
         }
       },
       "specifications": "Technical Specifications",
       "view_details": "View details",
-      "view_gallery": "See more projects"
+      "view_gallery": "See our portfolio"
     },
     "about": {
       "history": "Our History",
@@ -541,22 +549,22 @@
       "commitment": "Committed to innovations that enhance plastic injection processes",
       "text": "We use exclusive logical technology that allows us to improve the efficiency of plastic production. Our technology comes from years of experience, listening to typical molding problems and constantly coming up with SOLUTIONS. We can help your company with new or existing projects to become more efficient than you are today!",
       "features": {
-      "headquarters": {
-        "title": "Headquarters in Salto de Pirapora - SP",
-        "description": "New Manufacturer and Supplier of Hot Runner Systems"
-      },
-      "certified": {
-        "title": "Certified Products",
-        "description": "Manufactured with certified materials for each application"
-      },
-      "commitment": {
-        "title": "Commitment",
-        "description": "Flexibility, trust and commitment to each project"
-      },
-      "smart": {
-        "title": "Smart Projects",
-        "description": "Smart and Standardized Products and Projects"
-      }
+        "headquarters": {
+          "title": "Headquarters in Salto de Pirapora - SP",
+          "description": "New Manufacturer and Supplier of Hot Runner Systems"
+        },
+        "certified": {
+          "title": "Certified Products",
+          "description": "Manufactured with certified materials for each application"
+        },
+        "commitment": {
+          "title": "Commitment",
+          "description": "Flexibility, trust and commitment to each project"
+        },
+        "smart": {
+          "title": "Smart Projects",
+          "description": "Smart and Standardized Products and Projects"
+        }
       },
       "certified": "Certified company",
       "mission": "Our mission is to provide solutions that ensure the highest quality, efficiency, and reliability for all our customers.",
