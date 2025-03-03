@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next';
 import emailjs from '@emailjs/browser';
 // import { env } from '../../../env';
 import { emailjsConfig } from '../../config/emailjs';
+import ParticlesBackground from '../Services/ParticlesBackground';
 
 const ContactCard = ({ icon: Icon, title, content, action, actionText, actionClass, delay }) => (
   <motion.div
@@ -211,6 +212,10 @@ const Contact = () => {
 
   return (
     <section id="contato" className="relative py-32 bg-gradient-to-b from-black via-gray-900 to-black overflow-hidden">
+      <ParticlesBackground particleCount={160} interactionStrength={1.3} color="red" />
+
+      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-gray-900/75 to-[#0F0F0F]/85 z-10"></div>
+
       {/* Sistema de Notificação */}
       <AnimatePresence>
         {notification.show && (

@@ -94,17 +94,6 @@ const PageTransition = ({ children }) => {
 function App() {
   return (
     <div className="relative w-full h-full">
-      {/* Fundo 3D fixo */}
-      {/* <div className="fixed inset-0 -z-10">
-        <Canvas
-          camera={{ position: [0, 0, 20], fov: 45 }}
-          gl={{ antialias: true, alpha: true }}
-          dpr={[1, 2]}
-        >
-          <ParticlesBackground />
-        </Canvas>
-      </div> */}
-
       <Router>
         <div className="flex flex-col min-h-screen">
           <Navbar />

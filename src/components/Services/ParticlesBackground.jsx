@@ -1,16 +1,43 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 
-const ParticlesBackground = () => {
+const ParticlesBackground = ({ 
+  color = 'red', 
+  particleCount = 160, 
+  interactionStrength = 1.3
+}) => {
   const canvasRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Função para verificar se é dispositivo móvel
+  useEffect(() => {
+    const checkIfMobile = () => {
+      const mobileWidth = 768; // Definição do breakpoint para mobile
+      setIsMobile(window.innerWidth < mobileWidth);
+    };
+    
+    // Verificar na inicialização
+    checkIfMobile();
+    
+    // Adicionar listener para verificar mudanças de tamanho da tela
+    window.addEventListener('resize', checkIfMobile);
+    
+    // Limpar listener ao desmontar componente
+    return () => window.removeEventListener('resize', checkIfMobile);
+  }, []);
 
   useEffect(() => {
+    // Se for mobile, não inicializar o canvas
+    if (isMobile || !canvasRef.current) return;
+    
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+    
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     
     let particlesArray = [];
-    const numParticles = 100;
+    const numParticles = particleCount;
 
     class Particle {
       constructor() {
@@ -29,7 +56,7 @@ const ParticlesBackground = () => {
       }
 
       draw() {
-        ctx.fillStyle = 'red';
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.closePath();
@@ -52,7 +79,7 @@ const ParticlesBackground = () => {
           let dy = particlesArray[i].y - particlesArray[j].y;
           let distance = Math.sqrt(dx * dx + dy * dy);
           if (distance < maxDistance) {
-            ctx.strokeStyle = 'red';
+            ctx.strokeStyle = color;
             ctx.lineWidth = 1;
             ctx.beginPath();
             ctx.moveTo(particlesArray[i].x, particlesArray[i].y);
@@ -75,7 +102,12 @@ const ParticlesBackground = () => {
 
     initParticles();
     animate();
-  }, []);
+  }, [color, particleCount, interactionStrength, isMobile]);
+
+  // Se for mobile, não renderiza o canvas
+  if (isMobile) {
+    return null;
+  }
 
   return (
     <canvas 
