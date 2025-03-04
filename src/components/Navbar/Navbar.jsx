@@ -325,7 +325,7 @@ const Navbar = () => {
             </NavLink>
 
             <div className="ml-4 h-full border-l border-gray-200 pl-4 flex items-center">
-              <LanguageSelector />
+              <LanguageSelector isMobile={false} />
             </div>
           </div>
 
@@ -350,8 +350,13 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white shadow-lg overflow-hidden"
+            className="lg:hidden bg-white shadow-lg overflow-hidden z-50 relative"
           >
+            {/* Seletor de Idioma - Na parte superior sem padding ao redor */}
+            <div className="flex items-center justify-center px-4 py-4 bg-gray-50 border-b border-gray-200">
+              <LanguageSelector isMobile={true} />
+            </div>
+
             <div className="container mx-auto py-4 px-6 flex flex-col space-y-4">
               {/* Item Home */}
               <motion.div
@@ -484,14 +489,6 @@ const Navbar = () => {
                   <FaChevronRight className="text-xs opacity-50" />
                 </div>
               </motion.div>
-
-              {/* Seletor de Idioma */}
-              <div className="py-3 pt-4">
-                <div className="text-gray-500 text-sm mb-2">{t('navigation.language')}:</div>
-                <div className="flex items-center">
-                  <LanguageSelector isMobile={true} />
-                </div>
-              </div>
             </div>
           </motion.div>
         )}

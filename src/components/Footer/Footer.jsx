@@ -144,7 +144,7 @@ const Footer = () => {
             className="flex space-x-4"
           >
             <SocialButton
-              href="https://www.linkedin.com/company/vonic-systems"
+              href="https://www.linkedin.com/company/vonic-systems-do-brasil/posts/?feedView=all"
               icon={FaLinkedin}
               label="LinkedIn"
             />
