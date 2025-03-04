@@ -10,12 +10,12 @@ import SXNozzle from '../../../assets/mastip/nozzles/sx.png';
 import FlowLocNozzle from '../../../assets/mastip/nozzles/flowloc.png';
 import MultiGateNozzle from '../../../assets/mastip/nozzles/multi_gate.png';
 
-const NozzleCard = ({ t,title, description, image, link, features = [] }) => (
+const NozzleCard = ({ t, title, description, image, link, features = [] }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5 }}
-    className="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300"
+    className="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col"
   >
     <div className="relative">
       <div className="relative h-64 overflow-hidden">
@@ -27,7 +27,7 @@ const NozzleCard = ({ t,title, description, image, link, features = [] }) => (
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
       </div>
     </div>
-    <div className="p-6">
+    <div className="p-6 flex-grow">
       <h3 className="text-2xl font-bold mb-3 text-[#CE171F]">{title}</h3>
       <p className="text-black/80 mb-4">{description}</p>
       
@@ -42,7 +42,8 @@ const NozzleCard = ({ t,title, description, image, link, features = [] }) => (
           ))}
         </ul>
       </div>
-
+    </div>
+    <div className="p-6 pt-0 mt-auto">
       <a
         href={link}
         target="_blank"
@@ -112,8 +113,8 @@ const NozzleSystems = () => {
           className="text-center mb-16"
         >
           <h1 className="text-5xl font-bold mb-6 text-black">{t('mastip.products_page.nozzles.title')}</h1>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto">
-            {t('mastip.nozzles.description')}
+          <p className="text-xl text-black/90 max-w-3xl mx-auto">
+            {t('mastip.products_page.nozzles.description')}
           </p>
         </motion.div>
 

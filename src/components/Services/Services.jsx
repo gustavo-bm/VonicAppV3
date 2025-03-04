@@ -6,6 +6,7 @@ import { OrbitControls } from '@react-three/drei';
 import MovingPoints from './MovingPoints';
 import Scene from './MovingPoints';
 import ParticlesBackground from './ParticlesBackground';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
   const { t } = useTranslation();
@@ -16,10 +17,10 @@ const Services = () => {
       title: t('sections.services.maintenance.title'),
       description: t('sections.services.maintenance.description'),
       features: [
-        "Manutenção preventiva",
-        "Manutenção corretiva",
-        "Inspeção técnica",
-        "Diagnóstico avançado"
+        t('sections.services.maintenance.features.1'),
+        t('sections.services.maintenance.features.2'),
+        t('sections.services.maintenance.features.3'),
+        t('sections.services.maintenance.features.4')
       ]
     },
     {
@@ -27,10 +28,10 @@ const Services = () => {
       title: t('sections.services.manufacturing.title'),
       description: t('sections.services.manufacturing.description'),
       features: [
-        "Projetos personalizados",
-        "Fabricação sob medida",
-        "Prototipagem rápida",
-        "Controle de qualidade"
+        t('sections.services.manufacturing.features.1'),
+        t('sections.services.manufacturing.features.2'),
+        t('sections.services.manufacturing.features.3'),
+        t('sections.services.manufacturing.features.4')
       ]
     },
     {
@@ -38,10 +39,10 @@ const Services = () => {
       title: t('sections.services.optimization.title'),
       description: t('sections.services.optimization.description'),
       features: [
-        "Análise de eficiência",
-        "Otimização de processos",
-        "Redução de custos",
-        "Melhoria de performance"
+        t('sections.services.optimization.features.1'),
+        t('sections.services.optimization.features.2'),
+        t('sections.services.optimization.features.3'),
+        t('sections.services.optimization.features.4')
       ]
     },
     {
@@ -49,10 +50,10 @@ const Services = () => {
       title: t('sections.services.consulting.title'),
       description: t('sections.services.consulting.description'),
       features: [
-        "Consultoria técnica",
-        "Treinamento especializado",
-        "Suporte contínuo",
-        "Soluções inovadoras"
+        t('sections.services.consulting.features.1'),
+        t('sections.services.consulting.features.2'),
+        t('sections.services.consulting.features.3'),
+        t('sections.services.consulting.features.4')
       ]
     }
   ];
@@ -72,8 +73,8 @@ const Services = () => {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: { duration: 0.6, ease: "easeOut" }
     }
@@ -81,8 +82,8 @@ const Services = () => {
 
   const titleVariants = {
     hidden: { opacity: 0, y: -20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: { duration: 0.6, ease: "easeOut" }
     }
@@ -95,7 +96,7 @@ const Services = () => {
 
       {/* Overlay gradient mais suave */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-gray-900/75 to-[#0F0F0F]/85 z-10"></div>
-      
+
       <div className="max-w-7xl mx-auto px-6 relative z-20">
         <motion.div
           initial="hidden"
@@ -114,7 +115,7 @@ const Services = () => {
             {t('sections.services.description')}
           </p>
         </motion.div>
-        
+
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -141,7 +142,7 @@ const Services = () => {
                 <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300 mb-6">
                   {service.description}
                 </p>
-                
+
                 <div className="mt-auto space-y-3">
                   {service.features.map((feature, idx) => (
                     <div key={idx} className="flex items-center text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
@@ -167,19 +168,23 @@ const Services = () => {
           viewport={{ once: true }}
           className="mt-20 text-center"
         >
-          <motion.button
-            whileHover={{ scale: 1.05, y: -3 }}
-            whileTap={{ scale: 0.98 }}
-            transition={{ type: "spring", stiffness: 400, damping: 17 }}
-            className="relative group"
-          >
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-[#CE171F] to-[#A30F15] rounded-lg blur-sm opacity-75 group-hover:opacity-100 transition duration-500"></div>
-            <div className="relative bg-transparent text-white border-2 border-[#CE171F] px-8 py-4 rounded-lg font-medium shadow-lg flex items-center space-x-2 overflow-hidden group-hover:text-white group-hover:bg-[#CE171F] transition-colors duration-300">
-              <span>{t('buttons.contact_us')}</span>
-              <FaLightbulb className="text-xl" />
-            </div>
-          </motion.button>
+          <div className="relative group inline-block">
+            <motion.button
+              onClick={() => {
+                document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              whileHover={{ scale: 1.03, y: -3 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              className="relative bg-transparent text-white border-2 border-[#CE171F] px-8 py-4 rounded-lg font-medium shadow-lg flex items-center space-x-2 group-hover:bg-[#CE171F] transition-colors duration-300"
+            >
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-[#CE171F] to-[#A30F15] rounded-lg blur-sm opacity-75 group-hover:opacity-100 transition duration-500"></div>
+              <span className="relative z-10">{t('buttons.contact_us')}</span>
+              <FaLightbulb className="relative z-10 text-xl" />
+            </motion.button>
+          </div>
         </motion.div>
+
       </div>
     </section>
   );

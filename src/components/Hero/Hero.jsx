@@ -235,7 +235,7 @@ const Hero = () => {
             {/* Technical Specs Label - Redesigned for better visibility */}
             <motion.div
               variants={highlightVariants}
-              className="absolute bottom-8 right-0 bg-black/80 px-4 py-3 rounded-lg border-l-2 border-[#CE171F] shadow-xl z-30"
+              className="absolute bottom-10 right-0 bg-black/80 px-4 py-3 rounded-lg border-l-2 border-[#CE171F] shadow-xl z-30"
             >
               <span className="text-sm text-white font-medium">{t('hero.system_shown')}</span>
             </motion.div>

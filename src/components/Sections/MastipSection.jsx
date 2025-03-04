@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import MastipLogo from '../../assets/mastip/logo_mastip.png';
-import partnership from '../../assets/business-partners-handshake-international-business-concept.jpg';
+import VonicLogo from '../../assets/VONIC.png';
+// import partnership from '../../assets/business-partners-handshake-international-business-concept.jpg';
+import partnership from '../../assets/mastip/hot_halves/hot_half.png';
 import { useTranslation } from 'react-i18next';
 import { FaHandshake, FaCheckCircle, FaIndustry, FaArrowRight, FaCubes } from 'react-icons/fa';
 import { HiOutlineLightBulb } from 'react-icons/hi';
@@ -16,11 +18,11 @@ const MastipSection = () => {
   return (
     <section className="py-16 bg-gradient-to-b from-black to-gray-900 relative ">
       {/* Background de Particulas com configurações equivalentes às de Services */}
-      <ParticlesBackground particleCount={160} interactionStrength={1.3} color="blue" />
+      <ParticlesBackground particleCount={160} interactionStrength={1.3} color="#4A2365" />
 
       {/* Overlay gradient ajustado para mesma opacidade de Services */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-gray-900/75 to-[#0F0F0F]/85 z-10"></div>
-      
+
       {/* Section Header - Modernized and compact */}
       <div className="container mx-auto px-6 mb-16 relative z-20">
         <motion.div
@@ -89,7 +91,6 @@ const MastipSection = () => {
               </motion.div>
             </div>
 
-            {/* Benefits Card - Improved layout */}
             <motion.div
               whileHover={{ y: -4, boxShadow: "0 15px 30px -5px rgba(206, 23, 31, 0.15)" }}
               transition={{ duration: 0.3 }}
@@ -99,50 +100,35 @@ const MastipSection = () => {
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[#CE171F]/10 via-[#CE171F]/5 to-transparent -mr-10 -mt-10 rounded-full"></div>
 
               <h3 className="text-white text-xl font-semibold mb-6 flex items-center relative z-10">
-                <div className="p-2.5 rounded-full bg-[#CE171F]/10 border border-[#CE171F]/20 mr-3">
+                <div className="p-2.5 rounded-full bg-[#CE171F]/10 border border-[#CE171F]/20 mr-3 flex-shrink-0">
                   <HiOutlineLightBulb className="text-[#CE171F] text-xl" />
                 </div>
                 <span>{t('sections.mastip.benefits.title')}</span>
               </h3>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 relative z-10">
-                <motion.div
-                  whileHover={{ scale: 1.03 }}
-                  transition={{ duration: 0.2 }}
-                  className="flex flex-col bg-white/5 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-all duration-300"
-                >
-                  <div className="flex items-center mb-3">
-                    <FaCheckCircle className="text-[#CE171F] text-sm mr-2" />
-                    <h4 className="text-white font-medium text-base">{t('sections.mastip.benefits.1.title')}</h4>
-                  </div>
-                  <p className="text-white/60 text-xs">{t('sections.mastip.benefits.1.description')}</p>
-                </motion.div>
-
-                <motion.div
-                  whileHover={{ scale: 1.03 }}
-                  transition={{ duration: 0.2 }}
-                  className="flex flex-col bg-white/5 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-all duration-300"
-                >
-                  <div className="flex items-center mb-3">
-                    <FaCheckCircle className="text-[#CE171F] text-sm mr-2" />
-                    <h4 className="text-white font-medium text-base">{t('sections.mastip.benefits.2.title')}</h4>
-                  </div>
-                  <p className="text-white/60 text-xs">{t('sections.mastip.benefits.2.description')}</p>
-                </motion.div>
-
-                <motion.div
-                  whileHover={{ scale: 1.03 }}
-                  transition={{ duration: 0.2 }}
-                  className="flex flex-col bg-white/5 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-all duration-300"
-                >
-                  <div className="flex items-center mb-3">
-                    <FaCheckCircle className="text-[#CE171F] text-sm mr-2" />
-                    <h4 className="text-white font-medium text-base">{t('sections.mastip.benefits.3.title')}</h4>
-                  </div>
-                  <p className="text-white/60 text-xs">{t('sections.mastip.benefits.3.description')}</p>
-                </motion.div>
+                {[1, 2, 3].map((index) => (
+                  <motion.div
+                    key={index}
+                    whileHover={{ scale: 1.03 }}
+                    transition={{ duration: 0.2 }}
+                    className="flex flex-col justify-center items-center bg-white/5 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-all duration-300 min-h-32"
+                  >
+                    <div className="flex items-center justify-center w-full mb-3">
+                      <div className="flex-shrink-0 p-2 rounded-full bg-[#CE171F]/10 border border-[#CE171F]/20 mr-2">
+                        {/* Ícone descomentado e com tamanho fixo */}
+                        <FaCheckCircle className="text-[#CE171F] text-base" />
+                      </div>
+                      <h4 className="text-white font-medium text-base text-center flex-1">
+                        {t(`sections.mastip.benefits.${index}.title`)}
+                      </h4>
+                    </div>
+                    <p className="text-white/60 text-xs text-center">{t(`sections.mastip.benefits.${index}.description`)}</p>
+                  </motion.div>
+                ))}
               </div>
             </motion.div>
+
 
             {/* CTA Button - Positioned better */}
             <div className="flex mt-2">
@@ -191,7 +177,7 @@ const MastipSection = () => {
                 <img
                   src={partnership}
                   alt="Mastip Strategic Partnership"
-                  className="w-full h-full object-cover object-center z-0"
+                  className="object-cover object-center z-0"
                 />
               </div>
             </div>
@@ -199,10 +185,8 @@ const MastipSection = () => {
             {/* Glass-morphic elements */}
             <div className="absolute bottom-6 left-6 right-6 z-40 bg-black/60 backdrop-blur-md p-5 rounded-xl border border-white/10 shadow-2xl">
               <div className="flex items-center justify-between">
-                <img src={MastipLogo} alt="Mastip" className="h-10" />
-                <div className="px-3 py-1.5 bg-[#CE171F]/20 rounded-full border border-[#CE171F]/30">
-                  <span className="text-white text-sm font-medium">{t('sections.mastip.partner')}</span>
-                </div>
+                <img src={MastipLogo} alt="Mastip" className="h-12" />
+                <img src={VonicLogo} alt="Vonic" className="h-10" />
               </div>
             </div>
 

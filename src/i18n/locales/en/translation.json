@@ -31,7 +31,7 @@
     "solutions_exclamation": "!",
     "hero_description": "We are specialists in hot runner systems and plastic injection solutions, offering high-quality products and specialized technical support.",
     "innovation_indicator": "Innovation and technology on hot runner systems",
-    "system_shown": "24 vias"
+    "system_shown": "24 channels"
   },
   "features": "Features",
   "details": "See details",
@@ -117,82 +117,66 @@
         "title": "Mastip Temperature Controllers",
         "description": "High precision temperature controllers for hot runner systems",
         "systems": {
-          "standard": {
-            "title": "Meticom Temperature Controller",
-            "description": "Advanced temperature controller for hot runner systems",
-            "features": [
-              "Intuitive and easy to use interface",
-              "Precise temperature control",
-              "Real-time monitoring",
-              "Advanced fault diagnosis",
-              "Support for multiple zones"
-            ],
-            "specs": {
-              "Power": "AC220V (50/60 Hz)",
-              "Display": "High resolution LCD",
-              "Zones": "6 to 48 zones",
-              "Precision": "±0.1°C",
-              "Communication": "RS485/USB"
-            }
-          },
           "touchscreen": {
-            "title": "Meticom Touchscreen Temperature Controller",
-            "description": "Temperature controller with touchscreen interface for easy operation",
+            "title": "Touchscreen Temperature Controllers",
+            "description": "CTI Series",
             "features": [
               "Intuitive and colorful touchscreen interface",
               "Precise temperature control for multiple zones",
               "Real-time monitoring with graphical visualization",
-              "Advanced fault diagnosis with visual alerts",
               "Storage for multiple mold configurations",
-              "Advanced safety functions"
+              "Advanced safety functions",
+              "Connectors for mold-power, thermocouple, and valve gate control cables at the rear"
             ],
             "specs": {
-              "Power": "AC220V (50/60 Hz)",
+              "Power": "3-phase 4-wire Y / Δ type (200-240Vac) or 3-phase 5-wire Y type (380-415Vac)",
               "Display": "7 or 10 inch color touchscreen",
               "Zones": "6 to 120 zones",
               "Precision": "±0.1°C",
               "Communication": "RS485/USB/Ethernet",
-              "Storage": "100+ mold configurations"
+              "CTI-40": "Max zones 12",
+              "CTI-100": "Max zones 32",
+              "CTI-200": "Max zones 80",
+              "CTI-300": "Max zones 120"
             }
           },
           "modular": {
-            "title": "Meticom Modular Temperature Controller",
+            "title": "Modular Temperature Controller",
             "description": "Expandable modular system for temperature control in large-scale applications",
             "features": [
-              "Modular design for easy expansion",
-              "Flexible configurations adaptable to customer needs",
-              "User-friendly and intuitive interface",
-              "Advanced real-time diagnostics",
-              "Support for high-density applications",
-              "Excellent cost-benefit for multi-zone applications"
+              "Simple and user-friendly interface",
+              "Compatibility with most leading hot runner brands",
+              "Closed-loop power distributor and temperature controlling system",
+              "Heavy duty connectors (rated 10A or 16A)",
+              "Built-in cooling fans and circuit breakers",
+              "Comprehensive warning system including fuse blowout, overload, thermocouple open/reverse, temperature, heater fault, high load"
             ],
             "specs": {
-              "Power": "AC220V (50/60 Hz)",
-              "Display": "High resolution LCD or touchscreen",
-              "Zones": "6 to 256+ zones",
-              "Precision": "±0.1°C",
-              "Communication": "RS485/USB/Ethernet",
-              "Expandability": "6 or 12 zone modules"
+              "Display TM10": "LED display",
+              "Communication TM10": "None",
+              "Display TM20": "LCD display",
+              "Communication TM20": "RS485",
+              "Power Input": "AC220V (50/60 Hz)",
+              "Connectors": "Heavy duty (10A or 16A)",
+              "Cooling": "Built-in cooling fans",
+              "Safety": "Circuit breakers and comprehensive warning system"
             }
           },
           "integrated": {
-            "title": "Meticom Integrated Temperature Controller",
+            "title": "Integrated Temperature Controller",
             "description": "Integrated temperature control solution for hot runner systems",
             "features": [
-              "Compact and integrated design",
-              "Complete solution in a single cabinet",
-              "Easy installation and configuration",
-              "Precise control for small to medium applications",
-              "Intuitive and easy-to-operate interface",
-              "Ideal for limited space environments"
+              "Over-voltage protection",
+              "Multiple alarms including fuse break, overload, thermocouple, temperature, and heating element fault"
             ],
             "specs": {
-              "Power": "AC220V (50/60 Hz)",
-              "Display": "Integrated LCD",
-              "Zones": "6 to 48 zones",
-              "Precision": "±0.1°C",
-              "Communication": "RS485/USB",
-              "Dimensions": "Compact for installation in limited spaces"
+              "CIS-1": "PV 3-digit red LED",
+              "CIS-2": "SV 4-digit green LED",
+              "Display Unit": "3-digit red LED, 4-digit green LED",
+              "Automatic Input Voltage": "Yes",
+              "Delay Time": "4.0 s",
+              "Open Time": "6.0 s",
+              "Time Range": "0.0~99.9s"
             }
           }
         }
@@ -286,66 +270,67 @@
       },
       "nozzles": {
         "title": "Mastip Injection Nozzles",
-        "description": "High-performance injection nozzles for plastic injection applications",
+        "description": "High-performance nozzles for plastic injection applications",
         "series": {
           "mx": {
-            "title": "Standard Injection Nozzles",
-            "description": "High-quality nozzles for general applications",
+            "title": "MX Nozzle Series",
+            "description": "Ideal for small to medium applications, designed for multi-cavity systems and hot halves.",
             "features": [
+              "Excellent thermal consistency",
+              "Low molding temperature and pressure",
+              "Processes a wide range of plastics",
               "Robust design",
               "High durability",
-              "Easy maintenance",
-              "Compatibility with engineering resins",
-              "Specialized technical support",
-              "Advanced technology"
-            ]
-          },
-          "bx": {
-            "title": "Multi-Tip Nozzles",
-            "description": "Nozzles with multiple tips for specific applications",
-            "features": [
-              "Multiple tips",
-              "Advanced design",
-              "High performance",
-              "Compatibility with multiple materials",
-              "Specialized technical support",
-              "Easy maintenance"
-            ]
-          },
-          "sx": {
-            "title": "Multi-Material Nozzles",
-            "description": "Nozzles for applications with multiple materials",
-            "features": [
-              "Compatibility with multiple materials",
-              "Advanced design",
-              "High durability",
-              "Easy maintenance",
-              "Specialized technical support",
-              "Advanced technology"
-            ]
-          },
-          "flowloc": {
-            "title": "FlowLoc Technology",
-            "description": "Advanced technology for resin flow control",
-            "features": [
-              "Precise flow control",
-              "Pressure reduction",
-              "Improvement in part quality",
-              "Compatibility with engineering resins",
               "Easy maintenance",
               "Specialized technical support"
             ]
           },
-          "multigate": {
-            "title": "Multi-Gate Technology",
-            "description": "Innovative solutions for complex applications",
+          "bx": {
+            "title": "BX Nozzle Series",
+            "description": "Cost-effective solutions for low to medium cavity applications, not requiring hot half construction.",
             "features": [
+              "Rear loading configuration",
+              "Available in 13, 16, 19, and 27 series",
+              "Versatile and high performance",
+              "Suitable for demanding moulding conditions",
               "Advanced design",
-              "High performance",
-              "Compatibility with multiple materials",
-              "Easy maintenance",
-              "Specialized technical support",
-              "Advanced technology"
+              "Specialized technical support"
+            ]
+          },
+          "sx": {
+            "title": "SX Nozzle Series",
+            "description": "Ideal for processing demanding engineering and temperature-sensitive polymers",
+            "features": [
+              "Uniform temperature distribution",
+              "Two independently controlled heater zones",
+              "Reduced inlet diameter for pressure containment",
+              "Superior alignment with injection machine nozzle",
+              "High performance for single nozzle applications",
+              "Specialized technical support"
+            ]
+          },
+          "flowloc": {
+            "title": "FlowLocᵀᴹ Technology",
+            "description": "Leak-proof solution for multi-cavity manifold systems with advanced heating technology.",
+            "features": [
+              "Secure and leak-proof",
+              "Exceptional thermal performance",
+              "Ideal for Nexusᵀᴹ and VeriShotᵀᴹ systems",
+              "Suitable for various applications",
+              "Embedded heaters",
+              "Specialized technical support"
+            ]
+          },
+          "multigate": {
+            "title": "Multi-Gate Solutions",
+            "description": "Engineered for challenging applications requiring close pitch gates in restricted areas.",
+            "features": [
+              "Highly conductive alloy for excellent thermal profile",
+              "Balanced flow for simultaneous filling",
+              "Direct side and axial gating",
+              "Suitable for polyolefin polymers",
+              "Various configurations available",
+              "Specialized technical support"
             ]
           }
         }
@@ -355,75 +340,80 @@
         "description": "Advanced valve gate systems for plastic injection",
         "series": {
           "cylix": {
-            "title": "Standard Valve Gates",
-            "description": "High-quality valve gates for general applications",
+            "title": "Cylix Hybrid Valve Gates",
+            "description": "Pneumatic or hydraulic valve gate actuation for high glass-filled and large shot applications.",
             "features": [
-              "Robust design",
-              "High durability",
-              "Easy maintenance",
-              "Compatibility with engineering resins",
-              "Specialized technical support",
-              "Advanced technology"
+              "High closing force",
+              "Thermally controlled system",
+              "Compatibility with MX, BX, and TX nozzles",
+              "Adjustable valve pin height",
+              "Long life seals",
+              "Specialized technical support"
             ]
           },
           "mvg25": {
             "title": "Compact Valve Gates",
-            "description": "Compact valve gates for specific applications",
+            "description": "Ideal for small to medium applications requiring close cavity, high speed, sequential filling, or highly cosmetic gates.",
             "features": [
-              "Compact design",
-              "High performance",
-              "Compatibility with multiple materials",
-              "Specialized technical support",
-              "Easy maintenance",
-              "Advanced technology"
+              "Faster cycle times",
+              "Improved part strength and appearance",
+              "Increased dimensional stability",
+              "Multiple gating options",
+              "No material traps",
+              "Operates with demanding materials",
+              "Easy installation and maintenance",
+              "Simple mounting in the backplate with integral airways"
             ]
           },
           "mvg40": {
             "title": "Mini Valve Gates",
-            "description": "Miniature valve gates for small parts",
+            "description": "Ideal for high speed, simultaneous or sequential filling, or highly cosmetic gates. Produces faster cycle times, improved part strength and appearance with increased dimensional stability. Operates with demanding materials including filled materials.",
             "features": [
-              "Miniature design",
-              "High durability",
-              "Easy maintenance",
-              "Compatibility with engineering resins",
-              "Specialized technical support",
-              "Advanced technology"
+              "High speed and simultaneous or sequential filling",
+              "Improved part strength and appearance",
+              "Increased dimensional stability",
+              "Multiple gating options",
+              "No material traps",
+              "Easy installation and maintenance"
             ]
           },
           "mvg55": {
             "title": "Multi-Tip Valve Gates",
-            "description": "Valve gates with multiple tips for specific applications",
+            "description": "Ideal for medium to large shot weight applications requiring simultaneous or sequential filling, or cosmetic gates.",
             "features": [
-              "Multiple tips",
-              "Advanced design",
-              "High performance",
-              "Compatibility with multiple materials",
-              "Specialized technical support",
-              "Easy maintenance"
+              "Faster cycle times",
+              "Improved part strength and appearance",
+              "Increased dimensional stability",
+              "High speed multiple gating options",
+              "No material traps",
+              "Operates with demanding materials",
+              "Easy installation and maintenance",
+              "Simple mounting in the backplate with integral airways",
+              "Sequential filling and weld line management"
             ]
           },
           "nexus": {
-            "title": "Multi-Tip Valve Gates",
-            "description": "Valve gates with multiple tips for specific applications",
+            "title": "Nexusᵀᴹ Valve Gates",
+            "description": "Next generation valve gates with Cylix Hybrid Actuation and FlowLocᵀᴹ Technology.",
             "features": [
-              "Multiple tips",
-              "Advanced design",
+              "Pre-Assembled and Pre-Wired",
+              "Quick and simple installation",
+              "Advanced leak protection",
               "High performance",
               "Compatibility with multiple materials",
-              "Specialized technical support",
-              "Easy maintenance"
+              "Specialized technical support"
             ]
           },
           "verishot": {
-            "title": "Multi-Tip Valve Gates",
-            "description": "Valve gates with multiple tips for specific applications",
+            "title": "VeriShotᵀᴹ Single Valve Gate System",
+            "description": "Compact valve gates with advanced heating technology for high-quality parts",
             "features": [
-              "Multiple tips",
-              "Advanced design",
-              "High performance",
-              "Compatibility with multiple materials",
-              "Specialized technical support",
-              "Easy maintenance"
+              "Reduces mold height requirements",
+              "FlowLoc™ threaded leak-proof nozzles",
+              "Exceptional thermal performance",
+              "Ideal for cosmetic gate finish",
+              "Processes a wide range of polymers",
+              "High-temperature seals and adjustable valve pins"
             ]
           }
         }
@@ -639,7 +629,7 @@
     },
     "mastip": {
       "partner": "Strategic Partner",
-      "strategic_partnership": "Strategic Partnership with Mastip",
+      "strategic_partnership": "Authorized distributor of Mastip New Zealand",
       "partnership_description": "Our partnership with Mastip allows us to offer high-tech solutions in hot runner systems.",
       "who_is_mastip": "Who is Mastip?",
       "mastip_description": "Mastip is a global leader in hot runner technology, recognized for its innovation and quality.",
@@ -667,19 +657,43 @@
       "description": "Vonic understands your needs and provides tailored solutions with efficiency and innovation.",
       "maintenance": {
         "title": "Specialized Maintenance",
-        "description": "Preventive and corrective maintenance services for hot runner systems"
+        "description": "Preventive and corrective maintenance services for hot runner systems",
+        "features": {
+          "1": "Preventive maintenance",
+          "2": "Corrective maintenance",
+          "3": "Technical inspection",
+          "4": "Advanced diagnostics"
+        }
       },
       "manufacturing": {
         "title": "Custom Manufacturing",
-        "description": "Development and manufacturing of customized systems for your needs"
+        "description": "Development and manufacturing of customized systems for your needs",
+        "features": {
+          "1": "Custom projects",
+          "2": "Tailored manufacturing",
+          "3": "Rapid prototyping",
+          "4": "Quality control"
+        }
       },
       "optimization": {
         "title": "Process Optimization",
-        "description": "Analysis and efficiency improvement in existing systems"
+        "description": "Analysis and efficiency improvement in existing systems",
+        "features": {
+          "1": "Efficiency analysis",
+          "2": "Process optimization",
+          "3": "Cost reduction",
+          "4": "Performance improvement"
+        }
       },
       "consulting": {
         "title": "Technical Consulting",
-        "description": "Specialized support for system implementation and operation"
+        "description": "Specialized support for system implementation and operation",
+        "features": {
+          "1": "Technical support",
+          "2": "Implementation assistance",
+          "3": "Training",
+          "4": "Troubleshooting"
+        }
       }
     },
     "partners": {

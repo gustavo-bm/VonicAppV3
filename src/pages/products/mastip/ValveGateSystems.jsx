@@ -16,7 +16,7 @@ const SystemCard = ({ t, title, description, image, link, features = [] }) => (
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5 }}
-    className="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300"
+    className="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col"
   >
     <div className="relative">
       <div className="relative h-64 overflow-hidden">
@@ -28,7 +28,7 @@ const SystemCard = ({ t, title, description, image, link, features = [] }) => (
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
       </div>
     </div>
-    <div className="p-6">
+    <div className="p-6 flex-grow">
       <h3 className="text-2xl font-bold mb-3 text-[#CE171F]">{title}</h3>
       <p className="text-black/80 mb-4">{description}</p>
       
@@ -43,7 +43,8 @@ const SystemCard = ({ t, title, description, image, link, features = [] }) => (
           ))}
         </ul>
       </div>
-
+    </div>
+    <div className="p-6 pt-0 mt-auto">
       <a
         href={link}
         target="_blank"

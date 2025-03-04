@@ -116,82 +116,66 @@
         "title": "Controladores de Temperatura Mastip",
         "description": "Controladores de temperatura de alta precisão para sistemas de câmara quente",
         "systems": {
-          "standard": {
-            "title": "Controlador de Temperatura Meticom",
-            "description": "Controlador de temperatura avançado para sistemas de câmara quente",
-            "features": [
-              "Interface intuitiva e fácil de usar",
-              "Controle preciso de temperatura",
-              "Monitoramento em tempo real",
-              "Diagnóstico avançado de falhas",
-              "Suporte para múltiplas zonas"
-            ],
-            "specs": {
-              "Alimentação": "AC220V (50/60 Hz)",
-              "Display": "LCD de alta resolução",
-              "Zonas": "6 a 48 zonas",
-              "Precisão": "±0.1°C",
-              "Comunicação": "RS485/USB"
-            }
-          },
           "touchscreen": {
-            "title": "Controlador de Temperatura Meticom Touchscreen",
-            "description": "Controlador de temperatura com interface touchscreen para fácil operação",
+            "title": "Controladores de Temperatura com Tela Sensível ao Toque",
+            "description": "Série CTI",
             "features": [
-              "Interface touchscreen colorida e intuitiva",
+              "Interface intuitiva e colorida com tela sensível ao toque",
               "Controle preciso de temperatura para múltiplas zonas",
               "Monitoramento em tempo real com visualização gráfica",
-              "Diagnóstico avançado de falhas com alertas visuais",
-              "Armazenamento de configurações de múltiplos moldes",
-              "Funções de segurança avançadas"
+              "Armazenamento para várias configurações de molde",
+              "Funções avançadas de segurança",
+              "Conectores traseiros para alimentação do molde, termopar e controle de válvula de passagem"
             ],
             "specs": {
-              "Alimentação": "AC220V (50/60 Hz)",
-              "Display": "Touchscreen colorido de 7 ou 10 polegadas",
+              "Potência": "Trifásico 4 fios tipo Y / Δ (200-240Vac) ou trifásico 5 fios tipo Y (380-415Vac)",
+              "Display": "Tela sensível ao toque colorida de 7 ou 10 polegadas",
               "Zonas": "6 a 120 zonas",
               "Precisão": "±0.1°C",
               "Comunicação": "RS485/USB/Ethernet",
-              "Armazenamento": "100+ configurações de moldes"
+              "CTI-40": "Máximo de 12 zonas",
+              "CTI-100": "Máximo de 32 zonas",
+              "CTI-200": "Máximo de 80 zonas",
+              "CTI-300": "Máximo de 120 zonas"
             }
           },
           "modular": {
-            "title": "Controlador de Temperatura Meticom Modular",
+            "title": "Controlador de Temperatura Modular",
             "description": "Sistema modular expansível para controle de temperatura em aplicações de grande escala",
             "features": [
-              "Design modular para fácil expansão",
-              "Configurações flexíveis adaptáveis às necessidades do cliente",
-              "Interface amigável e intuitiva",
-              "Diagnóstico avançado em tempo real",
-              "Suporte para aplicações de alta densidade",
-              "Excelente custo-benefício para aplicações de múltiplas zonas"
+              "Interface simples e fácil de usar",
+              "Compatibilidade com as principais marcas de câmaras quentes",
+              "Distribuidor de energia e sistema de controle de temperatura em malha fechada",
+              "Conectores de alta resistência (10A ou 16A)",
+              "Ventiladores de resfriamento e disjuntores integrados",
+              "Sistema de alerta abrangente incluindo falha de fusível, sobrecarga, termopar aberto/invertido, temperatura, falha do aquecedor e alta carga"
             ],
             "specs": {
-              "Alimentação": "AC220V (50/60 Hz)",
-              "Display": "LCD de alta resolução ou touchscreen",
-              "Zonas": "6 a 256+ zonas",
-              "Precisão": "±0.1°C",
-              "Comunicação": "RS485/USB/Ethernet",
-              "Expansibilidade": "Módulos de 6 ou 12 zonas"
+              "Display TM10": "Visor LED",
+              "Comunicação TM10": "Nenhuma",
+              "Display TM20": "Visor LCD",
+              "Comunicação TM20": "RS485",
+              "Entrada de Energia": "AC220V (50/60 Hz)",
+              "Conectores": "Alta resistência (10A ou 16A)",
+              "Resfriamento": "Ventiladores de resfriamento integrados",
+              "Segurança": "Disjuntores e sistema de alerta abrangente"
             }
           },
           "integrated": {
-            "title": "Controlador de Temperatura Meticom Integrado",
+            "title": "Controlador de Temperatura Integrado",
             "description": "Solução integrada de controle de temperatura para sistemas de câmara quente",
             "features": [
-              "Design compacto e integrado",
-              "Solução completa em um único gabinete",
-              "Fácil instalação e configuração",
-              "Controle preciso para pequenas e médias aplicações",
-              "Interface intuitiva e de fácil operação",
-              "Ideal para espaços limitados"
+              "Proteção contra sobretensão",
+              "Múltiplos alarmes incluindo falha de fusível, sobrecarga, termopar, temperatura e elemento de aquecimento"
             ],
             "specs": {
-              "Alimentação": "AC220V (50/60 Hz)",
-              "Display": "LCD integrado",
-              "Zonas": "6 a 48 zonas",
-              "Precisão": "±0.1°C",
-              "Comunicação": "RS485/USB",
-              "Dimensões": "Compacto para instalação em espaços limitados"
+              "CIS-1": "LED vermelho de 3 dígitos (PV)",
+              "CIS-2": "LED verde de 4 dígitos (SV)",
+              "Unidade de Display": "LED vermelho de 3 dígitos, LED verde de 4 dígitos",
+              "Tensão de Entrada Automática": "Sim",
+              "Tempo de Atraso": "4,0 s",
+              "Tempo de Abertura": "6,0 s",
+              "Intervalo de Tempo": "0,0~99,9s"
             }
           }
         }
@@ -285,144 +269,150 @@
       },
       "nozzles": {
         "title": "Bicos de Injeção Mastip",
-        "description": "Bicos de injeção de alta performance para aplicações de injeção plástica",
+        "description": "Bicos de alta performance para aplicações de injeção plástica",
         "series": {
           "mx": {
-            "title": "Bicos de Injeção Padrão",
-            "description": "Bicos de alta qualidade para aplicações gerais",
+            "title": "Série de Bicos MX",
+            "description": "Ideal para aplicações de pequeno a médio porte, projetado para sistemas de múltiplas cavidades e metades quentes.",
             "features": [
+              "Excelente consistência térmica",
+              "Baixa temperatura e pressão de moldagem",
+              "Processa uma ampla gama de plásticos",
               "Design robusto",
-              "Alta resistência",
-              "Fácil manutenção",
-              "Compatibilidade com resinas de engenharia",
-              "Suporte técnico especializado",
-              "Tecnologia avançada"
-            ]
-          },
-          "bx": {
-            "title": "Bicos Multi-Tip",
-            "description": "Bicos com múltiplas pontas para aplicações específicas",
-            "features": [
-              "Múltiplas pontas",
-              "Design avançado",
-              "Alta performance",
-              "Compatibilidade com múltiplos materiais",
-              "Suporte técnico especializado",
-              "Fácil manutenção"
-            ]
-          },
-          "sx": {
-            "title": "Bicos Multi-Material",
-            "description": "Bicos para aplicações com múltiplos materiais",
-            "features": [
-              "Compatibilidade com múltiplos materiais",
-              "Design avançado",
-              "Alta resistência",
-              "Fácil manutenção",
-              "Suporte técnico especializado",
-              "Tecnologia avançada"
-            ]
-          },
-          "flowloc": {
-            "title": "Tecnologia FlowLoc",
-            "description": "Tecnologia avançada para controle de fluxo de resina",
-            "features": [
-              "Controle preciso de fluxo",
-              "Redução de pressão",
-              "Melhoria na qualidade da peça",
-              "Compatibilidade com resinas de engenharia",
+              "Alta durabilidade",
               "Fácil manutenção",
               "Suporte técnico especializado"
             ]
           },
-          "multigate": {
-            "title": "Tecnologia Multi-Gate",
-            "description": "Soluções inovadoras para aplicações complexas",
+          "bx": {
+            "title": "Série de Bicos BX",
+            "description": "Soluções econômicas para aplicações de baixa a média cavidade, sem necessidade de construção de metade quente.",
             "features": [
+              "Configuração de carregamento traseiro",
+              "Disponível nas séries 13, 16, 19 e 27",
+              "Versátil e de alto desempenho",
+              "Adequado para condições exigentes de moldagem",
               "Design avançado",
-              "Alta performance",
-              "Compatibilidade com múltiplos materiais",
-              "Fácil manutenção",
-              "Suporte técnico especializado",
-              "Tecnologia avançada"
+              "Suporte técnico especializado"
+            ]
+          },
+          "sx": {
+            "title": "Série de Bicos SX",
+            "description": "Ideal para processar polímeros de engenharia exigentes e sensíveis à temperatura.",
+            "features": [
+              "Distribuição uniforme de temperatura",
+              "Duas zonas de aquecimento controladas independentemente",
+              "Diâmetro de entrada reduzido para contenção de pressão",
+              "Alinhamento superior com o bico da máquina de injeção",
+              "Alto desempenho para aplicações de bico único",
+              "Suporte técnico especializado"
+            ]
+          },
+          "flowloc": {
+            "title": "Tecnologia FlowLocᵀᴹ",
+            "description": "Solução à prova de vazamentos para sistemas de múltiplas cavidades com tecnologia avançada de aquecimento.",
+            "features": [
+              "Seguro e à prova de vazamentos",
+              "Desempenho térmico excepcional",
+              "Ideal para sistemas Nexusᵀᴹ e VeriShotᵀᴹ",
+              "Adequado para diversas aplicações",
+              "Aquecedores embutidos",
+              "Suporte técnico especializado"
+            ]
+          },
+          "multigate": {
+            "title": "Soluções Multi-Gate",
+            "description": "Projetado para aplicações desafiadoras que exigem gates de passo reduzido em áreas restritas.",
+            "features": [
+              "Liga altamente condutiva para excelente perfil térmico",
+              "Fluxo equilibrado para preenchimento simultâneo",
+              "Gating lateral direto e axial",
+              "Adequado para polímeros poliolefínicos",
+              "Diversas configurações disponíveis",
+              "Suporte técnico especializado"
             ]
           }
         }
       },
       "valve_gates": {
-        "title": "Mastip Valve Gate Technology",
-        "description": "Advanced valve gate systems for plastic injection",
+        "title": "Tecnologia de Válvulas Mastip",
+        "description": "Sistemas avançados de válvulas para injeção plástica",
         "series": {
           "cylix": {
-            "title": "Standard Valve Gates",
-            "description": "High-quality valve gates for general applications",
+            "title": "Válvulas Híbridas Cylix",
+            "description": "Atuação pneumática ou hidráulica para aplicações com alto teor de fibra de vidro e grandes volumes de injeção.",
             "features": [
-              "Robust design",
-              "High durability",
-              "Easy maintenance",
-              "Compatibility with engineering resins",
-              "Specialized technical support",
-              "Advanced technology"
+              "Alta força de fechamento",
+              "Sistema com controle térmico",
+              "Compatibilidade com bicos MX, BX e TX",
+              "Altura do pino de válvula ajustável",
+              "Vedação de longa duração",
+              "Suporte técnico especializado"
             ]
           },
           "mvg25": {
-            "title": "Compact Valve Gates",
-            "description": "Compact valve gates for specific applications",
+            "title": "Válvulas Compactas",
+            "description": "Ideal para aplicações de pequeno a médio porte que exigem cavidades próximas, alta velocidade, preenchimento sequencial ou acabamento altamente cosmético.",
             "features": [
-              "Compact design",
-              "High performance",
-              "Compatibility with multiple materials",
-              "Specialized technical support",
-              "Easy maintenance",
-              "Advanced technology"
+              "Tempos de ciclo mais rápidos",
+              "Maior resistência e melhor aparência da peça",
+              "Maior estabilidade dimensional",
+              "Múltiplas opções de injeção",
+              "Sem retenção de material",
+              "Opera com materiais exigentes",
+              "Fácil instalação e manutenção",
+              "Montagem simples na placa traseira com vias aéreas integradas"
             ]
           },
           "mvg40": {
-            "title": "Mini Valve Gates",
-            "description": "Miniature valve gates for small parts",
+            "title": "Mini Válvulas",
+            "description": "Ideal para preenchimento de alta velocidade, simultâneo ou sequencial, ou para acabamentos altamente cosméticos. Produz tempos de ciclo mais rápidos, melhora a resistência da peça e sua aparência, além de aumentar a estabilidade dimensional. Opera com materiais exigentes, incluindo materiais com carga.",
             "features": [
-              "Miniature design",
-              "High durability",
-              "Easy maintenance",
-              "Compatibility with engineering resins",
-              "Specialized technical support",
-              "Advanced technology"
+              "Preenchimento de alta velocidade, simultâneo ou sequencial",
+              "Maior resistência e melhor aparência da peça",
+              "Maior estabilidade dimensional",
+              "Múltiplas opções de injeção",
+              "Sem retenção de material",
+              "Fácil instalação e manutenção"
             ]
           },
           "mvg55": {
-            "title": "Multi-Tip Valve Gates",
-            "description": "Valve gates with multiple tips for specific applications",
+            "title": "Válvulas Multi-Tip",
+            "description": "Ideal para aplicações de médio a grande porte que exigem preenchimento simultâneo ou sequencial, ou acabamento cosmético.",
             "features": [
-              "Multiple tips",
-              "Advanced design",
-              "High performance",
-              "Compatibility with multiple materials",
-              "Specialized technical support",
-              "Easy maintenance"
+              "Tempos de ciclo mais rápidos",
+              "Maior resistência e melhor aparência da peça",
+              "Maior estabilidade dimensional",
+              "Opções de múltiplos pontos de injeção em alta velocidade",
+              "Sem retenção de material",
+              "Opera com materiais exigentes",
+              "Fácil instalação e manutenção",
+              "Montagem simples na placa traseira com vias aéreas integradas",
+              "Preenchimento sequencial e gerenciamento de linhas de solda"
             ]
           },
           "nexus": {
-            "title": "Multi-Tip Valve Gates",
-            "description": "Valve gates with multiple tips for specific applications",
+            "title": "Válvulas Nexusᵀᴹ",
+            "description": "Válvulas de última geração com Atuação Híbrida Cylix e Tecnologia FlowLocᵀᴹ.",
             "features": [
-              "Multiple tips",
-              "Advanced design",
-              "High performance",
-              "Compatibility with multiple materials",
-              "Specialized technical support",
-              "Easy maintenance"
+              "Pré-montado e pré-cabeado",
+              "Instalação rápida e simples",
+              "Proteção avançada contra vazamentos",
+              "Alto desempenho",
+              "Compatibilidade com múltiplos materiais",
+              "Suporte técnico especializado"
             ]
           },
           "verishot": {
-            "title": "Multi-Tip Valve Gates",
-            "description": "Valve gates with multiple tips for specific applications",
+            "title": "Sistema de Válvula Única VeriShotᵀᴹ",
+            "description": "Válvulas compactas com tecnologia de aquecimento avançada para produção de peças de alta qualidade.",
             "features": [
-              "Multiple tips",
-              "Advanced design",
-              "High performance",
-              "Compatibility with multiple materials",
-              "Specialized technical support",
-              "Easy maintenance"
+              "Reduz os requisitos de altura do molde",
+              "Bicos roscados FlowLoc™ à prova de vazamento",
+              "Desempenho térmico excepcional",
+              "Ideal para acabamento cosmético de porta",
+              "Processa uma ampla gama de polímeros",
+              "Vedação de alta temperatura e pinos de válvula ajustáveis"
             ]
           }
         }
@@ -638,7 +628,7 @@
     },
     "mastip": {
       "partner": "Parceiro Estratégico",
-      "strategic_partnership": "Parceria Estratégica com a Mastip",
+      "strategic_partnership": "Distribuidor autorizado da Mastip Nova Zelândia",
       "partnership_description": "Nossa parceria com a Mastip nos permite oferecer soluções de alta tecnologia em sistemas de câmara quente.",
       "who_is_mastip": "Quem é a Mastip?",
       "mastip_description": "A Mastip é uma empresa líder global em tecnologia de câmara quente, reconhecida por sua inovação e qualidade.",
@@ -666,19 +656,43 @@
       "description": "A Vonic entende suas necessidades e oferece soluções personalizadas com eficiência e inovação.",
       "maintenance": {
         "title": "Manutenção Especializada",
-        "description": "Serviços de manutenção preventiva e corretiva para sistemas de câmara quente"
+        "description": "Serviços de manutenção preventiva e corretiva para sistemas de câmara quente",
+        "features": {
+          "1": "Manutenção preventiva",
+          "2": "Manutenção corretiva",
+          "3": "Inspeção técnica",
+          "4": "Diagnóstico avançado"
+        }
       },
       "manufacturing": {
         "title": "Fabricação sob Medida",
-        "description": "Desenvolvimento e fabricação de sistemas personalizados para sua necessidade"
+        "description": "Desenvolvimento e fabricação de sistemas personalizados para sua necessidade",
+        "features": {
+          "1": "Projetos personalizados",
+          "2": "Fabricação sob medida",
+          "3": "Prototipagem rápida",
+          "4": "Controle de qualidade"
+        }
       },
       "optimization": {
         "title": "Otimização de Processos",
-        "description": "Análise e melhoria de eficiência em sistemas existentes"
+        "description": "Análise e melhoria de eficiência em sistemas existentes",
+        "features": {
+          "1": "Análise de eficiência",
+          "2": "Otimização de processos",
+          "3": "Redução de custos",
+          "4": "Melhoria de performance"
+        }
       },
       "consulting": {
         "title": "Consultoria Técnica",
-        "description": "Suporte especializado para implementação e operação de sistemas"
+        "description": "Suporte especializado para implementação e operação de sistemas",
+        "features": {
+          "1": "Suporte técnico",
+          "2": "Assistência na implementação",
+          "3": "Treinamento",
+          "4": "Solução de problemas"
+        }
       }
     },
     "partners": {
