@@ -131,7 +131,7 @@ function App() {
     // Simular tempo de carregamento
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 1000);
 
     const handleScroll = () => {
       const revealElements = document.querySelectorAll('.reveal-on-scroll');
