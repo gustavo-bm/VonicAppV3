@@ -3,4 +3,4 @@ Disallow: /admin/
 Disallow: /private/  
 Allow: /  
 
-Sitemap: https://vonicsystems.com/sitemap.xml
+Sitemap: https://vonicsystems.com.br/sitemap.xml

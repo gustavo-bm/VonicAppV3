@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import './i18n/config';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -91,11 +91,80 @@ const PageTransition = ({ children }) => {
   );
 };
 
+// Componente de preloader
+const Preloader = () => {
+  return (
+    <motion.div
+      className="fixed inset-0 bg-white dark:bg-black flex items-center justify-center z-[9999]"
+      initial={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
+    >
+      <motion.div
+        className="flex flex-col items-center"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+      >
+        <motion.div
+          className="w-16 h-16 mb-4 border-4 border-primary dark:border-neon-primary dark:border-opacity-80 border-t-transparent rounded-full dark:neon-border"
+          animate={{ rotate: 360 }}
+          transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+        />
+        <motion.div
+          className="text-lg font-medium bg-gradient-to-r from-primary to-secondary dark:from-neon-primary dark:to-neon-secondary text-transparent bg-clip-text dark:neon-text"
+          animate={{ opacity: [0.5, 1, 0.5] }}
+          transition={{ duration: 1.5, repeat: Infinity }}
+        >
+          G3 Core
+        </motion.div>
+      </motion.div>
+    </motion.div>
+  );
+};
+
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  // Efeito para simular carregamento e ativar as animações de scroll reveal
+  useEffect(() => {
+    // Simular tempo de carregamento
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    const handleScroll = () => {
+      const revealElements = document.querySelectorAll('.reveal-on-scroll');
+      
+      revealElements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const elementVisible = 150;
+        
+        if (elementTop < window.innerHeight - elementVisible) {
+          element.classList.add('revealed');
+        } else {
+          element.classList.remove('revealed');
+        }
+      });
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    // Ativar para elementos já visíveis no carregamento inicial
+    handleScroll();
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      clearTimeout(timer);
+    };
+  }, []);
+
   return (
     <div className="relative w-full h-full">
       <Router>
         <div className="flex flex-col min-h-screen">
+          <AnimatePresence>
+            {loading && <Preloader />}
+          </AnimatePresence>
           <Navbar />
           <PageTransition>
             <Routes>
