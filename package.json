@@ -1,5 +1,6 @@
 {
   "name": "vonicappv3",
+  "homepage": "https://vonicsystems.com",
   "private": true,
   "version": "0.0.0",
   "type": "module",

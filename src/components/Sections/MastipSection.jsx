@@ -18,10 +18,11 @@ const MastipSection = () => {
   return (
     <section className="py-16 bg-gradient-to-b from-black to-gray-900 relative ">
       {/* Background de Particulas com configurações equivalentes às de Services */}
-      <ParticlesBackground particleCount={160} interactionStrength={1.3} color="#4A2365" />
+      <ParticlesBackground particleCount={140} interactionStrength={1.3} color="#4A2365" />
 
       {/* Overlay gradient ajustado para mesma opacidade de Services */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-gray-900/75 to-[#0F0F0F]/85 z-10"></div>
+      {/* <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-gray-900/75 to-[#0F0F0F]/85 z-10"></div> */}
+    <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-gray-900/60 to-[#0F0F0F]/70 z-10"></div>
 
       {/* Section Header - Modernized and compact */}
       <div className="container mx-auto px-6 mb-16 relative z-20">

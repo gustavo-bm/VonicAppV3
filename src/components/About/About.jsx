@@ -37,7 +37,7 @@ const About = () => {
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#CE171F]/5 rounded-full filter blur-[80px] opacity-50" />
       <div className="absolute top-1/2 left-1/4 w-8 h-8 rounded-full border border-[#CE171F]/20"></div>
       <div className="absolute top-1/3 right-1/4 w-4 h-4 rounded-full bg-[#CE171F]/20"></div>
-      
+
       {/* Section Header */}
       <div className="container mx-auto px-6 mb-20 relative z-10">
         <motion.div
@@ -63,12 +63,12 @@ const About = () => {
         {/* Main Content with Gradient Background */}
         <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden mb-20">
           <div className="absolute inset-0 bg-gradient-to-tr from-[#CE171F]/5 via-transparent to-[#CE171F]/5 z-0"></div>
-          
+
           {/* Quote Decoration */}
           <div className="absolute top-10 right-10 opacity-10">
             <FaQuoteRight className="text-[#CE171F] text-9xl" />
           </div>
-          
+
           <div className="relative z-10 p-10 lg:p-16">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
               {/* Left Column - Text Content */}
@@ -85,22 +85,22 @@ const About = () => {
                     {t('sections.about.excellence')}
                   </h3>
                 </div>
-                
+
                 <h4 className="text-3xl font-bold text-gray-900 leading-tight">
                   {t('sections.about.commitment')}
                 </h4>
-                
+
                 <div className="text-gray-700 space-y-6">
                   <p className="leading-relaxed text-lg">
                     {t('sections.about.text')}
                   </p>
-                  
+
                   <div className="pl-5 border-l-4 border-[#CE171F]/20 italic text-gray-600">
                     {t('sections.about.mission')}
                   </div>
                 </div>
-                
-                <div className="pt-4 grid grid-cols-2 gap-4">
+
+                <div className="pt-4 grid grid-cols-2 gap-4 md:grid-cols-1 max-[500px]:grid-cols-1">
                   <div className="bg-[#CE171F]/5 rounded-lg p-4 flex items-center">
                     <div className="bg-white p-2 rounded-full shadow-sm mr-3">
                       <FaCertificate className="text-lg text-[#CE171F]" />
@@ -114,6 +114,7 @@ const About = () => {
                     <span className="font-medium text-gray-900">{t('sections.about.time')}</span>
                   </div>
                 </div>
+
               </motion.div>
 
               {/* Right Column - Features Grid */}
@@ -127,9 +128,9 @@ const About = () => {
                 <div className="bg-gradient-to-br from-[#CE171F]/10 to-white/80 p-0.5 rounded-xl">
                   <div className="bg-white rounded-xl p-8">
                     <h3 className="text-xl font-semibold text-gray-900 mb-6">
-                      Nossos diferenciais
+                      {t('sections.about.differentiators')}
                     </h3>
-                    
+
                     <div className="space-y-6">
                       {features.map((feature, index) => (
                         <motion.div
@@ -160,7 +161,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        
+
         {/* Statistics Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

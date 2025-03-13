@@ -92,7 +92,7 @@ const Services = () => {
   return (
     <section className="py-24 bg-gradient-to-b from-black via-gray-900 to-[#0F0F0F] relative overflow-hidden">
       {/* Background de Particulas - configuração de referência */}
-      <ParticlesBackground particleCount={160} interactionStrength={1.3} color="red" />
+      <ParticlesBackground particleCount={140} interactionStrength={1.3} color="red" />
 
       {/* Overlay gradient mais suave */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-gray-900/75 to-[#0F0F0F]/85 z-10"></div>

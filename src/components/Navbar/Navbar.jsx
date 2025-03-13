@@ -247,7 +247,7 @@ const Navbar = () => {
               src={VonicLogo}
               alt="Vonic Systems"
               animate={{
-                height: isScrolled ? 35 : 40,
+                height: isScrolled ? 45 : 50,
                 filter: isScrolled ? 'drop-shadow(0 2px 2px rgba(0,0,0,0.1))' : 'drop-shadow(0 4px 4px rgba(0,0,0,0.15))'
               }}
               whileHover={{ scale: 1.05 }}
@@ -274,7 +274,7 @@ const Navbar = () => {
               <NavLink
                 to="/produtos/vonic"
                 onClick={() => {
-                  window.location.href = '/produtos/vonic';
+                  navigate('/produtos/vonic');
                   window.scrollTo(0, 0);
                 }}
                 isActive={location.pathname.includes('/produtos')}

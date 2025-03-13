@@ -538,6 +538,7 @@
       "excellence": "Excellence in Hot Runner Systems",
       "commitment": "Committed to innovations that enhance plastic injection processes",
       "text": "We use an exclusive logic technology designed to optimize efficiency in plastic production. Our solution is the result of years of experience, gained by listening to common molding challenges and constantly developing innovations to overcome them. We are ready to help your company reach a new level of efficiency, whether in new projects or existing processes, surpassing your current results!",
+      "differentiators": "Our Key Differentiators",
       "features": {
         "headquarters": {
           "title": "Headquarters in Salto de Pirapora - SP",
@@ -585,7 +586,7 @@
       "info": {
         "email": {
           "title": "Email",
-          "content": "marcos.moraes@vonicsystems.com.br",
+          "content": "comercial@vonicsystems.com.br",
           "action": "Send email"
         },
         "whatsapp": {
@@ -595,7 +596,7 @@
         },
         "address": {
           "title": "Address",
-          "content": "Rua Joaquim Machado, 999 - Salto de Pirapora, SP",
+          "content": "Rua João Pedroso da Rosa, 100 - Salto de Pirapora, SP",
           "action": "View on map"
         }
       },
@@ -738,6 +739,6 @@
     "rights": "All rights reserved.",
     "address": "Salto de Pirapora - SP",
     "phone": "+55 15 99802-4314",
-    "email": "marcos.moraes@vonicsystems.com.br"
+    "email": "comercial@vonicsystems.com.br"
   }
 }

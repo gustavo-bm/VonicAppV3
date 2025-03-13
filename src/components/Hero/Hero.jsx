@@ -74,7 +74,7 @@ const Hero = () => {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-[#0f0f0f] to-black min-h-screen flex flex-col justify-center">
       {/* Background de partículas com configurações equivalentes às de Services */}
-      <ParticlesBackground particleCount={160} interactionStrength={1.3} color="red" />
+      <ParticlesBackground particleCount={140} interactionStrength={1.3} color="red" />
       
       {/* Overlay gradient ajustado para mesma opacidade de Services */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-gray-900/75 to-black/85 z-10"></div>

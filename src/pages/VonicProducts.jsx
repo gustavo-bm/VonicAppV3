@@ -3,14 +3,12 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
-
-// Importando as imagens
-const HotNozzles = 'https://via.placeholder.com/300x200?text=Hot+Nozzles';
-const Manifolds = 'https://via.placeholder.com/300x200?text=Manifolds';
-const HotHalf = 'https://via.placeholder.com/300x200?text=Hot+Half';
-const Controllers = 'https://via.placeholder.com/300x200?text=Controllers';
-const Filters = 'https://via.placeholder.com/300x200?text=Filters';
-const NewProducts = 'https://via.placeholder.com/300x200?text=New+Products';
+import newReleases from '../assets/vonic/products/recent_project.jpeg';
+import hotNozzles from '../assets/vonic/products/hot_nozzles.jpeg';
+import manifolds from '../assets/vonic/products/manifolds.jpeg';
+import hotHalf from '../assets/vonic/products/hot_half.jpeg';
+import controllers from '../assets/mastip/controllers.png';
+import filters from '../assets/vonic/products/filter.jpg';
 
 const ProductCard = ({ title, description, image, link, isNew }) => (
   <motion.div
@@ -55,42 +53,42 @@ const VonicProducts = () => {
     {
       title: t('vonic.new_releases'),
       description: t('vonic.products_page.categories.new_releases.description'),
-      image: "/src/assets/vonic/products/recent_project.jpeg",
+      image: newReleases,
       link: "/produtos/vonic/novidades",
       isNew: true
     },
     {
       title: t('vonic.nozzles'),
       description: t('vonic.products_page.categories.hot_nozzles.description'),
-      image: "/src/assets/vonic/products/hot_nozzles.jpeg",
+      image: hotNozzles,
       link: "/produtos/vonic/bicos",
       isNew: false
     },
     {
       title: t('vonic.manifolds'),
       description: t('vonic.products_page.categories.manifolds.description'),
-      image: "/src/assets/vonic/products/manifolds.jpeg",
+      image: manifolds,
       link: "/produtos/vonic/manifolds",
       isNew: false
     },
     {
       title: t('vonic.hot_half'),
       description: t('vonic.products_page.categories.hot_half.description'),
-      image: "/src/assets/vonic/products/hot_half.jpeg",
+      image: hotHalf,
       link: "/produtos/vonic/hot-half",
       isNew: false
     },
     {
       title: t('vonic.controllers'),
       description: t('vonic.products_page.categories.controllers.description'),
-      image: "/src/assets/mastip/controllers.png",
+      image: controllers,
       link: "/produtos/vonic/controladores",
       isNew: false
     },
     {
       title: t('vonic.filters'),
       description: t('vonic.products_page.categories.filters.description'),
-      image: "/src/assets/vonic/products/filter.jpg",
+      image: filters,
       link: "/produtos/vonic/filtros",
       isNew: false
     }

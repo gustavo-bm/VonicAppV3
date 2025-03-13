@@ -537,6 +537,7 @@
       "excellence": "Excelência em Sistemas de Câmara Quente",
       "commitment": "Comprometida com inovações que aprimoram os processos de injeção plástica",
       "text": "Utilizamos uma tecnologia lógica exclusiva, desenvolvida para otimizar a eficiência na produção de plásticos. Nossa solução é fruto de anos de experiência, adquirida ao ouvir os desafios comuns da moldagem e ao desenvolver constantemente inovações para superá-los. Estamos prontos para ajudar sua empresa a alcançar um novo patamar de eficiência, seja em projetos novos ou em processos já existentes, superando seus resultados atuais!",
+      "differentiators": "Nossos diferenciais",
       "features": {
         "headquarters": {
           "title": "Sede em Salto de Pirapora - SP",
@@ -584,7 +585,7 @@
       "info": {
         "email": {
           "title": "E-mail",
-          "content": "marcos.moraes@vonicsystems.com.br",
+          "content": "comercial@vonicsystems.com.br",
           "action": "Enviar e-mail"
         },
         "whatsapp": {
@@ -594,7 +595,7 @@
         },
         "address": {
           "title": "Endereço",
-          "content": "Rua Joaquim Machado, 999 - Salto de Pirapora, SP",
+          "content": "Rua João Pedroso da Rosa, 100 - Salto de Pirapora, SP",
           "action": "Ver no mapa"
         }
       },
@@ -739,6 +740,6 @@
     "rights": "Todos os direitos reservados.",
     "address": "Salto de Pirapora - SP",
     "phone": "+55 15 99802-4314",
-    "email": "marcos.moraes@vonicsystems.com.br"
+    "email": "comercial@vonicsystems.com.br"
   }
 }
