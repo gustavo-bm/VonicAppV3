@@ -134,7 +134,7 @@ const Navbar = () => {
     // Verificar se temos uma seção alvo no state da location
     if (location.pathname === '/' && location.state && location.state.targetSection) {
       const targetSection = location.state.targetSection;
-      
+
       // Aguardar um pouco para garantir que a página esteja carregada
       const timer = setTimeout(() => {
         const element = document.getElementById(targetSection);
@@ -143,15 +143,15 @@ const Navbar = () => {
           scrollToSection(targetSection);
           setActiveSection(targetSection);
         }
-        
+
         // Limpar o state para não repetir o scroll em navegações futuras
         navigate('/', { state: {}, replace: true });
       }, 500);
-      
+
       return () => clearTimeout(timer);
     }
   }, [location.pathname, location.state, navigate]);
-  
+
   // Fechar o menu mobile quando mudar de rota
   useEffect(() => {
     setIsMobileOpen(false);
@@ -161,7 +161,7 @@ const Navbar = () => {
     // Fechar o menu mobile e dropdown ao clicar em um link
     setIsMobileOpen(false);
     setIsProductsOpen(false);
-    
+
     const currentPath = location.pathname;
 
     if (currentPath === '/') {
@@ -184,9 +184,9 @@ const Navbar = () => {
   const handleMobileNavClick = (sectionId) => {
     // Fechar o menu mobile antes de tentar fazer o scroll
     setIsMobileOpen(false);
-    
+
     const currentPath = location.pathname;
-    
+
     if (currentPath === '/') {
       // Usar um timeout maior para garantir que o menu já fechou completamente
       setTimeout(() => {
@@ -203,16 +203,16 @@ const Navbar = () => {
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (!element) return;
-    
+
     // Calcular a posição com ajuste para o header
     const headerHeight = 80; // Altura aproximada do header
     const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
     const offsetPosition = elementPosition - headerHeight;
-    
+
     // Usar um timeout maior para dispositivos móveis para garantir que a UI está estável
     const isMobile = window.innerWidth < 768;
     const scrollDelay = isMobile ? 300 : 100;
-    
+
     setTimeout(() => {
       window.scrollTo({
         top: offsetPosition,
@@ -248,11 +248,12 @@ const Navbar = () => {
               alt="Vonic Systems"
               animate={{
                 height: isScrolled ? 45 : 50,
-                filter: isScrolled ? 'drop-shadow(0 2px 2px rgba(0,0,0,0.1))' : 'drop-shadow(0 4px 4px rgba(0,0,0,0.15))'
+                filter: isScrolled ? 'drop-shadow(0 2px 2px rgba(0,0,0,0.1))' : 'drop-shadow(0 4px 4px rgba(0,0,0,0.15))',
               }}
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
               className="object-contain"
+              style={{ height: 50, width: 'auto' }} // Tamanho fixo para evitar redimensionamento abrupto
             />
           </Link>
 
