@@ -123,6 +123,23 @@ const Preloader = () => {
   );
 };
 
+const ScrollToHash = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const section = document.querySelector(location.hash);
+      if (section) {
+        setTimeout(() => {
+          section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    }
+  }, [location]);
+
+  return null;
+};
+
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -131,7 +148,7 @@ function App() {
     // Simular tempo de carregamento
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 500);
 
     const handleScroll = () => {
       const revealElements = document.querySelectorAll('.reveal-on-scroll');
@@ -161,6 +178,7 @@ function App() {
   return (
     <div className="relative w-full h-full">
       <Router>
+        <ScrollToHash />
         <div className="flex flex-col min-h-screen">
           <AnimatePresence>
             {loading && <Preloader />}
