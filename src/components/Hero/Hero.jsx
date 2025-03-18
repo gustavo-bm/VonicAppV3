@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import heroSystem from '../../assets/vonic/hero-system.png';
+import heroSystem from '../../assets/vonic/hero-system.webp';
 import { FaIndustry, FaChevronDown } from 'react-icons/fa';
 import { HiOutlineLightBulb } from 'react-icons/hi';
 import ParticlesBackground from '../Services/ParticlesBackground';

@@ -7,11 +7,11 @@ import { HiOutlineLightBulb } from 'react-icons/hi';
 import { TbDeviceAnalytics } from 'react-icons/tb';
 
 // Importar imagens
-import project24Img from '../../assets/vonic/projects/system24.jpg';
-import project16Img from '../../assets/vonic/projects/system16.jpeg';
-import project32Img from '../../assets/vonic/projects/system32.jpg';
+import project24Img from '../../assets/vonic/projects/system24-2kx2kHbD.webp';
+import project16Img from '../../assets/vonic/projects/system16-novo.webp';
+import project32Img from '../../assets/vonic/projects/system32-novo.webp';
 // import project48Img from '../../assets/vonic/projects/system48.jpg';
-import project64Img from '../../assets/vonic/projects/system64.jpg';
+import project64Img from '../../assets/vonic/projects/system64-novo.webp';
 
 // Componente de Card para cada projeto
 const ProjectCard = ({ image, title, description, applications, industries, materials, cycle, index }) => {
