@@ -184,9 +184,6 @@ function App() {
       <Router>
         <ScrollToHash />
         <div className="flex flex-col min-h-screen">
-          <AnimatePresence>
-            {loading && <Preloader />}
-          </AnimatePresence>
           <Navbar />
           <PageTransition>
             <Routes>
