@@ -11,6 +11,10 @@ import Footer from './components/Footer/Footer';
 import Home from './pages/Home';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
+import Hero from './components/Hero/Hero';
+import MastipSection from './components/Sections/MastipSection';
+import Services from './components/Services/Services';
+import Projects from './components/Projects/Projects';
 
 // Páginas de Produtos
 import VonicProducts from './pages/VonicProducts';
@@ -44,8 +48,8 @@ import ValveGateSystems from './pages/products/mastip/ValveGateSystems';
 import SequentialControllers from './pages/products/mastip/SequentialControllers';
 import MastipControllers from './pages/products/mastip/MastipControllers';
 import CAE from './pages/products/mastip/CAE';
-import ParticlesBackground from './components/Services/ParticlesBackground';
-import { Canvas } from '@react-three/fiber';
+import HomeWrapper from './components/Services/HomeWrapper';
+
 
 // Layout Wrapper com transição
 const PageTransition = ({ children }) => {
@@ -152,11 +156,11 @@ function App() {
 
     const handleScroll = () => {
       const revealElements = document.querySelectorAll('.reveal-on-scroll');
-      
+
       revealElements.forEach(element => {
         const elementTop = element.getBoundingClientRect().top;
         const elementVisible = 150;
-        
+
         if (elementTop < window.innerHeight - elementVisible) {
           element.classList.add('revealed');
         } else {
@@ -164,11 +168,11 @@ function App() {
         }
       });
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     // Ativar para elementos já visíveis no carregamento inicial
     handleScroll();
-    
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
       clearTimeout(timer);
@@ -186,8 +190,8 @@ function App() {
           <Navbar />
           <PageTransition>
             <Routes>
-              {/* Rotas Principais */}
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={<HomeWrapper />} />
+              <Route path="/:section" element={<HomeWrapper />} />
 
               {/* Rotas Base de Produtos */}
               <Route path="/produtos/vonic" element={<VonicProducts />} />
